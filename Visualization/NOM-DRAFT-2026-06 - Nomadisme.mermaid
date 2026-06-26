@@ -1,0 +1,328 @@
+---
+config:
+  flowchart:
+    defaultRenderer: "elk"
+  look: classic
+  theme: 'base'
+  themeVariables:
+    lineColor: '#284370'
+    nodeBorder: '#284370'
+    primaryTextColor: '#284370'
+    primaryColor: '#E0E3E6'
+    clusterBkg: '#D6C8DB'
+    clusterBorder: '#6E1C73'
+    titleColor: '#6E1C73'
+---
+flowchart LR
+classDef Thematique font-size:14px,fill:transparent,stroke:#000000,color:#000000
+classDef Verticale font-size:26px,fill:#D6C8DB,stroke:#6E1C73,color:#6E1C73
+classDef Pallier font-size:20px,fill:#D6C8DB,stroke:#6E1C73,color:#284370
+classDef Mesure font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef MesurePlus font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef MesureMoins font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef Recommendation font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+
+  NOM-001-001["<i>NOM-001-001</i><br><b>[M] [PC portable] Fournir un<br>filtre de confidentialité</b>"]
+  NOM-001-002["<i>NOM-001-002</i><br><b>[M] [Smartphone] Fournir un<br>filtre de confidentialité</b>"]
+  NOM-001-003["<i>NOM-001-003</i><br><b>[M] [PC portable] Mettre à<br>disposition une gamme<br>uniforme de postes<br>fournis par l&#39;entité</b>"]
+  NOM-001-004["<i>NOM-001-004</i><br><b>[M] [PC portable] Interdire<br>les pratiques de BYOD</b>"]
+  NOM-001-005["<i>NOM-001-005</i><br><b>[M] [PC portable] Mettre à<br>disposition une gamme<br>uniforme de postes<br>fournis et opérés par<br>l&#39;entité</b>"]
+  NOM-001-006["<i>NOM-001-006</i><br><b>[M] [Smartphones/Tablettes]<br>Mettre à disposition une<br>gamme uniforme de<br>terminaux fournis par<br>l&#39;entité</b>"]
+  NOM-001-007["<i>NOM-001-007</i><br><b>[M] [Smartphones/Tablettes]<br>Interdire les pratiques<br>de BYOD</b>"]
+  NOM-001-008["<i>NOM-001-008</i><br><b>[M] [Smartphones/Tablettes]<br>Mettre à disposition une<br>gamme uniforme de<br>terminaux fournis et<br>opérés par l&#39;entité</b>"]
+  NOM-001-009["<i>NOM-001-009</i><br><b>[M] [PC portable] Chiffrer<br>les disques</b>"]
+  NOM-001-010["<i>NOM-001-010</i><br><b>[M] [Smartphones/Tablettes]<br>Chiffrer les données des<br>terminaux mobiles</b>"]
+  NOM-001-011["<i>NOM-001-011</i><br><b>[M] [Smartphones/Tablettes]<br>Chiffrer les données<br>professionnelles des<br>terminaux mobiles</b>"]
+  NOM-001-012["<i>NOM-001-012</i><br><b>[M] Séparer les usages<br>professionnels des usages<br>personnels</b>"]
+  NOM-001-013["<i>NOM-001-013</i><br><b>[M] Créer une adresse e-mail<br>professionnelle dédiée</b>"]
+  NOM-001-014["<i>NOM-001-014</i><br><b>[M] Fournir une adresse<br>e-mail professionnelle</b>"]
+  NOM-001-015["<i>NOM-001-015</i><br><b>[M] Fournir un numéro de<br>téléphone professionnel</b>"]
+  NOM-001-016["<i>NOM-001-016</i><br><b>[M] [Smartphones/Tablettes]<br>Séparer les usages<br>professionnels des usages<br>personnels sur les<br>terminaux mobiles<br>maîtrisés par vos<br>services</b>"]
+  NOM-001-017["<i>NOM-001-017</i><br><b>[M] Etre en capacité de<br>bloquer à distance un<br>terminal mobile fourni et<br>opéré par vos services</b>"]
+  NOM-001-018["<i>NOM-001-018</i><br><b>[M] Etre en capacité<br>d&#39;effacer à distance et<br>de manière sécurisée un<br>terminal mobile maîtrisé<br>par vos services</b>"]
+  NOM-001-019["<i>NOM-001-019</i><br><b>[M] Définir une politique de<br>mise en veille et de<br>verrouillage</b>"]
+  NOM-001-020["<i>NOM-001-020</i><br><b>[M] Mettre en œuvre une<br>solution de gestion de<br>flotte mobile pour les<br>terminaux maîtrisés par<br>vos services</b>"]
+  NOM-001-021["<i>NOM-001-021</i><br><b>[M] Mettre en œuvre une<br>solution de gestion des<br>terminaux non fournis par<br>vos services</b>"]
+  NOM-001-022["<i>NOM-001-022</i><br><b>[M] Protéger les comptes avec<br>un mot de passe</b>"]
+  NOM-001-023["<i>NOM-001-023</i><br><b>[M] Mettre en oeuvre une<br>politique de mots de<br>passe</b>"]
+  NOM-001-024["<i>NOM-001-024</i><br><b>[M] [PC portable] Bloquer<br>l&#39;accès aux comptes<br>utilisateurs après<br>plusieurs tentatives de<br>connexion infructueuses</b>"]
+  NOM-001-027["<i>NOM-001-027</i><br><b>[M] [PC portable] Mettre<br>entre œuvre une<br>authentification<br>multifacteurs avec jeton<br>d&#39;authentification<br>physique pour la session<br>utilisateur</b>"]
+  NOM-001-028["<i>NOM-001-028</i><br><b>[M] Mettre entre œuvre une<br>authentification <br>multifacteurs avec jeton<br>d&#39;authentification<br>physique pour l&#39;accès aux<br>applications sensibles<br>et/ou d&#39;administration</b>"]
+  NOM-001-029["<i>NOM-001-029</i><br><b>[M] [Smartphone/tablette]<br>Activer un code de<br>déverrouillage pour<br>accéder au terminal</b>"]
+  NOM-001-030["<i>NOM-001-030</i><br><b>[M] [Smartphone/tablette]<br>Empêcher l&#39;utilisation<br>d&#39;un schéma de<br>déverrouillage pour<br>accéder au terminal</b>"]
+  NOM-001-031["<i>NOM-001-031</i><br><b>[M] [Smartphone/tablette]<br>Autoriser l&#39;utilisation<br>de la biométrie pour le<br>déverrouillage des<br>terminaux</b>"]
+  NOM-001-032["<i>NOM-001-032</i><br><b>[M] [Smartphone/tablette]<br>Mettre en œuvre des<br>règles sur le code de<br>déverrouillage pour<br>accéder au terminal</b>"]
+  NOM-001-034["<i>NOM-001-034</i><br><b>[M] [PC portable] Mettre en<br>œuvre un antivirus sur<br>les terminaux</b>"]
+  NOM-001-035["<i>NOM-001-035</i><br><b>[M] [PC portable] Activer le<br>pare-feu local sur les<br>terminaux</b>"]
+  NOM-001-036["<i>NOM-001-036</i><br><b>[M] Activer les mises à jour<br>automatiques </b>"]
+  NOM-001-037["<i>NOM-001-037</i><br><b>[M] [PC portable] Configurer<br>le pare-feu local pour<br>bloquer les connexions<br>des autres terminaux</b>"]
+  NOM-001-038["<i>NOM-001-038</i><br><b>[M] Limiter les accès aux<br>applications métier du SI<br>en situation de nomadisme</b>"]
+  NOM-001-039["<i>NOM-001-039</i><br><b>[M] Limiter les accès aux<br>données métier du SI en<br>situation de nomadisme </b>"]
+  NOM-001-040["<i>NOM-001-040</i><br><b>[M] Définir les limites<br>acceptables de<br>téléchargement des<br>données</b>"]
+  NOM-001-042["<i>NOM-001-042</i><br><b>[M] Avoir un store<br>d&#39;applications dédié</b>"]
+  NOM-001-043["<i>NOM-001-043</i><br><b>[M] Forcer le déploiement et<br>l&#39;application des mises à<br>jour</b>"]
+  NOM-001-045["<i>NOM-001-045</i><br><b>[M] Superviser le<br>téléchargement de données<br>et le bloquer au-delà des<br>seuils acceptales</b>"]
+  NOM-001-046["<i>NOM-001-046</i><br><b>[M] [Smartphones/Tablettes]<br>Limiter les accès aux<br>données professionnelles<br>par les applications<br>personnelles</b>"]
+  NOM-001-047["<i>NOM-001-047</i><br><b>[M] [Smartphones/Tablettes]<br>Limiter les accès aux<br>données personnelles par<br>les applications<br>professionnelles</b>"]
+  NOM-001-048["<i>NOM-001-048</i><br><b>[M] Désinstaller les<br>logiciels inutiles</b>"]
+  NOM-001-049["<i>NOM-001-049</i><br><b>[M] [Smartphones/Tablettes]<br>Supprimer les<br>autorisations des<br>applications</b>"]
+  NOM-001-051["<i>NOM-001-051</i><br><b>[M] Enrôler les appareils et<br>les comptes</b>"]
+  NOM-001-053["<i>NOM-001-053</i><br><b>[M] [Smartphones/Tablettes]<br>Forcer l&#39;utilisation de<br>mots de passe pour les<br>accès aux applications<br>métier</b>"]
+  NOM-001-054["<i>NOM-001-054</i><br><b>[M] [Smartphones/Tablettes]<br>Forcer l&#39;authentification<br>pour les accès aux<br>applications métier</b>"]
+  NOM-001-056["<i>NOM-001-056</i><br><b>[M] Fournir un cache-caméra</b>"]
+  NOM-001-057["<i>NOM-001-057</i><br><b>[M] Mettre en place<br>l&#39;utilisation du MFA pour<br>les accès aux<br>applications métier</b>"]
+  NOM-001-058["<i>NOM-001-058</i><br><b>[M] Forcer l&#39;utilisation du<br>MFA pour les accès aux<br>applications métier</b>"]
+  NOM-001-059["<i>NOM-001-059</i><br><b>[M] Désinstaller les<br>applications et logiciels<br>inutilisés depuis un<br>certain temps</b>"]
+  NOM-001-060["<i>NOM-001-060</i><br><b>[M] Superviser les terminaux<br>enregistrés</b>"]
+  NOM-001-061["<i>NOM-001-061</i><br><b>[M] [Smartphones/Tablettes]<br>Interdire l&#39;usage de la<br>2G </b>"]
+  NOM-001-062["<i>NOM-001-062</i><br><b>[M] Mettre en place un DNS<br>filtrant</b>"]
+  NOM-001-063["<i>NOM-001-063</i><br><b>[M] [PC portable] Déployer le<br>chiffrement des disques à<br>l&#39;installation des postes</b>"]
+  NOM-001-064["<i>NOM-001-064</i><br><b>[M] [Smartphones/Tablettes]<br>Déployer le chiffrement<br>des données à<br>l&#39;installation du<br>terminal</b>"]
+  NOM-001-065["<i>NOM-001-065</i><br><b>[M] [Smartphones/Tablettes]<br>Mettre en place un<br>antivirus sur les<br>terminaux</b>"]
+  NOM-001-066["<i>NOM-001-066</i><br><b>[M] Mettre entre œuvre une<br>authentification FIDO<br>pour l&#39;accès aux<br>applications métier</b>"]
+  NOM-001-067["<i>NOM-001-067</i><br><b>[M] [PC portable] Bloquer<br>temporairement l&#39;accès<br>aux comptes utilisateurs<br>après 3 tentatives de<br>connexion infructueuses</b>"]
+
+subgraph Nomadisme["<i>Juin 2026</i><br><b>Dalton - Thematique Nomadisme</b>"]
+  direction LR
+  subgraph Securisation_des_terminaux["<center>Sécurisation des terminaux</center>"]
+    direction BT
+    subgraph Securisation_des_terminaux_Palier_0["Palier 0"]
+      direction TB
+      NOM-001-001 ~~~ NOM-001-056
+      NOM-001-002
+    end
+    subgraph Securisation_des_terminaux_Palier_1["Palier 1"]
+      direction TB
+      NOM-001-004
+      NOM-001-007
+    end
+    subgraph Securisation_des_terminaux_Palier_2["Palier 2"]
+      direction TB
+      NOM-001-003 ~~~ NOM-001-034
+      NOM-001-034 ~~~ NOM-001-048
+      NOM-001-048 ~~~ NOM-001-061
+      NOM-001-061 ~~~ NOM-001-064
+      NOM-001-006 ~~~ NOM-001-035
+      NOM-001-035 ~~~ NOM-001-059
+      NOM-001-059 ~~~ NOM-001-063
+    end
+    subgraph Securisation_des_terminaux_Palier_3["Palier 3"]
+      direction TB
+      NOM-001-005 ~~~ NOM-001-011
+      NOM-001-011 ~~~ NOM-001-049
+      NOM-001-008 ~~~ NOM-001-037
+    end
+    subgraph Securisation_des_terminaux_Palier_4["Palier 4"]
+      direction TB
+      NOM-001-009 ~~~ NOM-001-062
+      NOM-001-010
+    end
+    subgraph Securisation_des_terminaux_Palier_5["Palier 5"]
+      direction TB
+      NOM-001-065
+    end
+  end
+  %% Links between paliers for Sécurisation des terminaux
+  Securisation_des_terminaux_Palier_0 --- Securisation_des_terminaux_Palier_1
+  Securisation_des_terminaux_Palier_1 --- Securisation_des_terminaux_Palier_2
+  Securisation_des_terminaux_Palier_2 --- Securisation_des_terminaux_Palier_3
+  Securisation_des_terminaux_Palier_3 --- Securisation_des_terminaux_Palier_4
+  Securisation_des_terminaux_Palier_4 --- Securisation_des_terminaux_Palier_5
+  subgraph Acces_aux_applications_et_aux_donnees["<center>Accès aux applications et aux<br>données</center>"]
+    direction BT
+    subgraph Acces_aux_applications_et_aux_donnees_Palier_1["Palier 1"]
+      direction TB
+      NOM-001-012 ~~~ NOM-001-053
+      NOM-001-013
+    end
+    subgraph Acces_aux_applications_et_aux_donnees_Palier_2["Palier 2"]
+      direction TB
+      NOM-001-014 ~~~ NOM-001-051
+      NOM-001-046 ~~~ NOM-001-054
+    end
+    subgraph Acces_aux_applications_et_aux_donnees_Palier_3["Palier 3"]
+      direction TB
+      NOM-001-015 ~~~ NOM-001-018
+      NOM-001-018 ~~~ NOM-001-039
+      NOM-001-039 ~~~ NOM-001-047
+      NOM-001-016 ~~~ NOM-001-038
+      NOM-001-038 ~~~ NOM-001-040
+      NOM-001-040 ~~~ NOM-001-057
+    end
+    subgraph Acces_aux_applications_et_aux_donnees_Palier_4["Palier 4"]
+      direction TB
+      NOM-001-058
+    end
+    subgraph Acces_aux_applications_et_aux_donnees_Palier_5["Palier 5"]
+      direction TB
+      NOM-001-028
+      NOM-001-066
+    end
+  end
+  %% Links between paliers for Accès aux applications et aux données
+  Acces_aux_applications_et_aux_donnees_Palier_1 --- Acces_aux_applications_et_aux_donnees_Palier_2
+  Acces_aux_applications_et_aux_donnees_Palier_2 --- Acces_aux_applications_et_aux_donnees_Palier_3
+  Acces_aux_applications_et_aux_donnees_Palier_3 --- Acces_aux_applications_et_aux_donnees_Palier_4
+  Acces_aux_applications_et_aux_donnees_Palier_4 --- Acces_aux_applications_et_aux_donnees_Palier_5
+  subgraph Acces_aux_terminaux["<center>Accès aux terminaux</center>"]
+    direction BT
+    subgraph Acces_aux_terminaux_Palier_0["Palier 0"]
+      direction TB
+      NOM-001-019
+    end
+    subgraph Acces_aux_terminaux_Palier_1["Palier 1"]
+      direction TB
+      NOM-001-022 ~~~ NOM-001-067
+      NOM-001-029
+    end
+    subgraph Acces_aux_terminaux_Palier_2["Palier 2"]
+      direction TB
+      NOM-001-023 ~~~ NOM-001-030
+      NOM-001-030 ~~~ NOM-001-032
+      NOM-001-024 ~~~ NOM-001-031
+    end
+    subgraph Acces_aux_terminaux_Palier_3["Palier 3"]
+      direction TB
+      NOM-001-017
+    end
+    subgraph Acces_aux_terminaux_Palier_4["Palier 4 (vide)"]
+      direction LR
+    end
+    subgraph Acces_aux_terminaux_Palier_5["Palier 5"]
+      direction TB
+      NOM-001-027
+    end
+  end
+  %% Links between paliers for Accès aux terminaux
+  Acces_aux_terminaux_Palier_0 --- Acces_aux_terminaux_Palier_1
+  Acces_aux_terminaux_Palier_1 --- Acces_aux_terminaux_Palier_2
+  Acces_aux_terminaux_Palier_2 --- Acces_aux_terminaux_Palier_3
+  Acces_aux_terminaux_Palier_3 --- Acces_aux_terminaux_Palier_4
+  Acces_aux_terminaux_Palier_4 --- Acces_aux_terminaux_Palier_5
+  subgraph Maintien_en_condition_de_securite["<center>Maintien en condition de<br>sécurité</center>"]
+    direction BT
+    subgraph Maintien_en_condition_de_securite_Palier_0["Palier 0"]
+      direction TB
+      NOM-001-036
+    end
+    subgraph Maintien_en_condition_de_securite_Palier_1["Palier 1 (vide)"]
+      direction LR
+    end
+    subgraph Maintien_en_condition_de_securite_Palier_2["Palier 2"]
+      direction TB
+      NOM-001-043
+    end
+    subgraph Maintien_en_condition_de_securite_Palier_3["Palier 3"]
+      direction TB
+      NOM-001-021
+      NOM-001-060
+    end
+    subgraph Maintien_en_condition_de_securite_Palier_4["Palier 4"]
+      direction TB
+      NOM-001-042
+      NOM-001-045
+    end
+    subgraph Maintien_en_condition_de_securite_Palier_5["Palier 5"]
+      direction TB
+      NOM-001-020
+    end
+  end
+  %% Links between paliers for Maintien en condition de sécurité
+  Maintien_en_condition_de_securite_Palier_0 --- Maintien_en_condition_de_securite_Palier_1
+  Maintien_en_condition_de_securite_Palier_1 --- Maintien_en_condition_de_securite_Palier_2
+  Maintien_en_condition_de_securite_Palier_2 --- Maintien_en_condition_de_securite_Palier_3
+  Maintien_en_condition_de_securite_Palier_3 --- Maintien_en_condition_de_securite_Palier_4
+  Maintien_en_condition_de_securite_Palier_4 --- Maintien_en_condition_de_securite_Palier_5
+end
+%% Links between verticales for Nomadisme
+  Securisation_des_terminaux --- Acces_aux_applications_et_aux_donnees
+  Acces_aux_applications_et_aux_donnees --- Acces_aux_terminaux
+  Acces_aux_terminaux --- Maintien_en_condition_de_securite
+%% Apply style
+class Nomadisme Thematique
+class Securisation_des_terminaux Verticale
+class Acces_aux_applications_et_aux_donnees Verticale
+class Acces_aux_terminaux Verticale
+class Maintien_en_condition_de_securite Verticale
+class Securisation_des_terminaux_Palier_0 Pallier
+class Securisation_des_terminaux_Palier_1 Pallier
+class Securisation_des_terminaux_Palier_2 Pallier
+class Securisation_des_terminaux_Palier_3 Pallier
+class Securisation_des_terminaux_Palier_4 Pallier
+class Securisation_des_terminaux_Palier_5 Pallier
+class Acces_aux_applications_et_aux_donnees_Palier_1 Pallier
+class Acces_aux_applications_et_aux_donnees_Palier_2 Pallier
+class Acces_aux_applications_et_aux_donnees_Palier_3 Pallier
+class Acces_aux_applications_et_aux_donnees_Palier_4 Pallier
+class Acces_aux_applications_et_aux_donnees_Palier_5 Pallier
+class Acces_aux_terminaux_Palier_0 Pallier
+class Acces_aux_terminaux_Palier_1 Pallier
+class Acces_aux_terminaux_Palier_2 Pallier
+class Acces_aux_terminaux_Palier_3 Pallier
+class Acces_aux_terminaux_Palier_4 Pallier
+class Acces_aux_terminaux_Palier_5 Pallier
+class Maintien_en_condition_de_securite_Palier_0 Pallier
+class Maintien_en_condition_de_securite_Palier_1 Pallier
+class Maintien_en_condition_de_securite_Palier_2 Pallier
+class Maintien_en_condition_de_securite_Palier_3 Pallier
+class Maintien_en_condition_de_securite_Palier_4 Pallier
+class Maintien_en_condition_de_securite_Palier_5 Pallier
+class NOM-001-001 Mesure
+class NOM-001-002 Mesure
+class NOM-001-003 Mesure
+class NOM-001-004 Mesure
+class NOM-001-005 Mesure
+class NOM-001-006 Mesure
+class NOM-001-007 Mesure
+class NOM-001-008 Mesure
+class NOM-001-009 Mesure
+class NOM-001-010 Mesure
+class NOM-001-011 Mesure
+class NOM-001-012 Mesure
+class NOM-001-013 Mesure
+class NOM-001-014 Mesure
+class NOM-001-015 Mesure
+class NOM-001-016 Mesure
+class NOM-001-017 Mesure
+class NOM-001-018 Mesure
+class NOM-001-019 Mesure
+class NOM-001-020 Mesure
+class NOM-001-021 Mesure
+class NOM-001-022 Mesure
+class NOM-001-023 Mesure
+class NOM-001-024 Mesure
+class NOM-001-027 Mesure
+class NOM-001-028 Mesure
+class NOM-001-029 Mesure
+class NOM-001-030 Mesure
+class NOM-001-031 Mesure
+class NOM-001-032 Mesure
+class NOM-001-034 Mesure
+class NOM-001-035 Mesure
+class NOM-001-036 Mesure
+class NOM-001-037 Mesure
+class NOM-001-038 Mesure
+class NOM-001-039 Mesure
+class NOM-001-040 Mesure
+class NOM-001-042 Mesure
+class NOM-001-043 Mesure
+class NOM-001-045 Mesure
+class NOM-001-046 Mesure
+class NOM-001-047 Mesure
+class NOM-001-048 Mesure
+class NOM-001-049 Mesure
+class NOM-001-051 Mesure
+class NOM-001-053 Mesure
+class NOM-001-054 Mesure
+class NOM-001-056 Mesure
+class NOM-001-057 Mesure
+class NOM-001-058 Mesure
+class NOM-001-059 Mesure
+class NOM-001-060 Mesure
+class NOM-001-061 Mesure
+class NOM-001-062 Mesure
+class NOM-001-063 Mesure
+class NOM-001-064 Mesure
+class NOM-001-065 Mesure
+class NOM-001-066 Mesure
+class NOM-001-067 Mesure

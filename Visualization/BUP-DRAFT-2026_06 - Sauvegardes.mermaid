@@ -1,0 +1,244 @@
+---
+config:
+  flowchart:
+    defaultRenderer: "elk"
+  look: classic
+  theme: 'base'
+  themeVariables:
+    lineColor: '#284370'
+    nodeBorder: '#284370'
+    primaryTextColor: '#284370'
+    primaryColor: '#E0E3E6'
+    clusterBkg: '#D6C8DB'
+    clusterBorder: '#6E1C73'
+    titleColor: '#6E1C73'
+---
+flowchart LR
+classDef Thematique font-size:14px,fill:transparent,stroke:#000000,color:#000000
+classDef Verticale font-size:26px,fill:#D6C8DB,stroke:#6E1C73,color:#6E1C73
+classDef Pallier font-size:20px,fill:#D6C8DB,stroke:#6E1C73,color:#284370
+classDef Mesure font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef MesurePlus font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef MesureMoins font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef Recommendation font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+
+  SVG-001-001["<i>SVG-001-001</i><br><b>[M] Inventorier les données<br>vitales  </b>"]
+  SVG-001-002["<i>SVG-001-002</i><br><b>[M] Inventorier les données<br>importantes </b>"]
+  SVG-001-003["<i>SVG-001-003</i><br><b>[M] Inventorier les besoins<br>spécifiques de vos<br>données importantes</b>"]
+  SVG-001-004["<i>SVG-001-004</i><br><b>[M] Inventorier les<br>législations s&#39;appliquant<br>aux données sauvegardées</b>"]
+  SVG-001-005["<i>SVG-001-005</i><br><b>[M] Sauvegarder manuellement<br>vos données </b>"]
+  SVG-001-006["<i>SVG-001-006</i><br><b>[M] Sélectionner un support<br>simple pour sauvegarder</b>"]
+  SVG-001-007["<i>SVG-001-007</i><br><b>[M] Automatiser les<br>sauvegardes</b>"]
+  SVG-001-008["<i>SVG-001-008</i><br><b>[M] Sauvegarder sur un NAS </b>"]
+  SVG-001-009["<i>SVG-001-009</i><br><b>[M] Synchroniser vos données<br>(cloud ou NAS)</b>"]
+  SVG-001-010["<i>SVG-001-010</i><br><b>[M] Sauvegarder tous les mois</b>"]
+  SVG-001-011["<i>SVG-001-011</i><br><b>[M] Sauvegarder<br>quotidiennement ou toutes<br>les semaines</b>"]
+  SVG-001-012["<i>SVG-001-012</i><br><b>[M] Vérifier le<br>fonctionnement du système<br>de sauvegarde</b>"]
+  SVG-001-013["<i>SVG-001-013</i><br><b>[M] Configurer des<br>notifications de<br>sauvegarde</b>"]
+  SVG-001-014["<i>SVG-001-014</i><br><b>[M] Vérifier l&#39;intégrité des<br>sauvegardes</b>"]
+  SVG-001-015["<i>SVG-001-015</i><br><b>[M] Réaliser des tests de<br>restauration réguliers</b>"]
+  SVG-001-016["<i>SVG-001-016</i><br><b>[M] Créer une sauvegardes<br>ultime hors-ligne</b>"]
+  SVG-001-017["<i>SVG-001-017</i><br><b>[M] Réaliser une seconde<br>sauvegarde régulière hors<br>site &amp; hors ligne</b>"]
+  SVG-001-018["<i>SVG-001-018</i><br><b>[M] Mettre à jour le système<br>de sauvegardes</b>"]
+  SVG-001-019["<i>SVG-001-019</i><br><b>[M] Définir des mots de passe<br>robustes</b>"]
+  SVG-001-020["<i>SVG-001-020</i><br><b>[M] Activer la double<br>authentification sur les<br>comptes Cloud</b>"]
+  SVG-001-021["<i>SVG-001-021</i><br><b>[M] Appliquer le principe du<br>moindre privilège </b>"]
+  SVG-001-022["<i>SVG-001-022</i><br><b>[M] Chiffrer les sauvegardes<br>au niveau du disque </b>"]
+  SVG-001-023["<i>SVG-001-023</i><br><b>[M] Protéger physiquement les<br>supports</b>"]
+  SVG-001-024["<i>SVG-001-024</i><br><b>[M] Chiffrer les sauvegardes<br>sensibles au niveau du<br>fichier</b>"]
+  SVG-001-025["<i>SVG-001-025</i><br><b>[M] Détruire de manière<br>sécurisée les anciens<br>supports</b>"]
+  SVG-001-026["<i>SVG-001-026</i><br><b>[M] Mettre en place des<br>sauvegardes immuables<br>contre les ransomwares</b>"]
+  SVG-001-027["<i>SVG-001-027</i><br><b>[M] Limiter la taille des<br>données sauvegardées </b>"]
+  SVG-001-028["<i>SVG-001-028</i><br><b>[M] Réaliser des sauvegardes<br>incrémentales/différentielles</b>"]
+  SVG-001-029["<i>SVG-001-029</i><br><b>[M] Vérifier les<br>réglementations impactant<br>les services de<br>sauvegardes utilisables </b>"]
+
+subgraph Securite_des_sauvegardes["<i>Juin 2026</i><br><b>Dalton - Thematique Sécurité des sauvegardes</b>"]
+  direction LR
+  subgraph Connaitre_et_identifier_le_perimetre__donnees___localisation_["<center>Connaitre et identifier le<br>périmètre (données &amp;<br>localisation)</center>"]
+    direction BT
+    subgraph Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_0["Palier 0"]
+      direction TB
+      SVG-001-001 ~~~ SVG-001-003
+      SVG-001-002
+    end
+    subgraph Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_1["Palier 1 (vide)"]
+      direction LR
+    end
+    subgraph Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_2["Palier 2 (vide)"]
+      direction LR
+    end
+    subgraph Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_3["Palier 3 (vide)"]
+      direction LR
+    end
+    subgraph Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_4["Palier 4"]
+      direction TB
+      SVG-001-004
+    end
+  end
+  %% Links between paliers for Connaitre et identifier le périmètre (données & localisation)
+  Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_0 --- Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_1
+  Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_1 --- Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_2
+  Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_2 --- Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_3
+  Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_3 --- Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_4
+  subgraph Disposer_de_donnees_fraiches["<center>Disposer de données fraiches</center>"]
+    direction BT
+    subgraph Disposer_de_donnees_fraiches_Palier_1["Palier 1"]
+      direction TB
+      SVG-001-005
+    end
+    subgraph Disposer_de_donnees_fraiches_Palier_2["Palier 2"]
+      direction TB
+      SVG-001-007 ~~~ SVG-001-009
+      SVG-001-008 ~~~ SVG-001-010
+    end
+    subgraph Disposer_de_donnees_fraiches_Palier_3["Palier 3"]
+      direction TB
+      SVG-001-011
+    end
+  end
+  %% Links between paliers for Disposer de données fraiches
+  Disposer_de_donnees_fraiches_Palier_1 --- Disposer_de_donnees_fraiches_Palier_2
+  Disposer_de_donnees_fraiches_Palier_2 --- Disposer_de_donnees_fraiches_Palier_3
+  subgraph Disposer_d_un_service_de_sauvegarde_robuste["<center>Disposer d&#39;un service de<br>sauvegarde robuste</center>"]
+    direction BT
+    subgraph Disposer_d_un_service_de_sauvegarde_robuste_Palier_1["Palier 1"]
+      direction TB
+      SVG-001-006
+    end
+    subgraph Disposer_d_un_service_de_sauvegarde_robuste_Palier_2["Palier 2"]
+      direction TB
+      SVG-001-018 ~~~ SVG-001-020
+      SVG-001-019
+    end
+    subgraph Disposer_d_un_service_de_sauvegarde_robuste_Palier_3["Palier 3"]
+      direction TB
+      SVG-001-021
+      SVG-001-022
+    end
+    subgraph Disposer_d_un_service_de_sauvegarde_robuste_Palier_4["Palier 4"]
+      direction TB
+      SVG-001-023 ~~~ SVG-001-025
+      SVG-001-024 ~~~ SVG-001-026
+    end
+  end
+  %% Links between paliers for Disposer d'un service de sauvegarde robuste
+  Disposer_d_un_service_de_sauvegarde_robuste_Palier_1 --- Disposer_d_un_service_de_sauvegarde_robuste_Palier_2
+  Disposer_d_un_service_de_sauvegarde_robuste_Palier_2 --- Disposer_d_un_service_de_sauvegarde_robuste_Palier_3
+  Disposer_d_un_service_de_sauvegarde_robuste_Palier_3 --- Disposer_d_un_service_de_sauvegarde_robuste_Palier_4
+  subgraph S_assurer_de_la_capacite_a_restaurer["<center>S&#39;assurer de la capacité à<br>restaurer</center>"]
+    direction BT
+    subgraph S_assurer_de_la_capacite_a_restaurer_Palier_1["Palier 1"]
+      direction TB
+      SVG-001-012
+    end
+    subgraph S_assurer_de_la_capacite_a_restaurer_Palier_2["Palier 2"]
+      direction TB
+      SVG-001-013
+    end
+    subgraph S_assurer_de_la_capacite_a_restaurer_Palier_3["Palier 3"]
+      direction TB
+      SVG-001-014
+      SVG-001-015
+    end
+  end
+  %% Links between paliers for S'assurer de la capacité à restaurer
+  S_assurer_de_la_capacite_a_restaurer_Palier_1 --- S_assurer_de_la_capacite_a_restaurer_Palier_2
+  S_assurer_de_la_capacite_a_restaurer_Palier_2 --- S_assurer_de_la_capacite_a_restaurer_Palier_3
+  subgraph Externaliser_la_sauvegarde["<center>Externaliser la sauvegarde</center>"]
+    direction BT
+    subgraph Externaliser_la_sauvegarde_Palier_1["Palier 1"]
+      direction TB
+      SVG-001-016
+    end
+    subgraph Externaliser_la_sauvegarde_Palier_2["Palier 2 (vide)"]
+      direction LR
+    end
+    subgraph Externaliser_la_sauvegarde_Palier_3["Palier 3"]
+      direction TB
+      SVG-001-017
+    end
+  end
+  %% Links between paliers for Externaliser la sauvegarde
+  Externaliser_la_sauvegarde_Palier_1 --- Externaliser_la_sauvegarde_Palier_2
+  Externaliser_la_sauvegarde_Palier_2 --- Externaliser_la_sauvegarde_Palier_3
+  subgraph Optimiser_les_sauvegardes__stockage__durees_de_sauvegarde_et_restauration_["<center>Optimiser les sauvegardes<br>(stockage, durées de<br>sauvegarde et restauration)</center>"]
+    direction BT
+    subgraph Optimiser_les_sauvegardes__stockage__durees_de_sauvegarde_et_restauration__Palier_0["Palier 0"]
+      direction TB
+      SVG-001-027
+      SVG-001-028
+    end
+  end
+  subgraph Respecter_les_exigences_reglementaires["<center>Respecter les exigences<br>réglementaires</center>"]
+    direction BT
+    subgraph Respecter_les_exigences_reglementaires_Palier_3["Palier 3"]
+      direction TB
+      SVG-001-029
+    end
+  end
+end
+%% Links between verticales for Sécurité des sauvegardes
+  Connaitre_et_identifier_le_perimetre__donnees___localisation_ --- Disposer_de_donnees_fraiches
+  Disposer_de_donnees_fraiches --- Disposer_d_un_service_de_sauvegarde_robuste
+  Disposer_d_un_service_de_sauvegarde_robuste --- S_assurer_de_la_capacite_a_restaurer
+  S_assurer_de_la_capacite_a_restaurer --- Externaliser_la_sauvegarde
+  Externaliser_la_sauvegarde --- Optimiser_les_sauvegardes__stockage__durees_de_sauvegarde_et_restauration_
+  Optimiser_les_sauvegardes__stockage__durees_de_sauvegarde_et_restauration_ --- Respecter_les_exigences_reglementaires
+%% Apply style
+class Securite_des_sauvegardes Thematique
+class Connaitre_et_identifier_le_perimetre__donnees___localisation_ Verticale
+class Disposer_de_donnees_fraiches Verticale
+class Disposer_d_un_service_de_sauvegarde_robuste Verticale
+class S_assurer_de_la_capacite_a_restaurer Verticale
+class Externaliser_la_sauvegarde Verticale
+class Optimiser_les_sauvegardes__stockage__durees_de_sauvegarde_et_restauration_ Verticale
+class Respecter_les_exigences_reglementaires Verticale
+class Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_0 Pallier
+class Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_1 Pallier
+class Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_2 Pallier
+class Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_3 Pallier
+class Connaitre_et_identifier_le_perimetre__donnees___localisation__Palier_4 Pallier
+class Disposer_de_donnees_fraiches_Palier_1 Pallier
+class Disposer_de_donnees_fraiches_Palier_2 Pallier
+class Disposer_de_donnees_fraiches_Palier_3 Pallier
+class Disposer_d_un_service_de_sauvegarde_robuste_Palier_1 Pallier
+class Disposer_d_un_service_de_sauvegarde_robuste_Palier_2 Pallier
+class Disposer_d_un_service_de_sauvegarde_robuste_Palier_3 Pallier
+class Disposer_d_un_service_de_sauvegarde_robuste_Palier_4 Pallier
+class S_assurer_de_la_capacite_a_restaurer_Palier_1 Pallier
+class S_assurer_de_la_capacite_a_restaurer_Palier_2 Pallier
+class S_assurer_de_la_capacite_a_restaurer_Palier_3 Pallier
+class Externaliser_la_sauvegarde_Palier_1 Pallier
+class Externaliser_la_sauvegarde_Palier_2 Pallier
+class Externaliser_la_sauvegarde_Palier_3 Pallier
+class Optimiser_les_sauvegardes__stockage__durees_de_sauvegarde_et_restauration__Palier_0 Pallier
+class Respecter_les_exigences_reglementaires_Palier_3 Pallier
+class SVG-001-001 Mesure
+class SVG-001-002 Mesure
+class SVG-001-003 Mesure
+class SVG-001-004 Mesure
+class SVG-001-005 Mesure
+class SVG-001-006 Mesure
+class SVG-001-007 Mesure
+class SVG-001-008 Mesure
+class SVG-001-009 Mesure
+class SVG-001-010 Mesure
+class SVG-001-011 Mesure
+class SVG-001-012 Mesure
+class SVG-001-013 Mesure
+class SVG-001-014 Mesure
+class SVG-001-015 Mesure
+class SVG-001-016 Mesure
+class SVG-001-017 Mesure
+class SVG-001-018 Mesure
+class SVG-001-019 Mesure
+class SVG-001-020 Mesure
+class SVG-001-021 Mesure
+class SVG-001-022 Mesure
+class SVG-001-023 Mesure
+class SVG-001-024 Mesure
+class SVG-001-025 Mesure
+class SVG-001-026 Mesure
+class SVG-001-027 Mesure
+class SVG-001-028 Mesure
+class SVG-001-029 Mesure

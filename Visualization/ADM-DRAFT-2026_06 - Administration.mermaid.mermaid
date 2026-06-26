@@ -1,0 +1,380 @@
+---
+config:
+  flowchart:
+    defaultRenderer: "elk"
+  look: classic
+  theme: 'base'
+  themeVariables:
+    lineColor: '#284370'
+    nodeBorder: '#284370'
+    primaryTextColor: '#284370'
+    primaryColor: '#E0E3E6'
+    clusterBkg: '#D6C8DB'
+    clusterBorder: '#6E1C73'
+    titleColor: '#6E1C73'
+---
+flowchart LR
+classDef Thematique font-size:14px,fill:transparent,stroke:#000000,color:#000000
+classDef Verticale font-size:26px,fill:#D6C8DB,stroke:#6E1C73,color:#6E1C73
+classDef Pallier font-size:20px,fill:#D6C8DB,stroke:#6E1C73,color:#284370
+classDef Mesure font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef MesurePlus font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef MesureMoins font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+classDef Recommendation font-size:16px,fill:#E0E3E6,stroke:#284370,color:#284370
+
+  ADM-001-001["<i>ADM-001-001</i><br><b>[M] Protéger les comptes<br>d&#39;administration avec un<br>mot de passe</b>"]
+  ADM-001-002["<i>ADM-001-002</i><br><b>[M] Supprimer/remplacer les<br>comptes par défaut sur<br>les systèmes et outils<br>d&#39;administration</b>"]
+  ADM-001-003["<i>ADM-001-003</i><br><b>[M] Mettre en œuvre un<br>gestionnaire de mots de<br>passe pour les comptes<br>d&#39;administration</b>"]
+  ADM-001-004["<i>ADM-001-004</i><br><b>[M] Mettre entre œuvre une<br>authentification à deux<br>facteurs</b>"]
+  ADM-001-005["<i>ADM-001-005</i><br><b>[M] Utiliser des comptes<br>distincts selon les<br>environnements</b>"]
+  ADM-001-006["<i>ADM-001-006</i><br><b>[M] Protéger les comptes<br>d&#39;administration avec une<br>authentification &quot;forte&quot;</b>"]
+  ADM-001-007["<i>ADM-001-007</i><br><b>[M] Attribuer les droits<br>d&#39;administration à des<br>groupes</b>"]
+  ADM-001-008["<i>ADM-001-008</i><br><b>[M] Journaliser<br>basiquement l&#39;utilisation<br>des comptes<br>d&#39;administration</b>"]
+  ADM-001-009["<i>ADM-001-009</i><br><b>[M] Utiliser des comptes<br>individuels pour<br>l&#39;administration</b>"]
+  ADM-001-010["<i>ADM-001-010</i><br><b>[M] Utiliser des comptes et<br>mots de passe uniques<br>pour les comptes<br>d&#39;administration &quot;locaux&quot;<br>sur les systèmes</b>"]
+  ADM-001-011["<i>ADM-001-011</i><br><b>[M] Mettre entre œuvre une<br>authentification à deux<br>facteurs avec jeton<br>d&#39;authentification<br>physique</b>"]
+  ADM-001-012["<i>ADM-001-012</i><br><b>[M] Mettre en œuvre une<br>gestion centralisée des<br>comptes d&#39;administration</b>"]
+  ADM-001-013["<i>ADM-001-013</i><br><b>[M] Limiter les droits des<br>administrateurs aux<br>seules actions qu&#39;ils ont<br>besoin de réaliser</b>"]
+  ADM-001-014["<i>ADM-001-014</i><br><b>[M] Éviter l&#39;identification<br>explicite des comptes<br>d&#39;administration</b>"]
+  ADM-001-015["<i>ADM-001-015</i><br><b>[M] Mettre en œuvre une<br>architecture de type<br>&quot;Zero Trust&quot; pour les<br>accès d&#39;administration<br>des systèmes</b>"]
+  ADM-001-016["<i>ADM-001-016</i><br><b>[M] Journaliser finement<br>l&#39;utilisation des comptes<br>d&#39;administration</b>"]
+  ADM-001-017["<i>ADM-001-017</i><br><b>[M] Distinguer les comptes<br>des rôles<br>d&#39;administration des<br>autres rôles</b>"]
+  ADM-001-018["<i>ADM-001-018</i><br><b>[M] Tenir à jour la liste des<br>comptes d&#39;administration</b>"]
+  ADM-001-019["<i>ADM-001-019</i><br><b>[M] Désactiver ou supprimer<br>les comptes<br>d&#39;administration expirés.<br>
+Avoir une stratégie de<br>cycle de vie des comptes<br>d&#39;administration</b>"]
+  ADM-001-020["<i>ADM-001-020</i><br><b>[M] Utiliser des protocoles<br>sécurisés</b>"]
+  ADM-001-021["<i>ADM-001-021</i><br><b>[M] Chiffrer les données en<br>transit</b>"]
+  ADM-001-022["<i>ADM-001-022</i><br><b>[M] Chiffrer les données au<br>repos</b>"]
+  ADM-001-023["<i>ADM-001-023</i><br><b>[M] Chiffrer les sauvegardes</b>"]
+  ADM-001-024["<i>ADM-001-024</i><br><b>[M] Utiliser des versions de<br>systèmes d&#39;exploitation<br>(OS) supportées</b>"]
+  ADM-001-025["<i>ADM-001-025</i><br><b>[M] Supprimer des postes<br>d&#39;administration (dédié<br>ou non) les élements non<br>indispensable à<br>l&#39;administration </b>"]
+  ADM-001-026["<i>ADM-001-026</i><br><b>[M] Durcir le système du<br>terminal utilisé pour les<br>taches d&#39;administration</b>"]
+  ADM-001-027["<i>ADM-001-027</i><br><b>[M] Durcir les navigateurs du<br>terminal utilisé pour les<br>tâches d&#39;administration</b>"]
+  ADM-001-028["<i>ADM-001-028</i><br><b>[M] Mettre en œuvre un<br>antivirus sur les<br>terminaux<br>d&#39;administration</b>"]
+  ADM-001-029["<i>ADM-001-029</i><br><b>[M] Configurer un service DNS<br>filtrant</b>"]
+  ADM-001-030["<i>ADM-001-030</i><br><b>[M] Activer le pare-feu local<br>sur les terminaux<br>d&#39;administration</b>"]
+  ADM-001-031["<i>ADM-001-031</i><br><b>[M] Mettre en œuvre un EDR<br>sur les terminaux<br>d&#39;administration</b>"]
+  ADM-001-032["<i>ADM-001-032</i><br><b>[M] Mettre en œuvre un SI<br>d&#39;administration<br>intermédiaire dédié entre<br>les terminaux et le SI de<br>production</b>"]
+  ADM-001-033["<i>ADM-001-033</i><br><b>[M] Mettre en œuvre un rebond<br>en intermédiaire entre<br>les terminaux<br>d&#39;administration et le SI<br>administré</b>"]
+  ADM-001-034["<i>ADM-001-034</i><br><b>[M] Limiter l&#39;exposition du<br>serveurs de rebond à un<br>tunnel VPN</b>"]
+  ADM-001-035["<i>ADM-001-035</i><br><b>[M] Mettre en œuvre des<br>postes maitrisés par<br>l&#39;entité</b>"]
+  ADM-001-036["<i>ADM-001-036</i><br><b>[M] Mettre en œuvre un<br>environnement logiciel<br>dédié aux actions<br>d&#39;administration sur un<br>poste usuel</b>"]
+  ADM-001-037["<i>ADM-001-037</i><br><b>[M] Mettre en œuvre une<br>machine virtuelle sur un<br>poste usuel pour les<br>actions d&#39;administration</b>"]
+  ADM-001-038["<i>ADM-001-038</i><br><b>[M] Mettre en œuvre un<br>terminal dédié aux seules<br>actions d&#39;administration</b>"]
+  ADM-001-039["<i>ADM-001-039</i><br><b>[M] Mettre en œuvre une<br>machine virtuelle sur un<br>poste d&#39;administration<br>pour les actions de<br>bureautique</b>"]
+  ADM-001-040["<i>ADM-001-040</i><br><b>[M] Mettre en œuvre un double<br>amorçage avec chiffrement<br>des disques sur les<br>terminaux pour cloisonner<br>le système pour<br>l&#39;administration des<br>autres systèmes usuels</b>"]
+  ADM-001-041["<i>ADM-001-041</i><br><b>[M] Mettre en œuvre un<br>filtrage périmètrique sur<br>le système d&#39;information<br>d&#39;administration</b>"]
+  ADM-001-042["<i>ADM-001-042</i><br><b>[M] Mettre en œuvre un<br>filtrage sur l&#39;ensemble<br>du système d&#39;information<br>d&#39;administration et entre<br>ses composants</b>"]
+  ADM-001-043["<i>ADM-001-043</i><br><b>[M] Mettre à jour les<br>systèmes liés à<br>l&#39;activité<br>d&#39;administration les plus<br>simples à mettre à jour</b>"]
+  ADM-001-044["<i>ADM-001-044</i><br><b>[M] Activer les mises à jour<br>automatiques </b>"]
+  ADM-001-045["<i>ADM-001-045</i><br><b>[M] Suivre les alertes de<br>sécurité du CERT-FR</b>"]
+  ADM-001-046["<i>ADM-001-046</i><br><b>[M] Mettre à jour les outils<br>liés à l&#39;activité<br>d&#39;administration les plus<br>critiques</b>"]
+  ADM-001-047["<i>ADM-001-047</i><br><b>[M] Mettre à jour les<br>systèmes liés à<br>l&#39;activité<br>d&#39;administration les plus<br>exposés</b>"]
+  ADM-001-048["<i>ADM-001-048</i><br><b>[M] Vérifier l&#39;authenticité<br>des données entrantes</b>"]
+  ADM-001-049["<i>ADM-001-049</i><br><b>[M] Vérifier l&#39;intégrité des<br>données entrantes</b>"]
+  ADM-001-050["<i>ADM-001-050</i><br><b>[M] Analyser les données<br>entrantes</b>"]
+  ADM-001-051["<i>ADM-001-051</i><br><b>[M] Valider l&#39;innocuité des<br>entrants sur un système<br>cloisonné</b>"]
+  ADM-001-052["<i>ADM-001-052</i><br><b>[M] Mettre en œuvre des<br>sauvegardes régulières<br>des éléments<br>d&#39;authentification liés à<br>l&#39;administration</b>"]
+  ADM-001-053["<i>ADM-001-053</i><br><b>[M] Mettre en œuvre des<br>sauvegardes régulières<br>des configurations des<br>éléments de sécurité liés<br>à l&#39;administration</b>"]
+
+subgraph Administration["<i>Juin 2026</i><br><b>Dalton - Thematique Administration</b>"]
+  direction LR
+  subgraph Identification__Authentification___Controle_d_acces["<center>Identification,<br>Authentification &amp; Contrôle<br>d&#39;accès</center>"]
+    direction BT
+    subgraph Identification__Authentification___Controle_d_acces_Palier_0["Palier 0"]
+      direction TB
+      ADM-001-001
+    end
+    subgraph Identification__Authentification___Controle_d_acces_Palier_1["Palier 1"]
+      direction TB
+      ADM-001-002 ~~~ ADM-001-004
+      ADM-001-003 ~~~ ADM-001-014
+    end
+    subgraph Identification__Authentification___Controle_d_acces_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-005 ~~~ ADM-001-007
+      ADM-001-006 ~~~ ADM-001-008
+    end
+    subgraph Identification__Authentification___Controle_d_acces_Palier_3["Palier 3"]
+      direction TB
+      ADM-001-009 ~~~ ADM-001-012
+      ADM-001-010 ~~~ ADM-001-013
+    end
+    subgraph Identification__Authentification___Controle_d_acces_Palier_4["Palier 4"]
+      direction TB
+      ADM-001-011
+      ADM-001-016
+    end
+    subgraph Identification__Authentification___Controle_d_acces_Palier_5["Palier 5"]
+      direction TB
+      ADM-001-015
+    end
+  end
+  %% Links between paliers for Identification, Authentification & Contrôle d'accès
+  Identification__Authentification___Controle_d_acces_Palier_0 --- Identification__Authentification___Controle_d_acces_Palier_1
+  Identification__Authentification___Controle_d_acces_Palier_1 --- Identification__Authentification___Controle_d_acces_Palier_2
+  Identification__Authentification___Controle_d_acces_Palier_2 --- Identification__Authentification___Controle_d_acces_Palier_3
+  Identification__Authentification___Controle_d_acces_Palier_3 --- Identification__Authentification___Controle_d_acces_Palier_4
+  Identification__Authentification___Controle_d_acces_Palier_4 --- Identification__Authentification___Controle_d_acces_Palier_5
+  subgraph Controle_et_Inventaire_des_comptes_d_administration["<center>Contrôle et Inventaire des<br>comptes d&#39;administration</center>"]
+    direction BT
+    subgraph Controle_et_Inventaire_des_comptes_d_administration_Palier_1["Palier 1"]
+      direction TB
+      ADM-001-017
+      ADM-001-019
+    end
+    subgraph Controle_et_Inventaire_des_comptes_d_administration_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-018
+    end
+  end
+  %% Links between paliers for Contrôle et Inventaire des comptes d’administration
+  Controle_et_Inventaire_des_comptes_d_administration_Palier_1 --- Controle_et_Inventaire_des_comptes_d_administration_Palier_2
+  subgraph Chiffrement_des_donnees["<center>Chiffrement des données</center>"]
+    direction BT
+    subgraph Chiffrement_des_donnees_Palier_1["Palier 1"]
+      direction TB
+      ADM-001-020
+    end
+    subgraph Chiffrement_des_donnees_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-022
+      ADM-001-023
+    end
+    subgraph Chiffrement_des_donnees_Palier_3["Palier 3"]
+      direction TB
+      ADM-001-021
+    end
+  end
+  %% Links between paliers for Chiffrement des données
+  Chiffrement_des_donnees_Palier_1 --- Chiffrement_des_donnees_Palier_2
+  Chiffrement_des_donnees_Palier_2 --- Chiffrement_des_donnees_Palier_3
+  subgraph Durcissement_des_postes["<center>Durcissement des postes</center>"]
+    direction BT
+    subgraph Durcissement_des_postes_Palier_1["Palier 1"]
+      direction TB
+      ADM-001-024 ~~~ ADM-001-026
+      ADM-001-026 ~~~ ADM-001-028
+      ADM-001-025 ~~~ ADM-001-027
+      ADM-001-027 ~~~ ADM-001-029
+    end
+    subgraph Durcissement_des_postes_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-030
+    end
+    subgraph Durcissement_des_postes_Palier_3["Palier 3 (vide)"]
+      direction LR
+    end
+    subgraph Durcissement_des_postes_Palier_4["Palier 4"]
+      direction TB
+      ADM-001-031
+    end
+  end
+  %% Links between paliers for Durcissement des postes
+  Durcissement_des_postes_Palier_1 --- Durcissement_des_postes_Palier_2
+  Durcissement_des_postes_Palier_2 --- Durcissement_des_postes_Palier_3
+  Durcissement_des_postes_Palier_3 --- Durcissement_des_postes_Palier_4
+  subgraph Cloisonnement_des_outils_d_administration["<center>Cloisonnement des outils<br>d&#39;administration</center>"]
+    direction BT
+    subgraph Cloisonnement_des_outils_d_administration_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-033
+    end
+    subgraph Cloisonnement_des_outils_d_administration_Palier_3["Palier 3"]
+      direction TB
+      ADM-001-032
+    end
+    subgraph Cloisonnement_des_outils_d_administration_Palier_4["Palier 4"]
+      direction TB
+      ADM-001-034
+    end
+  end
+  %% Links between paliers for Cloisonnement des outils d'administration
+  Cloisonnement_des_outils_d_administration_Palier_2 --- Cloisonnement_des_outils_d_administration_Palier_3
+  Cloisonnement_des_outils_d_administration_Palier_3 --- Cloisonnement_des_outils_d_administration_Palier_4
+  subgraph Cloisonnement_des_postes["<center>Cloisonnement des postes</center>"]
+    direction BT
+    subgraph Cloisonnement_des_postes_Palier_1["Palier 1"]
+      direction TB
+      ADM-001-036
+    end
+    subgraph Cloisonnement_des_postes_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-035 ~~~ ADM-001-040
+      ADM-001-037
+    end
+    subgraph Cloisonnement_des_postes_Palier_3["Palier 3"]
+      direction TB
+      ADM-001-038
+      ADM-001-039
+    end
+  end
+  %% Links between paliers for Cloisonnement des postes
+  Cloisonnement_des_postes_Palier_1 --- Cloisonnement_des_postes_Palier_2
+  Cloisonnement_des_postes_Palier_2 --- Cloisonnement_des_postes_Palier_3
+  subgraph Filtrage_des_communications["<center>Filtrage des communications</center>"]
+    direction BT
+    subgraph Filtrage_des_communications_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-041
+    end
+    subgraph Filtrage_des_communications_Palier_3["Palier 3"]
+      direction TB
+      ADM-001-042
+    end
+  end
+  %% Links between paliers for Filtrage des communications
+  Filtrage_des_communications_Palier_2 --- Filtrage_des_communications_Palier_3
+  subgraph Maintien_en_condition_de_Securite["<center>Maintien en condition de<br>Sécurité</center>"]
+    direction BT
+    subgraph Maintien_en_condition_de_Securite_Palier_1["Palier 1"]
+      direction TB
+      ADM-001-043 ~~~ ADM-001-045
+      ADM-001-044
+    end
+    subgraph Maintien_en_condition_de_Securite_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-046
+      ADM-001-047
+    end
+  end
+  %% Links between paliers for Maintien en condition de Sécurité
+  Maintien_en_condition_de_Securite_Palier_1 --- Maintien_en_condition_de_Securite_Palier_2
+  subgraph Maitrise_des_entrants["<center>Maitrise des entrants</center>"]
+    direction BT
+    subgraph Maitrise_des_entrants_Palier_1["Palier 1"]
+      direction TB
+      ADM-001-049
+    end
+    subgraph Maitrise_des_entrants_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-050
+    end
+    subgraph Maitrise_des_entrants_Palier_3["Palier 3"]
+      direction TB
+      ADM-001-048
+      ADM-001-051
+    end
+  end
+  %% Links between paliers for Maitrise des entrants
+  Maitrise_des_entrants_Palier_1 --- Maitrise_des_entrants_Palier_2
+  Maitrise_des_entrants_Palier_2 --- Maitrise_des_entrants_Palier_3
+  subgraph Sauvegardes["<center>Sauvegardes</center>"]
+    direction BT
+    subgraph Sauvegardes_Palier_1["Palier 1"]
+      direction TB
+      ADM-001-052
+    end
+    subgraph Sauvegardes_Palier_2["Palier 2"]
+      direction TB
+      ADM-001-053
+    end
+  end
+  %% Links between paliers for Sauvegardes
+  Sauvegardes_Palier_1 --- Sauvegardes_Palier_2
+end
+%% Links between verticales for Administration
+  Identification__Authentification___Controle_d_acces --- Controle_et_Inventaire_des_comptes_d_administration
+  Controle_et_Inventaire_des_comptes_d_administration --- Chiffrement_des_donnees
+  Chiffrement_des_donnees --- Durcissement_des_postes
+  Durcissement_des_postes --- Cloisonnement_des_outils_d_administration
+  Cloisonnement_des_outils_d_administration --- Cloisonnement_des_postes
+  Cloisonnement_des_postes --- Filtrage_des_communications
+  Filtrage_des_communications --- Maintien_en_condition_de_Securite
+  Maintien_en_condition_de_Securite --- Maitrise_des_entrants
+  Maitrise_des_entrants --- Sauvegardes
+%% Apply style
+class Administration Thematique
+class Identification__Authentification___Controle_d_acces Verticale
+class Controle_et_Inventaire_des_comptes_d_administration Verticale
+class Chiffrement_des_donnees Verticale
+class Durcissement_des_postes Verticale
+class Cloisonnement_des_outils_d_administration Verticale
+class Cloisonnement_des_postes Verticale
+class Filtrage_des_communications Verticale
+class Maintien_en_condition_de_Securite Verticale
+class Maitrise_des_entrants Verticale
+class Sauvegardes Verticale
+class Identification__Authentification___Controle_d_acces_Palier_0 Pallier
+class Identification__Authentification___Controle_d_acces_Palier_1 Pallier
+class Identification__Authentification___Controle_d_acces_Palier_2 Pallier
+class Identification__Authentification___Controle_d_acces_Palier_3 Pallier
+class Identification__Authentification___Controle_d_acces_Palier_4 Pallier
+class Identification__Authentification___Controle_d_acces_Palier_5 Pallier
+class Controle_et_Inventaire_des_comptes_d_administration_Palier_1 Pallier
+class Controle_et_Inventaire_des_comptes_d_administration_Palier_2 Pallier
+class Chiffrement_des_donnees_Palier_1 Pallier
+class Chiffrement_des_donnees_Palier_2 Pallier
+class Chiffrement_des_donnees_Palier_3 Pallier
+class Durcissement_des_postes_Palier_1 Pallier
+class Durcissement_des_postes_Palier_2 Pallier
+class Durcissement_des_postes_Palier_3 Pallier
+class Durcissement_des_postes_Palier_4 Pallier
+class Cloisonnement_des_outils_d_administration_Palier_2 Pallier
+class Cloisonnement_des_outils_d_administration_Palier_3 Pallier
+class Cloisonnement_des_outils_d_administration_Palier_4 Pallier
+class Cloisonnement_des_postes_Palier_1 Pallier
+class Cloisonnement_des_postes_Palier_2 Pallier
+class Cloisonnement_des_postes_Palier_3 Pallier
+class Filtrage_des_communications_Palier_2 Pallier
+class Filtrage_des_communications_Palier_3 Pallier
+class Maintien_en_condition_de_Securite_Palier_1 Pallier
+class Maintien_en_condition_de_Securite_Palier_2 Pallier
+class Maitrise_des_entrants_Palier_1 Pallier
+class Maitrise_des_entrants_Palier_2 Pallier
+class Maitrise_des_entrants_Palier_3 Pallier
+class Sauvegardes_Palier_1 Pallier
+class Sauvegardes_Palier_2 Pallier
+class ADM-001-001 Mesure
+class ADM-001-002 Mesure
+class ADM-001-003 Mesure
+class ADM-001-004 Mesure
+class ADM-001-005 Mesure
+class ADM-001-006 Mesure
+class ADM-001-007 Mesure
+class ADM-001-008 Mesure
+class ADM-001-009 Mesure
+class ADM-001-010 Mesure
+class ADM-001-011 Mesure
+class ADM-001-012 Mesure
+class ADM-001-013 Mesure
+class ADM-001-014 Mesure
+class ADM-001-015 Mesure
+class ADM-001-016 Mesure
+class ADM-001-017 Mesure
+class ADM-001-018 Mesure
+class ADM-001-019 Mesure
+class ADM-001-020 Mesure
+class ADM-001-021 Mesure
+class ADM-001-022 Mesure
+class ADM-001-023 Mesure
+class ADM-001-024 Mesure
+class ADM-001-025 Mesure
+class ADM-001-026 Mesure
+class ADM-001-027 Mesure
+class ADM-001-028 Mesure
+class ADM-001-029 Mesure
+class ADM-001-030 Mesure
+class ADM-001-031 Mesure
+class ADM-001-032 Mesure
+class ADM-001-033 Mesure
+class ADM-001-034 Mesure
+class ADM-001-035 Mesure
+class ADM-001-036 Mesure
+class ADM-001-037 Mesure
+class ADM-001-038 Mesure
+class ADM-001-039 Mesure
+class ADM-001-040 Mesure
+class ADM-001-041 Mesure
+class ADM-001-042 Mesure
+class ADM-001-043 Mesure
+class ADM-001-044 Mesure
+class ADM-001-045 Mesure
+class ADM-001-046 Mesure
+class ADM-001-047 Mesure
+class ADM-001-048 Mesure
+class ADM-001-049 Mesure
+class ADM-001-050 Mesure
+class ADM-001-051 Mesure
+class ADM-001-052 Mesure
+class ADM-001-053 Mesure
