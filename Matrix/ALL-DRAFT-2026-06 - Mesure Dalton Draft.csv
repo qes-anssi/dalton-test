@@ -1,425 +1,417 @@
-ID;Thématique;Intitulé;Palier;Verticale;Description;Justification / Risque;Exemple / Cas d'usage;Type de mesure (M, M+ ou M-) ou de recommendation (R--, R-, R, R+);Mesure (M) ou recommendation (R) associée
-ADM-001-001;Administration;Protéger les comptes d'administration avec un mot de passe;0;Identification, Authentification & Contrôle d'accès;Vous mettez en place un mot de passe robuste sur tous les comptes d'administration, si ce n'est déjà fait;;;M;
-ADM-001-002;Administration;Supprimer/remplacer les comptes par défaut sur les systèmes et outils d'administration;1;Identification, Authentification & Contrôle d'accès;Vous remplacez systèmatiquement les comptes et mots de passe d'administration par défaut qui seraient présents sur un nouveau materiel, et lorsque vous souscrivez à un nouveau service;;;M;
-ADM-001-003;Administration;Mettre en œuvre un gestionnaire de mots de passe pour les comptes d'administration;1;Identification, Authentification & Contrôle d'accès;Vous déployez un outil permettant la génération et le stockage de mots de passe. Il peut prendre la forme d'une simple application créant une base locale chiffrée. Ce gestionnaire de mot de passe doit permettre la génération de mots de passe robustes.;;;M;
-ADM-001-004;Administration;Mettre entre œuvre une authentification à deux facteurs;1;Identification, Authentification & Contrôle d'accès;Vous déployez un second facteur d'authentification. Si votre système d'information administré est infogéré ou dans un cloud, vous utilisez en priorité les outils déjà prévu par votre fournisseur;;Authentification par SMS ou email acceptable.;M;
-ADM-001-005;Administration;Utiliser des comptes distincts selon les environnements;2;Identification, Authentification & Contrôle d'accès;Lorsqu'un même administrateur peut agir sur des systèmes ou environnements de nature différentes (sensibilité ou exposition), alors vous créez des comptes distincts selon ces environnements;;;M;
-ADM-001-006;Administration;"Protéger les comptes d'administration avec une authentification ""forte""";2;Identification, Authentification & Contrôle d'accès;"Vous mettez en place une authentification ""forte"", généralement à base d'une clé cryptographique, sur tous les comptes d'administration.  ";;Authentification par certificats ou bi-clés;M;
-ADM-001-007;Administration;Attribuer les droits d'administration à des groupes;2;Identification, Authentification & Contrôle d'accès;Pour faciliter la gestion des droits d'administration (ajout, modification et suppression), vous attribuez les droits d’administration à des groupes de comptes d’administration, plutôt qu’unitairement à des comptes d’administration;;;M;
-ADM-001-008;Administration;Journaliser basiquement l'utilisation des comptes d'administration;2;Identification, Authentification & Contrôle d'accès;Pour les comptes d'administration, vous journalisez au minimum les créations de compte, les réussites et des échecs d'authentification. Cela peut consister à s'assurer que la journalisation native et locale du système ou de l'équipement est activée.;;;M;
-ADM-001-009;Administration;Utiliser des comptes individuels pour l'administration;3;Identification, Authentification & Contrôle d'accès;Lorsque plusieurs administrateurs peuvent agir sur un système, vous devez permettre un cloisonnement entre ces utilisateurs en configurant plusieurs comptes distincts. Ces comptes peuvent être nominatifs afin de faciliter l'imputabilité;;;M;
-ADM-001-010;Administration;"Utiliser des comptes et mots de passe uniques pour les comptes d'administration ""locaux"" sur les systèmes";3;Identification, Authentification & Contrôle d'accès;"(Reboucler avec la thématique ""AAA""). Vous créez des comptes et des mots de passe uniques et distincts pour chacune des machines qui composent votre système d'information d'administration";;;M;
-ADM-001-011;Administration;Mettre entre œuvre une authentification à deux facteurs avec jeton d’authentification physique;4;Identification, Authentification & Contrôle d'accès;Vous déployez un second facteur d'authentification par jeton d’authentification physique;;Authentification par  carte à puce ou Yubikey;M;
-ADM-001-012;Administration;Mettre en œuvre une gestion centralisée des comptes d'administration;3;Identification, Authentification & Contrôle d'accès;Lorsque le nombre d'administrateur devient trop grand pour maintenir une gestion simple, vous devez mettre en œuvre un système de gestion centralisée de leurs comptes et droitr à l'aide d'un annuaire;;;M;
-ADM-001-013;Administration;Limiter les droits des administrateurs aux seules actions qu'ils ont besoin de réaliser;3;Identification, Authentification & Contrôle d'accès;"Vous configurez sur vos systèmes les comptes d'administration afin qu'ils ne disposent que des droits strictement nécessaires à leurs tâches. En particulier s'ils sont hebergés dans le cloud où la configuration des comptes est facilitée par la mise à disposition d'un annuaire de type ""IAM"" permettant une gestion fine des utilisateurs.";;;M;
-ADM-001-014;Administration;Éviter l'identification explicite des comptes d'administration;1;Identification, Authentification & Contrôle d'accès;Vous définissez et mettez en œuvre une convention de nommage des comptes d'administration en prennant garde à de ne pas les rendre identifiables de façon explicite et triviale par un attaquant.;;"Eviter les mentions ""adm"", ""admin"", ""root"".";M;
-ADM-001-015;Administration;"Mettre en œuvre une architecture de type ""Zero Trust"" pour les accès d'administration des systèmes";5;Identification, Authentification & Contrôle d'accès;"Vous souscrivez ou déployez des mécanisme d'accès granulaires et dynamiques tels que les solutions de contrôle d'accès de type ""Zero Trust"" pour renforcer le cloisonnement et le contrôle d'accès aux ressources d'administration et aux ressources administrées";;;M;
-ADM-001-016;Administration;Journaliser finement l'utilisation des comptes d'administration;4;Identification, Authentification & Contrôle d'accès;Au delà de la journalisation basique, et en cohérence avec vos capacités de détection, vous vous référez au guide journalisation de l'ANSSI pour journaliser la gestion et l'activité des comptes d'administration. Idéalement, les journaux sont centralisés. Vous devez être en capacité de traiter les informations remontées dans un délai court (24h).;;;M;
-ADM-001-017;Administration;Distinguer les comptes des rôles d'administration des autres rôles;1;Contrôle et Inventaire des comptes d’administration;"Vous créez des comptes spécifiques pour l'activité d'administration de vos services. Les autres comptes - dit ""usuels""- sont alors exclus de ces activités. Il est important que vous consideriez d'inclure dans la communuauté des administrateurs les comptes d'administration dits ""fonctionnels"" dès lors que leur niveau de pouvoir pourait avoir un impact lors d'une attaque. ";;;M;
-ADM-001-018;Administration;Tenir à jour la liste des comptes d'administration;2;Contrôle et Inventaire des comptes d’administration;Vous maintenez à jour une liste des comptes d'administration, ainsi que leur niveau de privilèges;;;M;
-ADM-001-019;Administration;"Désactiver ou supprimer les comptes d'administration expirés. 
-Avoir une stratégie de cycle de vie des comptes d'administration";1;Contrôle et Inventaire des comptes d’administration;"Vous définissez les règles de création, modification et suppression des comptes liés à une activité d'administration. Vous les désactivez dès lors qu'ils ne sont plus nécessaires. Vous les supprimez après ""un certain temps"".";;;M;
-ADM-001-020;Administration;Utiliser des protocoles sécurisés;1;Chiffrement des données;"Vous abandonnez tout type de protocoles qui seraient soit ""clairs"" (ex. : Telnet) ou s'appuyant sur des algorithmes obsolètes (3DES, RSA<2048, etc.)";;;M;
-ADM-001-021;Administration;Chiffrer les données en transit;3;Chiffrement des données;Vous configurez systématiquement un chiffrement des flux d'administration dès lors qu'ils transitent sur des réseaux qui ne sont pas dédiés à votre activité d'administration;;;M;
-ADM-001-022;Administration;Chiffrer les données au repos;2;Chiffrement des données;Vous configurez systématiquement un chiffrement des données d'administration dès lors qu'ils sont stockés sur des dispositifs qui ne sont pas dédiés à votre activité d'administration;;;M;
-ADM-001-023;Administration;Chiffrer les sauvegardes;2;Chiffrement des données;Vous configurez systématiquement un chiffrement de vos sauvegardes, au minimum par mot de passe. Vous les conservez physiquement hors-ligne (par exemple sur disques externes, clés USB ou bandes),;;;M;
-ADM-001-024;Administration;Utiliser des versions de systèmes d'exploitation (OS) supportées;1;Durcissement des postes;Vous installez sur les environnements d'administration (postes, serveurs...) des système d’exploitation dont l’éditeur fournit encore des mises à jour et des correctifs de sécurité et de stabilité, ainsi qu'un support technique en cas d'incident ou difficulté;;;M;
-ADM-001-025;Administration;Supprimer des postes d'administration (dédié ou non) les élements non indispensable à l'administration ;1;Durcissement des postes;Vous supprimez des postes d'administration tous les logiciels, services et fonctionalités qui ne sont pas essentiels à l'activité d'administration. Les logiciels liés à une activité bureautique ou personnelle doivent être exclues de ces postes;;;M;
-ADM-001-026;Administration;Durcir le système du terminal utilisé pour les taches d'administration;1;Durcissement des postes;Vous configurez le système d'exploitation de vos terminaux utilisés pour l'administration en appliquant des protections maximales;;;M;
-ADM-001-027;Administration;Durcir les navigateurs du terminal utilisé pour les tâches d'administration;1;Durcissement des postes;Vous installez et configurez un navigateur sécurisé pour vos activités d'administration;;"* Utiliser une version de navigateur supportée
-* Durcir les paramètres de confidentialité
-* Bloquer l’exécution des plugins et extensions inutiles
+ID;ThÃ©matique;IntitulÃ©;Palier;Verticale;Description;Justification / Risque;Exemple / Cas d'usage;Type de mesure (M, M+ ou M-) ou de recommendation (R--, R-, R, R+);Mesure (M) ou recommendation (R) associÃ©e
+ADM-001-001;Administration;ProtÃ©ger les comptes d'administration avec un mot de passe;0;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Vous mettez en place un mot de passe robuste sur tous les comptes d'administration, si ce n'est dÃ©jÃ  fait";;;M;
+ADM-001-002;Administration;Supprimer/remplacer les comptes par dÃ©faut sur les systÃ¨mes et outils d'administration;1;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Vous remplacez systÃ¨matiquement les comptes et mots de passe d'administration par dÃ©faut qui seraient prÃ©sents sur un nouveau materiel, et lorsque vous souscrivez Ã  un nouveau service";;;M;
+ADM-001-003;Administration;Mettre en Å“uvre un gestionnaire de mots de passe pour les comptes d'administration;1;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";Vous dÃ©ployez un outil permettant la gÃ©nÃ©ration et le stockage de mots de passe. Il peut prendre la forme d'une simple application crÃ©ant une base locale chiffrÃ©e. Ce gestionnaire de mot de passe doit permettre la gÃ©nÃ©ration de mots de passe robustes.;;;M;
+ADM-001-004;Administration;Mettre entre Å“uvre une authentification Ã  deux facteurs;1;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Vous dÃ©ployez un second facteur d'authentification. Si votre systÃ¨me d'information administrÃ© est infogÃ©rÃ© ou dans un cloud, vous utilisez en prioritÃ© les outils dÃ©jÃ  prÃ©vu par votre fournisseur";;Authentification par SMS ou email acceptable.;M;
+ADM-001-005;Administration;Utiliser des comptes distincts selon les environnements;2;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Lorsqu'un mÃªme administrateur peut agir sur des systÃ¨mes ou environnements de nature diffÃ©rentes (sensibilitÃ© ou exposition), alors vous crÃ©ez des comptes distincts selon ces environnements";;;M;
+ADM-001-006;Administration;"ProtÃ©ger les comptes d'administration avec une authentification ""forte""";2;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Vous mettez en place une authentification ""forte"", gÃ©nÃ©ralement Ã  base d'une clÃ© cryptographique, sur tous les comptes d'administration.";;Authentification par certificats ou bi-clÃ©s;M;
+ADM-001-007;Administration;Attribuer les droits d'administration Ã  des groupes;2;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Pour faciliter la gestion des droits d'administration (ajout, modification et suppression), vous attribuez les droits dâ€™administration Ã  des groupes de comptes dâ€™administration, plutÃ´t quâ€™unitairement Ã  des comptes dâ€™administration";;;M;
+ADM-001-008;Administration;Journaliser basiquementÂ l'utilisation des comptes d'administration;2;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Pour les comptes d'administration, vous journalisez au minimum les crÃ©ations de compte, les rÃ©ussites et des Ã©checs d'authentification. Cela peut consister Ã  s'assurer que la journalisation native et locale du systÃ¨me ou de l'Ã©quipement est activÃ©e.";;;M;
+ADM-001-009;Administration;Utiliser des comptes individuels pour l'administration;3;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Lorsque plusieurs administrateurs peuvent agir sur un systÃ¨me, vous devez permettre un cloisonnement entre ces utilisateurs en configurant plusieurs comptes distincts. Ces comptes peuvent Ãªtre nominatifs afin de faciliter l'imputabilitÃ©";;;M;
+ADM-001-010;Administration;"Utiliser des comptes et mots de passe uniques pour les comptes d'administration ""locaux"" sur les systÃ¨mes";3;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"(Reboucler avec la thÃ©matique ""AAA""). Vous crÃ©ez des comptes et des mots de passe uniques et distincts pour chacune des machines qui composent votre systÃ¨me d'information d'administration";;;M;
+ADM-001-011;Administration;Mettre entre Å“uvre une authentification Ã  deux facteurs avec jeton dâ€™authentification physique;4;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";Vous dÃ©ployez un second facteur d'authentification par jeton dâ€™authentification physique;;Authentification par  carte Ã  puce ou Yubikey;M;
+ADM-001-012;Administration;Mettre en Å“uvre une gestion centralisÃ©e des comptes d'administration;3;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Lorsque le nombre d'administrateur devient trop grand pour maintenir une gestion simple, vous devez mettre en Å“uvre un systÃ¨me de gestion centralisÃ©e de leurs comptes et droitr Ã  l'aide d'un annuaire";;;M;
+ADM-001-013;Administration;Limiter les droits des administrateurs aux seules actions qu'ils ont besoin de rÃ©aliser;3;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Vous configurez sur vos systÃ¨mes les comptes d'administration afin qu'ils ne disposent que des droits strictement nÃ©cessaires Ã  leurs tÃ¢ches. En particulier s'ils sont hebergÃ©s dans le cloud oÃ¹ la configuration des comptes est facilitÃ©e par la mise Ã  disposition d'un annuaire de type ""IAM"" permettant une gestion fine des utilisateurs.";;;M;
+ADM-001-014;Administration;Ã‰viter l'identification explicite des comptes d'administration;1;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";Vous dÃ©finissez et mettez en Å“uvre une convention de nommage des comptes d'administration en prennant garde Ã  de ne pas les rendre identifiables de faÃ§on explicite et triviale par un attaquant.;;"Eviter les mentions ""adm"", ""admin"", ""root"".";M;
+ADM-001-015;Administration;"Mettre en Å“uvre une architecture de type ""Zero Trust"" pour les accÃ¨s d'administration des systÃ¨mes";5;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Vous souscrivez ou dÃ©ployez des mÃ©canisme d'accÃ¨s granulaires et dynamiques tels que les solutions de contrÃ´le d'accÃ¨s de type ""Zero Trust"" pour renforcer le cloisonnement et le contrÃ´le d'accÃ¨s aux ressources d'administration et aux ressources administrÃ©es";;;M;
+ADM-001-016;Administration;Journaliser finement l'utilisation des comptes d'administration;4;"Identification, Authentification & ContrÃ´le d'accÃ¨s PIPO";"Au delÃ  de la journalisation basique, et en cohÃ©rence avec vos capacitÃ©s de dÃ©tection, vous vous rÃ©fÃ©rez au guide journalisation de l'ANSSI pour journaliser la gestion et l'activitÃ© des comptes d'administration. IdÃ©alement, les journaux sont centralisÃ©s. Vous devez Ãªtre en capacitÃ© de traiter les informations remontÃ©es dans un dÃ©lai court (24h).";;;M;
+ADM-001-017;Administration;Distinguer les comptes des rÃ´les d'administration des autres rÃ´les;1;ContrÃ´le et Inventaire des comptes dâ€™administration;"Vous crÃ©ez des comptes spÃ©cifiques pour l'activitÃ© d'administration de vos services. Les autres comptes - dit ""usuels""- sont alors exclus de ces activitÃ©s. Il est important que vous consideriez d'inclure dans la communuautÃ© des administrateurs les comptes d'administration dits ""fonctionnels"" dÃ¨s lors que leur niveau de pouvoir pourait avoir un impact lors d'une attaque.";;;M;
+ADM-001-018;Administration;Tenir Ã  jour la liste des comptes d'administration;2;ContrÃ´le et Inventaire des comptes dâ€™administration;"Vous maintenez Ã  jour une liste des comptes d'administration, ainsi que leur niveau de privilÃ¨ges";;;M;
+ADM-001-019;Administration;"DÃ©sactiver ou supprimer les comptes d'administration expirÃ©s. 
+Avoir une stratÃ©gie de cycle de vie des comptes d'administration";1;ContrÃ´le et Inventaire des comptes dâ€™administration;"Vous dÃ©finissez les rÃ¨gles de crÃ©ation, modification et suppression des comptes liÃ©s Ã  une activitÃ© d'administration. Vous les dÃ©sactivez dÃ¨s lors qu'ils ne sont plus nÃ©cessaires. Vous les supprimez aprÃ¨s ""un certain temps"".";;;M;
+ADM-001-020;Administration;Utiliser des protocoles sÃ©curisÃ©s;1;Chiffrement des donnÃ©es;"Vous abandonnez tout type de protocoles qui seraient soit ""clairs"" (ex. : Telnet) ou s'appuyant sur des algorithmes obsolÃ¨tes (3DES, RSA<2048, etc.)";;;M;
+ADM-001-021;Administration;Chiffrer les donnÃ©es en transit;3;Chiffrement des donnÃ©es;Vous configurez systÃ©matiquement un chiffrement des flux d'administration dÃ¨s lors qu'ils transitent sur des rÃ©seaux qui ne sont pas dÃ©diÃ©s Ã  votre activitÃ© d'administration;;;M;
+ADM-001-022;Administration;Chiffrer les donnÃ©es au repos;2;Chiffrement des donnÃ©es;Vous configurez systÃ©matiquement un chiffrement des donnÃ©es d'administration dÃ¨s lors qu'ils sont stockÃ©s sur des dispositifs qui ne sont pas dÃ©diÃ©s Ã  votre activitÃ© d'administration;;;M;
+ADM-001-023;Administration;Chiffrer les sauvegardes;2;Chiffrement des donnÃ©es;"Vous configurez systÃ©matiquement un chiffrement de vos sauvegardes, au minimum par mot de passe. Vous les conservez physiquement hors-ligne (par exemple sur disques externes, clÃ©s USB ou bandes),";;;M;
+ADM-001-024;Administration;Utiliser des versions de systÃ¨mes d'exploitation (OS) supportÃ©es;1;Durcissement des postes;"Vous installez sur les environnements d'administration (postes, serveurs...) des systÃ¨me dâ€™exploitation dont lâ€™Ã©diteur fournit encore des mises Ã  jour et des correctifs de sÃ©curitÃ© et de stabilitÃ©, ainsi qu'un support technique en cas d'incident ou difficultÃ©";;;M;
+ADM-001-025;Administration;Supprimer des postes d'administration (dÃ©diÃ© ou non) les Ã©lements non indispensable Ã  l'administration;1;Durcissement des postes;"Vous supprimez des postes d'administration tous les logiciels, services et fonctionalitÃ©s qui ne sont pas essentiels Ã  l'activitÃ© d'administration. Les logiciels liÃ©s Ã  une activitÃ© bureautique ou personnelle doivent Ãªtre exclues de ces postes";;;M;
+ADM-001-026;Administration;Durcir le systÃ¨me du terminal utilisÃ© pour les taches d'administration;1;Durcissement des postes;Vous configurez le systÃ¨me d'exploitation de vos terminaux utilisÃ©s pour l'administration en appliquant des protections maximales;;;M;
+ADM-001-027;Administration;Durcir les navigateurs du terminal utilisÃ© pour les tÃ¢ches d'administration;1;Durcissement des postes;Vous installez et configurez un navigateur sÃ©curisÃ© pour vos activitÃ©s d'administration;;"* Utiliser une version de navigateur supportÃ©e
+* Durcir les paramÃ¨tres de confidentialitÃ©
+* Bloquer lâ€™exÃ©cution des plugins et extensions inutiles
 * Forcer le mode HTTPS-only";M;
-ADM-001-028;Administration;Mettre en œuvre un antivirus sur les terminaux d'administration;1;Durcissement des postes;Vous installez et maintenez à jour une solution d'antivirus sur les terminaux utilisés pour une activité d'administration.  Vous utilisez en priorité l'antivirus natif de votre système d'exploitation si celui-ci existe.;;;M;
-ADM-001-029;Administration;Configurer un service DNS filtrant;1;Durcissement des postes;Vous configurez sur vos postes ou vos systèmes qui ne sont pas dédiés à l'administration un service DNS offrant un service de protection contre les domaines frauduleux;;;M;
-ADM-001-030;Administration;Activer le pare-feu local sur les terminaux d'administration;2;Durcissement des postes;Vous installez et configurez un pare-feu logiciel sur le système d'exploitation du terminal utilisé pour les tâches d'administration. Vous utilisez en priorité le pare-feu natif de votre système d'exploitation si celui-ci existe;;;M;
-ADM-001-031;Administration;Mettre en œuvre un EDR sur les terminaux d'administration;4;Durcissement des postes;Vous installez et maintenez à jour une solution d'EDR sur les terminaux utilisés pour une activité d'administration. Vous n'implémentez cette recommandation que si vous avez la maturité suffisante pour le configurer, le maintenir et l'inclure dans un écosystème de journalisation et détéction adapté.;;;M;
-ADM-001-032;Administration;Mettre en œuvre un SI d'administration intermédiaire dédié entre les terminaux et le SI de production;3;Cloisonnement des outils d'administration;"Lorsque la taille des systèmes d'information devient conséquente, vous devez envisager la mise en place d'un système d'information (au minimum ""serveurs"") dédié aux activités d'administration. Ce SI dédié regroupera tous les outils, les annuaires, les rebonds [...] nécessaires à l'activité d'administration";;;M;
-ADM-001-033;Administration;Mettre en œuvre un rebond en intermédiaire entre les terminaux d'administration et le SI administré;2;Cloisonnement des outils d'administration;"Vous mettez en œuvre des systèmes de type ""rebonds"" en intermédiaire entre vos terminaux et vos systèmes administrés. Associés à un filtrage strict (depuis les terminaux et vers les systèmes administrés), ces systèmes vous permettront de créer un point d'entrée centralisé. Cette mesure est d'autant plus nécessaire (même si souvent insuffisante) lorsque des terminaux usuels sont utilisés pour des activités d'administration";;"La mise en œuvre d'un ""bastion"" en tant que ""serveur de rebond"" est acceptable si ce dernier est durci et parfaitement maitrisé et configuré.";M;
-ADM-001-034;Administration;Limiter l'exposition du serveurs de rebond à un tunnel VPN;4;Cloisonnement des outils d'administration;Vous configurez un tunnel (IPSec ou TLS) pour l'accès des terminaux au serveur de rebond. Vous supprimez toute exposition directe du serveur de rebond à Internet.;;;M;
-ADM-001-035;Administration;Mettre en œuvre des postes maitrisés par l'entité;2;Cloisonnement des postes;"Vous mettez à disposition de vos administrateurs des postes maitrisés par vos services. Vous interdisez les pratiques de ""bring your own devices"" pour vos administrateurs.";;;M;
-ADM-001-036;Administration;Mettre en œuvre un environnement logiciel dédié aux actions d'administration sur un poste usuel;1;Cloisonnement des postes;Vous devez installer un environnement logiciel spécifique aux activité d'administration si vous utilisez un terminal usuel pour l'administration;;"* Logiciel de sandboxing
-* Navigateur spécifique et dédié
+ADM-001-028;Administration;Mettre en Å“uvre un antivirus sur les terminaux d'administration;1;Durcissement des postes;Vous installez et maintenez Ã  jour une solution d'antivirus sur les terminaux utilisÃ©s pour une activitÃ© d'administration.  Vous utilisez en prioritÃ© l'antivirus natif de votre systÃ¨me d'exploitation si celui-ci existe.;;;M;
+ADM-001-029;Administration;Configurer un service DNS filtrant;1;Durcissement des postes;Vous configurez sur vos postes ou vos systÃ¨mes qui ne sont pas dÃ©diÃ©s Ã  l'administration un service DNS offrant un service de protection contre les domaines frauduleux;;;M;
+ADM-001-030;Administration;Test;2;Durcissement des postes;Vous installez et configurez un pare-feu logiciel sur le systÃ¨me d'exploitation du terminal utilisÃ© pour les tÃ¢ches d'administration. Vous utilisez en prioritÃ© le pare-feu natif de votre systÃ¨me d'exploitation si celui-ci existe;;;M;
+ADM-001-031;Administration;Mettre en Å“uvre un EDR sur les terminaux d'administration;4;Durcissement des postes;"Vous installez et maintenez Ã  jour une solution d'EDR sur les terminaux utilisÃ©s pour une activitÃ© d'administration. Vous n'implÃ©mentez cette recommandation que si vous avez la maturitÃ© suffisante pour le configurer, le maintenir et l'inclure dans un Ã©cosystÃ¨me de journalisation et dÃ©tÃ©ction adaptÃ©.";;;M;
+ADM-001-032;Administration;Mettre en Å“uvre un SI d'administration intermÃ©diaire dÃ©diÃ© entre les terminaux et le SI de production;3;Cloisonnement des outils d'administration;"Lorsque la taille des systÃ¨mes d'information devient consÃ©quente, vous devez envisager la mise en place d'un systÃ¨me d'information (au minimum ""serveurs"") dÃ©diÃ© aux activitÃ©s d'administration. Ce SI dÃ©diÃ© regroupera tous les outils, les annuaires, les rebonds [...] nÃ©cessaires Ã  l'activitÃ© d'administration";;;M;
+ADM-001-033;Administration;Mettre en Å“uvre un rebond en intermÃ©diaire entre les terminaux d'administration et le SI administrÃ©;2;Cloisonnement des outils d'administration;"Vous mettez en Å“uvre des systÃ¨mes de type ""rebonds"" en intermÃ©diaire entre vos terminaux et vos systÃ¨mes administrÃ©s. AssociÃ©s Ã  un filtrage strict (depuis les terminaux et vers les systÃ¨mes administrÃ©s), ces systÃ¨mes vous permettront de crÃ©er un point d'entrÃ©e centralisÃ©. Cette mesure est d'autant plus nÃ©cessaire (mÃªme si souvent insuffisante) lorsque des terminaux usuels sont utilisÃ©s pour des activitÃ©s d'administration";;"La mise en Å“uvre d'un ""bastion"" en tant que ""serveur de rebond"" est acceptable si ce dernier est durci et parfaitement maitrisÃ© et configurÃ©.";M;
+ADM-001-034;Administration;Limiter l'exposition du serveurs de rebond Ã  un tunnel VPN;4;Cloisonnement des outils d'administration;Vous configurez un tunnel (IPSec ou TLS) pour l'accÃ¨s des terminaux au serveur de rebond. Vous supprimez toute exposition directe du serveur de rebond Ã  Internet.;;;M;
+ADM-001-035;Administration;Mettre en Å“uvre des postes maitrisÃ©s par l'entitÃ©;2;Cloisonnement des postes;"Vous mettez Ã  disposition de vos administrateurs des postes maitrisÃ©s par vos services. Vous interdisez les pratiques de ""bring your own devices"" pour vos administrateurs.";;;M;
+ADM-001-036;Administration;Mettre en Å“uvre un environnement logiciel dÃ©diÃ© aux actions d'administration sur un poste usuel;1;Cloisonnement des postes;Vous devez installer un environnement logiciel spÃ©cifique aux activitÃ© d'administration si vous utilisez un terminal usuel pour l'administration;;"* Logiciel de sandboxing
+* Navigateur spÃ©cifique et dÃ©diÃ©
 * RBI/Remote Browser Isolation";M;
-ADM-001-037;Administration;Mettre en œuvre une machine virtuelle sur un poste usuel pour les actions d'administration;2;Cloisonnement des postes;Vous devez installer une machine virtuelle spécifique aux activités d'administration sur votre poste usuel ;;;M;
-ADM-001-038;Administration;Mettre en œuvre un terminal dédié aux seules actions d'administration;3;Cloisonnement des postes;Vous devez mettre en œuvre un poste dédié aux tâches d'administration. Ce poste sera isolé par nature d'Internet (pas de mail, pas de navigation), ne communiquera que sur des protocoles sécurisés et ses flux seront filtrés au strict nécessaire des activités d'administration;;;M;
-ADM-001-039;Administration;Mettre en œuvre une machine virtuelle sur un poste d'administration pour les actions de bureautique;3;Cloisonnement des postes;Si une activité usuelle (mail, navigation) reste nécessaire depuis un poste dédié aux activités d'administration, alors vous devez cloisonner cette activité usuelle en installant une machine virtuelle spécifique;;;M;
-ADM-001-040;Administration;Mettre en œuvre un double amorçage avec chiffrement des disques sur les terminaux pour cloisonner le système pour l'administration des autres systèmes usuels;2;Cloisonnement des postes;Vous installez un systèmes permettant le double amorçage de deux OS distincts permettant sur un poste unique soit une activité d'administration, soit une activité usuelle. Vous devrez alors mettre en place un chiffrement des données sur chacun des systèmes d'exploitation afin d'assurer un cloisonnement robuste entre les deux environnements;;"* Windows boot manager
+ADM-001-037;Administration;Mettre en Å“uvre une machine virtuelle sur un poste usuel pour les actions d'administration;2;Cloisonnement des postes;Vous devez installer une machine virtuelle spÃ©cifique aux activitÃ©s d'administration sur votre poste usuel;;;M;
+ADM-001-038;Administration;Mettre en Å“uvre un terminal dÃ©diÃ© aux seules actions d'administration;3;Cloisonnement des postes;"Vous devez mettre en Å“uvre un poste dÃ©diÃ© aux tÃ¢ches d'administration. Ce poste sera isolÃ© par nature d'Internet (pas de mail, pas de navigation), ne communiquera que sur des protocoles sÃ©curisÃ©s et ses flux seront filtrÃ©s au strict nÃ©cessaire des activitÃ©s d'administration";;;M;
+ADM-001-039;Administration;Mettre en Å“uvre une machine virtuelle sur un poste d'administration pour les actions de bureautique;3;Cloisonnement des postes;"Si une activitÃ© usuelle (mail, navigation) reste nÃ©cessaire depuis un poste dÃ©diÃ© aux activitÃ©s d'administration, alors vous devez cloisonner cette activitÃ© usuelle en installant une machine virtuelle spÃ©cifique";;;M;
+ADM-001-040;Administration;Mettre en Å“uvre un double amorÃ§age avec chiffrement des disques sur les terminaux pour cloisonner le systÃ¨me pour l'administration des autres systÃ¨mes usuels;2;Cloisonnement des postes;"Vous installez un systÃ¨mes permettant le double amorÃ§age de deux OS distincts permettant sur un poste unique soit une activitÃ© d'administration, soit une activitÃ© usuelle. Vous devrez alors mettre en place un chiffrement des donnÃ©es sur chacun des systÃ¨mes d'exploitation afin d'assurer un cloisonnement robuste entre les deux environnements";;"* Windows boot manager
 * GRUB";M;
-ADM-001-041;Administration;Mettre en œuvre un filtrage périmètrique sur le système d'information d'administration;2;Filtrage des communications;Vous mettez en place un filtrage réseau, même simple, entre votre systèmes d'information d'administration et les autres sysèmes (y compris les systèmes administrés), et en particulier pour les flux depuis et vers Internet. Vous mettez en oeuvre le filtrage sur les équipements (serveurs ou pare-feux) en bordure du systèmes d'information d'administration;;;M;
-ADM-001-042;Administration;Mettre en œuvre un filtrage sur l'ensemble du système d'information d'administration et entre ses composants;3;Filtrage des communications;Vous mettez en place un filtrage réseau, entre les composant de votre systèmes d'administration ainsi qu'entre le système d'administration et le système administré (dans le cloud ou non) afin de limiter les échange au strict necessaire et bloquer toutes les autres communications, en particulier celles en provenance d'Internet si aucun n'est necessaire. Ce filtrage peut être implémenté directement sur les postes et serveurs ou porté par des équipements spécifiques (pare-feux). Dans le cas où un système est hebergé dans le cloud, alors vous devez activer un filtrage sur le service afin que seuls les postes et systèmes autorisés aient accès aux interfaces de gestion (portail Web ou API);;;M;
-ADM-001-043;Administration;Mettre à jour les systèmes liés à l'activité d'administration les plus simples à mettre à jour;1;Maintien en condition de Sécurité;Pour un gain immédiat, vous mettez à jour en priorité tous les systèmes et applications liés à l'activité d'administration qui, selon vous, sont les plus simples à mettre à jour;;;M;
-ADM-001-044;Administration;Activer les mises à jour automatiques ;1;Maintien en condition de Sécurité;Vous configurez partout où c'est possible (systèmes, applications…) les mises à jour automatiques sur vos systèmes d'administration;;;M;
-ADM-001-045;Administration;Suivre les alertes de sécurité du CERT-FR;1;Maintien en condition de Sécurité;Vous vous inscrivez aux alertes du CERT-FR et étudiez l'impact des vulnérabilités sur vos systèmes liés à l'administration;;;M;
-ADM-001-046;Administration;Mettre à jour les outils liés à l'activité d'administration les plus critiques;2;Maintien en condition de Sécurité;Vous mettez à jour en priorité tous les outils les plus critiques. En particulier ceux exposés sur Internet;;;M;
-ADM-001-047;Administration;Mettre à jour les systèmes liés à l'activité d'administration les plus exposés;2;Maintien en condition de Sécurité;Vous mettez à jour en priorité tous les systèmes liés à l'activité d'administration exposés aux réseaux non maitrisés par l'entité. En particulier ceux exposés sur Internet.;;Internet, services tiers type MPLS/VPN;M;
-ADM-001-048;Administration;Vérifier l'authenticité des données entrantes;3;Maitrise des entrants;Vous vous assurez que les données entrantes (en particulier les mises à jour) proviennent de sources légitimes;;;M;
-ADM-001-049;Administration;Vérifier l'intégrité des données entrantes;1;Maitrise des entrants;Vous vérifiez l'intégrité des données entrantes (en particulier les mises à jour) par exemple en validant leur hash ;;;M;
-ADM-001-050;Administration;Analyser les données entrantes;2;Maitrise des entrants;Vous analysez avec un ou plusieurs antivirus les entrants (fichiers, mises à jour…) avant leur introduction dans le SI d'administration;;;M;
-ADM-001-051;Administration;Valider l'innocuité des entrants sur un système cloisonné;3;Maitrise des entrants;"Vous mettez en œuvre un environnement spécifique (par exemple d'intégration ou de pré-production) pour validation des entrants (fichiers, mises à jour…) avant leur introduction dans le SI d'administration ou dans le SI administré. Dans le cas d'un environnement de développement et de pratiques de type DevOps, la ""chaîne d'intégration continue"" peut porter cette fonction";;;M;
-ADM-001-052;Administration;Mettre en œuvre des sauvegardes régulières des éléments d'authentification liés à l'administration;1;Sauvegardes;Vous procédez aux sauvegardes des éléments d'identification et d'authentification (logins, mots de passe, secrets/clés). Vous devrez planifier ces sauvegardes de manière régulière et récurente. Ces sauvegardes devront être régulièrement testées afin de s'assurer de leur intégrité en cas d'incident;;;M;
-ADM-001-053;Administration;Mettre en œuvre des sauvegardes régulières des configurations des éléments de sécurité liés à l'administration;2;Sauvegardes;Vous procédez aux sauvegardes des configurations  des éléments de sécurité d'administration. Vous devrez planifier ces sauvegardes de manière régulière et récurente. Ces sauvegardes devront être régulièrement testées afin de s'assurer de leur intégrité en cas d'incident;;;M;
-SVG-001-001;Sécurité des sauvegardes;Inventorier les données vitales  ;0;Connaitre et identifier le périmètre (données & localisation);;;"Exemples de données potentiellement vitales pour une entreprise : 
- - Statuts de l’entreprise (Kbis, documents d’immatriculation)
+ADM-001-041;Administration;Mettre en Å“uvre un filtrage pÃ©rimÃ¨trique sur le systÃ¨me d'information d'administration;2;Filtrage des communications;"Vous mettez en place un filtrage rÃ©seau, mÃªme simple, entre votre systÃ¨mes d'information d'administration et les autres sysÃ¨mes (y compris les systÃ¨mes administrÃ©s), et en particulier pour les flux depuis et vers Internet. Vous mettez en oeuvre le filtrage sur les Ã©quipements (serveurs ou pare-feux) en bordure du systÃ¨mes d'information d'administration";;;M;
+ADM-001-042;Administration;Mettre en Å“uvre un filtrage sur l'ensemble du systÃ¨me d'information d'administration et entre ses composants;3;Filtrage des communications;"Vous mettez en place un filtrage rÃ©seau, entre les composant de votre systÃ¨mes d'administration ainsi qu'entre le systÃ¨me d'administration et le systÃ¨me administrÃ© (dans le cloud ou non) afin de limiter les Ã©change au strict necessaire et bloquer toutes les autres communications, en particulier celles en provenance d'Internet si aucun n'est necessaire. Ce filtrage peut Ãªtre implÃ©mentÃ© directement sur les postes et serveurs ou portÃ© par des Ã©quipements spÃ©cifiques (pare-feux). Dans le cas oÃ¹ un systÃ¨me est hebergÃ© dans le cloud, alors vous devez activer un filtrage sur le service afin que seuls les postes et systÃ¨mes autorisÃ©s aient accÃ¨s aux interfaces de gestion (portail Web ou API)";;;M;
+ADM-001-043;Administration;Mettre Ã  jour les systÃ¨mes liÃ©s Ã  l'activitÃ© d'administration les plus simples Ã  mettre Ã  jour;1;Maintien en condition de SÃ©curitÃ©;"Pour un gain immÃ©diat, vous mettez Ã  jour en prioritÃ© tous les systÃ¨mes et applications liÃ©s Ã  l'activitÃ© d'administration qui, selon vous, sont les plus simples Ã  mettre Ã  jour";;;M;
+ADM-001-044;Administration;Activer les mises Ã  jour automatiques;1;Maintien en condition de SÃ©curitÃ©;"Vous configurez partout oÃ¹ c'est possible (systÃ¨mes, applicationsâ€¦) les mises Ã  jour automatiques sur vos systÃ¨mes d'administration";;;M;
+ADM-001-045;Administration;Suivre les alertes de sÃ©curitÃ© du CERT-FR;1;Maintien en condition de SÃ©curitÃ©;Vous vous inscrivez aux alertes du CERT-FR et Ã©tudiez l'impact des vulnÃ©rabilitÃ©s sur vos systÃ¨mes liÃ©s Ã  l'administration;;;M;
+ADM-001-046;Administration;Mettre Ã  jour les outils liÃ©s Ã  l'activitÃ© d'administration les plus critiques;2;Maintien en condition de SÃ©curitÃ©;Vous mettez Ã  jour en prioritÃ© tous les outils les plus critiques. En particulier ceux exposÃ©s sur Internet;;;M;
+ADM-001-047;Administration;Mettre Ã  jour les systÃ¨mes liÃ©s Ã  l'activitÃ© d'administration les plus exposÃ©s;2;Maintien en condition de SÃ©curitÃ©;Vous mettez Ã  jour en prioritÃ© tous les systÃ¨mes liÃ©s Ã  l'activitÃ© d'administration exposÃ©s aux rÃ©seaux non maitrisÃ©s par l'entitÃ©. En particulier ceux exposÃ©s sur Internet.;;"Internet, services tiers type MPLS/VPN";M;
+ADM-001-048;Administration;VÃ©rifier l'authenticitÃ© des donnÃ©es entrantes;3;Maitrise des entrants;Vous vous assurez que les donnÃ©es entrantes (en particulier les mises Ã  jour) proviennent de sources lÃ©gitimes;;;M;
+ADM-001-049;Administration;VÃ©rifier l'intÃ©gritÃ© des donnÃ©es entrantes;1;Maitrise des entrants;Vous vÃ©rifiez l'intÃ©gritÃ© des donnÃ©es entrantes (en particulier les mises Ã  jour) par exemple en validant leur hash;;;M;
+ADM-001-050;Administration;Analyser les donnÃ©es entrantes;2;Maitrise des entrants;"Vous analysez avec un ou plusieurs antivirus les entrants (fichiers, mises Ã  jourâ€¦) avant leur introduction dans le SI d'administration";;;M;
+ADM-001-051;Administration;Valider l'innocuitÃ© des entrants sur un systÃ¨me cloisonnÃ©;3;Maitrise des entrants;"Vous mettez en Å“uvre un environnement spÃ©cifique (par exemple d'intÃ©gration ou de prÃ©-production) pour validation des entrants (fichiers, mises Ã  jourâ€¦) avant leur introduction dans le SI d'administration ou dans le SI administrÃ©. Dans le cas d'un environnement de dÃ©veloppement et de pratiques de type DevOps, la ""chaÃ®ne d'intÃ©gration continue"" peut porter cette fonction";;;M;
+ADM-001-052;Administration;Mettre en Å“uvre des sauvegardes rÃ©guliÃ¨res des Ã©lÃ©ments d'authentification liÃ©s Ã  l'administration;1;Sauvegardes;"Vous procÃ©dez aux sauvegardes des Ã©lÃ©ments d'identification et d'authentification (logins, mots de passe, secrets/clÃ©s). Vous devrez planifier ces sauvegardes de maniÃ¨re rÃ©guliÃ¨re et rÃ©curente. Ces sauvegardes devront Ãªtre rÃ©guliÃ¨rement testÃ©es afin de s'assurer de leur intÃ©gritÃ© en cas d'incident";;;M;
+ADM-001-053;Administration;Mettre en Å“uvre des sauvegardes rÃ©guliÃ¨res des configurations des Ã©lÃ©ments de sÃ©curitÃ© liÃ©s Ã  l'administration;2;Sauvegardes;Vous procÃ©dez aux sauvegardes des configurations  des Ã©lÃ©ments de sÃ©curitÃ© d'administration. Vous devrez planifier ces sauvegardes de maniÃ¨re rÃ©guliÃ¨re et rÃ©curente. Ces sauvegardes devront Ãªtre rÃ©guliÃ¨rement testÃ©es afin de s'assurer de leur intÃ©gritÃ© en cas d'incident;;;M;
+SVG-001-001;SÃ©curitÃ© des sauvegardes;Inventorier les donnÃ©es vitales;0;Connaitre et identifier le pÃ©rimÃ¨tre (donnÃ©es & localisation);;;"Exemples de donnÃ©es potentiellement vitales pour une entreprise : 
+ - Statuts de lâ€™entreprise (Kbis, documents dâ€™immatriculation)
  - Contrats essentiels (clients, fournisseurs, bail, assurances)
- - Documents fiscaux et comptables (bilans, commandes & factures en cours, déclarations, TVA)
- - Licences logicielles et preuves d’achat (pour réinstallation)
- - Clés de chiffrement et clés de récupération (Bitlocker) 
- - Mots de passe maîtres (gestionnaire de mots de passe, comptes critiques)
- - Données RH (contrats salariés)
+ - Documents fiscaux et comptables (bilans, commandes & factures en cours, dÃ©clarations, TVA)
+ - Licences logicielles et preuves dâ€™achat (pour rÃ©installation)
+ - ClÃ©s de chiffrement et clÃ©s de rÃ©cupÃ©ration (Bitlocker) 
+ - Mots de passe maÃ®tres (gestionnaire de mots de passe, comptes critiques)
+ - DonnÃ©es RH (contrats salariÃ©s)";M;
+SVG-001-002;SÃ©curitÃ© des sauvegardes;Inventorier les donnÃ©es importantes;0;Connaitre et identifier le pÃ©rimÃ¨tre (donnÃ©es & localisation);;;"Artisans, CommerÃ§ants : Logiciel de caisse : DonnÃ©es de transaction, Z de caisse. Gestion des stocks : Ã‰tat des stocks, rÃ©fÃ©rences produits, commandes en cours chez les fournisseurs.Fichiers de conception/fabrication : Plans, schÃ©mas. Portefeuille de fournisseurs : Liste des contacts, conditions d'achat nÃ©gociÃ©es.
 
-";M;
-SVG-001-002;Sécurité des sauvegardes;Inventorier les données importantes ;0;Connaitre et identifier le périmètre (données & localisation);;;"Artisans, Commerçants : Logiciel de caisse : Données de transaction, Z de caisse. Gestion des stocks : État des stocks, références produits, commandes en cours chez les fournisseurs.Fichiers de conception/fabrication : Plans, schémas. Portefeuille de fournisseurs : Liste des contacts, conditions d'achat négociées.
+Entreprises Industrielles / Production: Dossiers de Fabrication (GPAO) : Gammes de fabrication, nomenclatures des produits. Plans de Recherche & DÃ©veloppement (R&D) : SchÃ©mas, rÃ©sultats de tests, prototypes.DonnÃ©es issues des automates et machines (SCADA) : Programmes des automates, base de donnÃ©es del'Historian. ProcÃ©dures de ContrÃ´le QualitÃ© : Gammes de contrÃ´le, rapports de non-conformitÃ©. Gestion de la chaÃ®ne logistique (Supply Chain) : DonnÃ©es des fournisseurs, planification de la production, Ã©tat des stocks de matiÃ¨res premiÃ¨res.
 
-Entreprises Industrielles / Production: Dossiers de Fabrication (GPAO) : Gammes de fabrication, nomenclatures des produits. Plans de Recherche & Développement (R&D) : Schémas, résultats de tests, prototypes.Données issues des automates et machines (SCADA) : Programmes des automates, base de données del'Historian. Procédures de Contrôle Qualité : Gammes de contrôle, rapports de non-conformité. Gestion de la chaîne logistique (Supply Chain) : Données des fournisseurs, planification de la production, état des stocks de matières premières.
+Acteurs du NumÃ©rique (ESN, Agences Web, Ã‰diteurs de logiciels): DÃ©pÃ´ts de code source : L'accÃ¨s Ã  l'historique complet (Git, SVN) est fondamental. SpÃ©cifications fonctionnelles et techniques des projets clients. Documentation projet et infrastructure. Identifiants d'accÃ¨s aux infrastructures des clients. Tickets de support et de maintenance.
 
-Acteurs du Numérique (ESN, Agences Web, Éditeurs de logiciels): Dépôts de code source : L'accès à l'historique complet (Git, SVN) est fondamental. Spécifications fonctionnelles et techniques des projets clients. Documentation projet et infrastructure. Identifiants d'accès aux infrastructures des clients. Tickets de support et de maintenance.
+DonnÃ©es informatique : Gestionnaire de mots de passe, ClÃ©s de rÃ©cupÃ©ration et licences logicielles, Copies de documents officiels";M;
+SVG-001-003;SÃ©curitÃ© des sauvegardes;Inventorier les besoins spÃ©cifiques de vos donnÃ©es importantes;0;Connaitre et identifier le pÃ©rimÃ¨tre (donnÃ©es & localisation);;;;M;
+SVG-001-004;SÃ©curitÃ© des sauvegardes;Inventorier les lÃ©gislations s'appliquant aux donnÃ©es sauvegardÃ©es;4;Connaitre et identifier le pÃ©rimÃ¨tre (donnÃ©es & localisation);1. Identifiez les lÃ©gislations s'appliquant aux donnÃ©es que vous avez inventoriÃ©es et que vous sauvegardez.;;;M;
+SVG-001-005;SÃ©curitÃ© des sauvegardes;Sauvegarder manuellement vos donnÃ©es;1;Disposer de donnÃ©es fraiches;"1. Sauvergadez vos donnÃ©es et utilisez le support de votre choix pour y stocker ces copies. RÃ©alisez vos sauvegardes manuellement en crÃ©ant un rÃ©pertoire nommÃ© avec la date de votre sauvegarde et en y dÃ©posant une copie des donnÃ©es que vous souhaitez sauvegarder. 
 
-Données informatique : Gestionnaire de mots de passe, Clés de récupération et licences logicielles, Copies de documents officiels";M;
-SVG-001-003;Sécurité des sauvegardes;Inventorier les besoins spécifiques de vos données importantes;0;Connaitre et identifier le périmètre (données & localisation);;;;M;
-SVG-001-004;Sécurité des sauvegardes;Inventorier les législations s'appliquant aux données sauvegardées;4;Connaitre et identifier le périmètre (données & localisation);1. Identifiez les législations s'appliquant aux données que vous avez inventoriées et que vous sauvegardez. ;;;M;
-SVG-001-005;Sécurité des sauvegardes;Sauvegarder manuellement vos données ;1;Disposer de données fraiches;"1. Sauvergadez vos données et utilisez le support de votre choix pour y stocker ces copies. Réalisez vos sauvegardes manuellement en créant un répertoire nommé avec la date de votre sauvegarde et en y déposant une copie des données que vous souhaitez sauvegarder. 
+2. Programmez un rappel sur votre tÃ©lÃ©phone ou votre agenda Ã©lectronique pour respecter la frÃ©quence choisie, Ã  minima annuelle.
 
-2. Programmez un rappel sur votre téléphone ou votre agenda électronique pour respecter la fréquence choisie, à minima annuelle.
-
-Attention à ne rien oublier :
-Identifiez les applications/systèmes utiles à votre activité quotidienne, les données associées, les localisations associées. Quelles sont les données essentielles à votre activité ? En cas de reprise à zéro, quelles sont les données indispensables pour garantir une reprise dans un délai raisonnable ?
+Attention Ã  ne rien oublier :
+Identifiez les applications/systÃ¨mes utiles Ã  votre activitÃ© quotidienne, les donnÃ©es associÃ©es, les localisations associÃ©es. Quelles sont les donnÃ©es essentielles Ã  votre activitÃ© ? En cas de reprise Ã  zÃ©ro, quelles sont les donnÃ©es indispensables pour garantir une reprise dans un dÃ©lai raisonnable ?
 NB : Sauvegardez aussi vos configurations
-Si vous utilisez des logiciels avec des paramètres complexes, capturez-les (capture d’écran ou photo) et placez ces fichiers dans un dossier inclus dans vos sauvegardes.";;;M;
-SVG-001-006;Sécurité des sauvegardes;Sélectionner un support simple pour sauvegarder;1;Disposer d'un service de sauvegarde robuste ;"Pour une première sauvegarde, deux supports sont adaptés : Les disques durs et supports physiques similaires (a) ou les services Cloud gratuits (b).
+Si vous utilisez des logiciels avec des paramÃ¨tres complexes, capturez-les (capture dâ€™Ã©cran ou photo) et placez ces fichiers dans un dossier inclus dans vos sauvegardes.";;;M;
+SVG-001-006;SÃ©curitÃ© des sauvegardes;SÃ©lectionner un support simple pour sauvegarder;1;Disposer d'un service de sauvegarde robuste;"Pour une premiÃ¨re sauvegarde, deux supports sont adaptÃ©s : Les disques durs et supports physiques similaires (a) ou les services Cloud gratuits (b).
 
-a. Réalisez vos sauvegarde en plaçant vos données sur un support physique amovible : disque dur, clé usb, etc. 
-Les disques durs SSD sont à privilégier notamment pour leur résilience au transport (comparativement à des HDD).
+a. RÃ©alisez vos sauvegarde en plaÃ§ant vos donnÃ©es sur un support physique amovible : disque dur, clÃ© usb, etc. 
+Les disques durs SSD sont Ã  privilÃ©gier notamment pour leur rÃ©silience au transport (comparativement Ã  des HDD).
 
-b.Choisissez un service Cloud adapté
-Optez pour un service de stockage cloud gratuit ou payant en fonction du volume de données à sauvegarder. Identifiez bien les durées de l'historique de la corbeille et des versions de fichiers. Par exemple, la durée de conservation des fichiers supprimés peut être de 30 jours, et l'historique des modifications de fichiers de 15 jours.
+b.Choisissez un service Cloud adaptÃ©
+Optez pour un service de stockage cloud gratuit ou payant en fonction du volume de donnÃ©es Ã  sauvegarder. Identifiez bien les durÃ©es de l'historique de la corbeille et des versions de fichiers. Par exemple, la durÃ©e de conservation des fichiers supprimÃ©s peut Ãªtre de 30 jours, et l'historique des modifications de fichiers de 15 jours.
 
-Sur les support cloud attention à la différence entre synchronisation et sauvegarde. 
-Il est essentiel de bien distinguer les spécificités de la synchronisation qui est parfois proposé par les services Cloud :
- - Sauvegarde : crée une copie indépendante de vos données, protégée des modifications accidentelles.
- - Synchronisation : reflète en temps réel les modifications (y compris les suppressions) apportées aux fichiers. Cela peut entraîner des pertes définitives en cas d’erreur ou de compromission.";;;M;
-SVG-001-007;Sécurité des sauvegardes;Automatiser les sauvegardes;2;Disposer de données fraiches;"1. Configurez et/ou installez un outil qui va réaliser la tâche de sauvegarde automatiquement.
+Sur les support cloud attention Ã  la diffÃ©rence entre synchronisation et sauvegarde. 
+Il est essentiel de bien distinguer les spÃ©cificitÃ©s de la synchronisation qui est parfois proposÃ© par les services Cloud :
+ - Sauvegarde : crÃ©e une copie indÃ©pendante de vos donnÃ©es, protÃ©gÃ©e des modifications accidentelles.
+ - Synchronisation : reflÃ¨te en temps rÃ©el les modifications (y compris les suppressions) apportÃ©es aux fichiers. Cela peut entraÃ®ner des pertes dÃ©finitives en cas dâ€™erreur ou de compromission.";;;M;
+SVG-001-007;SÃ©curitÃ© des sauvegardes;Automatiser les sauvegardes;2;Disposer de donnÃ©es fraiches;"1. Configurez et/ou installez un outil qui va rÃ©aliser la tÃ¢che de sauvegarde automatiquement.
 
-Vous sauvegarder automatiquement vos fichiers sur un support (ex. disque dur) à l’aide des fonctionnalités natives du système.
-Attention, pour que la sauvegarde automatique fonctionne, le disque dur doit être branché à l’ordinateur lors de la tâche programmée.
+Vous sauvegarder automatiquement vos fichiers sur un support (ex. disque dur) Ã  lâ€™aide des fonctionnalitÃ©s natives du systÃ¨me.
+Attention, pour que la sauvegarde automatique fonctionne, le disque dur doit Ãªtre branchÃ© Ã  lâ€™ordinateur lors de la tÃ¢che programmÃ©e.
 
-Vous pouvez opter pour des solutions plus avancées :
-Des logiciels indépendants comme EaseUS Todo Backup Free ou Cobian Backup permettent d’automatiser des sauvegardes plus complexes, vers vos disques durs ou vers un service de stockage Cloud.";;;M;
-SVG-001-008;Sécurité des sauvegardes;Sauvegarder sur un NAS ;2;Disposer de données fraiches;"1. Installez un NAS avec redondance
-Achetez et installez un NAS (Network Attached Storage) disposant d’au moins 2 baies de disques. Ce système remplacera vos disques durs externes par une solution plus résiliente face aux pannes.
+Vous pouvez opter pour des solutions plus avancÃ©es :
+Des logiciels indÃ©pendants comme EaseUS Todo Backup Free ou Cobian Backup permettent dâ€™automatiser des sauvegardes plus complexes, vers vos disques durs ou vers un service de stockage Cloud.";;;M;
+SVG-001-008;SÃ©curitÃ© des sauvegardes;Sauvegarder sur un NAS;2;Disposer de donnÃ©es fraiches;"1. Installez un NAS avec redondance
+Achetez et installez un NAS (Network Attached Storage) disposant dâ€™au moins 2 baies de disques. Ce systÃ¨me remplacera vos disques durs externes par une solution plus rÃ©siliente face aux pannes.
 
-2. Configurez le matériel
- - Installez au moins deux disques dur dans les baies du NAS (vous pouvez opter pour des disques HDD pour optimiser les coûts).
- - Branchez le NAS à votre réseau, par exemple directement à votre box Internet via un câble Ethernet (RJ45).
- - Configurez le matériel
+2. Configurez le matÃ©riel
+ - Installez au moins deux disques dur dans les baies du NAS (vous pouvez opter pour des disques HDD pour optimiser les coÃ»ts).
+ - Branchez le NAS Ã  votre rÃ©seau, par exemple directement Ã  votre box Internet via un cÃ¢ble Ethernet (RJ45).
+ - Configurez le matÃ©riel
 
-3. Sécurisez l’accès
+3. SÃ©curisez lâ€™accÃ¨s
  - Modifiez le mot de passe du compte administrateur avec un mot de passe complexe (cf. recommandation SVG-001-024).
- - Créez un compte spécifique pour l'administration et un compte non administrateur pour les opérations quotidiennes.
+ - CrÃ©ez un compte spÃ©cifique pour l'administration et un compte non administrateur pour les opÃ©rations quotidiennes.
 
 5. Configurez le stockage en RAID
- - Créez un volume RAID
-Le RAID 1 permet de vous protéger d'une panne de disque qui pourrait arrriver avec un seul disque dur, mais ne remplace pas une sauvegarde complète. Attention le RAID 0 ne permet pas de se prémunir d'une panne de disque.
-NB : Pour une résilience accrue, vous pouvez ajouter un troisième disque et activer la configuration RAID 5.";;;M;
-SVG-001-009;Sécurité des sauvegardes;Synchroniser vos données (cloud ou NAS);2;Disposer de données fraiches;"1. Installez l'agent qui correspond à votre service cloud ou votre NAS et configurez les dossiers à synchroniser
-Attention à la différence entre synchronisation et sauvegarde. Il est essentiel de bien distinguer ces deux mécanismes :
- - Synchronisation : reflète en temps réel les modifications (y compris les suppressions) apportées aux fichiers. Cela peut entraîner des pertes définitives en cas d’erreur ou de compromission.
- - Sauvegarde : crée une copie indépendante de vos données, protégée des modifications accidentelles.
-";;;M;
-SVG-001-010;Sécurité des sauvegardes;Sauvegarder tous les mois;2;Disposer de données fraiches;"1. Réalisez vos sauvegardes sur une base mensuelle, ou sur une échelle de temps proche qui vous semble adaptée à vos besoins.
-";;;M;
-SVG-001-011;Sécurité des sauvegardes;Sauvegarder quotidiennement ou toutes les semaines;3;Disposer de données fraiches;"1. Adaptez vos fréquences de sauvegarde en fonction des besoins spécifiques de vos données et réalisez vos sauvegardes les plus importantes quotidiennement ou une fois par semaine.
-Prérequis : 
-a. Identifiez les besoins de sauvegarde des données indispensables à votre activité quotidienne pour pouvoir leur appliquer des méthodes de sauvegarde adaptées. Le critère que l'on cherche à identifier en priorité est le PDMA :
-    - PDMA : Perte de Données Maximale Admissible, correspond à la quantité de travail, en termes de temps passé, que l'on s'autorise à perdre. Si il n'est pas acceptable de perdre 2 jours de travail complet, il faut sauvegarder tous les jours. 
-";;;M;
-SVG-001-012;Sécurité des sauvegardes;Vérifier le fonctionnement du système de sauvegarde;1;S'assurer de la capacité à restaurer;"1. Une fois vos premières sauvegardes réalisées (manuellement ou automatiquement) , prenez le temps de vérifier qu’elle fonctionne vraiment. L’objectif de ce test est uniquement de vérifier que votre méthode de sauvegarde fonctionne correctement à l’instant où vous l’avez mise en place.
+ - CrÃ©ez un volume RAID
+Le RAID 1 permet de vous protÃ©ger d'une panne de disque qui pourrait arrriver avec un seul disque dur, mais ne remplace pas une sauvegarde complÃ¨te. Attention le RAID 0 ne permet pas de se prÃ©munir d'une panne de disque.
+NB : Pour une rÃ©silience accrue, vous pouvez ajouter un troisiÃ¨me disque et activer la configuration RAID 5.";;;M;
+SVG-001-009;SÃ©curitÃ© des sauvegardes;Synchroniser vos donnÃ©es (cloud ou NAS);2;Disposer de donnÃ©es fraiches;"1. Installez l'agent qui correspond Ã  votre service cloud ou votre NAS et configurez les dossiers Ã  synchroniser
+Attention Ã  la diffÃ©rence entre synchronisation et sauvegarde. Il est essentiel de bien distinguer ces deux mÃ©canismes :
+ - Synchronisation : reflÃ¨te en temps rÃ©el les modifications (y compris les suppressions) apportÃ©es aux fichiers. Cela peut entraÃ®ner des pertes dÃ©finitives en cas dâ€™erreur ou de compromission.
+ - Sauvegarde : crÃ©e une copie indÃ©pendante de vos donnÃ©es, protÃ©gÃ©e des modifications accidentelles.";;;M;
+SVG-001-010;SÃ©curitÃ© des sauvegardes;Sauvegarder tous les mois;2;Disposer de donnÃ©es fraiches;"1. RÃ©alisez vos sauvegardes sur une base mensuelle, ou sur une Ã©chelle de temps proche qui vous semble adaptÃ©e Ã  vos besoins.";;;M;
+SVG-001-011;SÃ©curitÃ© des sauvegardes;Sauvegarder quotidiennement ou toutes les semaines;3;Disposer de donnÃ©es fraiches;"1. Adaptez vos frÃ©quences de sauvegarde en fonction des besoins spÃ©cifiques de vos donnÃ©es et rÃ©alisez vos sauvegardes les plus importantes quotidiennement ou une fois par semaine.
+PrÃ©requis : 
+a. Identifiez les besoins de sauvegarde des donnÃ©es indispensables Ã  votre activitÃ© quotidienne pour pouvoir leur appliquer des mÃ©thodes de sauvegarde adaptÃ©es. Le critÃ¨re que l'on cherche Ã  identifier en prioritÃ© est le PDMA :
+    - PDMA : Perte de DonnÃ©es Maximale Admissible, correspond Ã  la quantitÃ© de travail, en termes de temps passÃ©, que l'on s'autorise Ã  perdre. Si il n'est pas acceptable de perdre 2 jours de travail complet, il faut sauvegarder tous les jours.";;;M;
+SVG-001-012;SÃ©curitÃ© des sauvegardes;VÃ©rifier le fonctionnement du systÃ¨me de sauvegarde;1;S'assurer de la capacitÃ© Ã  restaurer;"1. Une fois vos premiÃ¨res sauvegardes rÃ©alisÃ©es (manuellement ou automatiquement) , prenez le temps de vÃ©rifier quâ€™elle fonctionne vraiment. Lâ€™objectif de ce test est uniquement de vÃ©rifier que votre mÃ©thode de sauvegarde fonctionne correctement Ã  lâ€™instant oÃ¹ vous lâ€™avez mise en place.
 
-2. Si vous aves mis en place un système qui réalise des sauvegarde automatiquement, laissez-le tourner pendant une semaine avant de faire ce test. 
+2. Si vous aves mis en place un systÃ¨me qui rÃ©alise des sauvegarde automatiquement, laissez-le tourner pendant une semaine avant de faire ce test. 
 
-3. Le test en lui-même peut prendre plusieurs formes selon le type de données que vous sauvegardez. 
-Pour de simples fichiers : essayez de récupérer un fichier ou un dossier depuis votre sauvegarde, copiez-le sur un ordinateur et ouvrez-le. Si le fichier s’ouvre correctement et que son contenu est intact (par exemple : un document Word lisible, des formules Excel qui fonctionnent toujours), alors le test est concluant.
-";;;M;
-SVG-001-013;Sécurité des sauvegardes;Configurer des notifications de sauvegarde;2;S'assurer de la capacité à restaurer;1. Sur la solution automatisant la réalisation de vos sauvegardes, programmez l’envoi de notifications par e-mail ou SMS à chaque sauvegarde réussie ou échouée.;;;M;
-SVG-001-014;Sécurité des sauvegardes;Vérifier l'intégrité des sauvegardes;3;S'assurer de la capacité à restaurer;"1. Utilisez les fonctionnalités intégrées pour vérifier régulièrement l’intégrité des sauvegardes
-Selon les solutions logicielles utilisées, cette vérification peut être intégrée et activée nativement.
+3. Le test en lui-mÃªme peut prendre plusieurs formes selon le type de donnÃ©es que vous sauvegardez. 
+Pour de simples fichiers : essayez de rÃ©cupÃ©rer un fichier ou un dossier depuis votre sauvegarde, copiez-le sur un ordinateur et ouvrez-le. Si le fichier sâ€™ouvre correctement et que son contenu est intact (par exemple : un document Word lisible, des formules Excel qui fonctionnent toujours), alors le test est concluant.";;;M;
+SVG-001-013;SÃ©curitÃ© des sauvegardes;Configurer des notifications de sauvegarde;2;S'assurer de la capacitÃ© Ã  restaurer;"1. Sur la solution automatisant la rÃ©alisation de vos sauvegardes, programmez lâ€™envoi de notifications par e-mail ou SMS Ã  chaque sauvegarde rÃ©ussie ou Ã©chouÃ©e.";;;M;
+SVG-001-014;SÃ©curitÃ© des sauvegardes;VÃ©rifierÂ l'intÃ©gritÃ© des sauvegardes;3;S'assurer de la capacitÃ© Ã  restaurer;"1. Utilisez les fonctionnalitÃ©s intÃ©grÃ©es pour vÃ©rifier rÃ©guliÃ¨rement lâ€™intÃ©gritÃ© des sauvegardes
+Selon les solutions logicielles utilisÃ©es, cette vÃ©rification peut Ãªtre intÃ©grÃ©e et activÃ©e nativement.
 
-2. Vérifier l’intégrité d'une sauvegarde peut correspondre à différentes actions et ces tests peuvent viser :
- - La cohérence avec la source de la données : s’assurer que la sauvegarde correspond bien aux fichiers du système de production au moment où elle a été faite, par exemple avec la comparaison d'empreintes numériques (hash).
- - L’absence de corruption : vérifier que la sauvegarde n’a pas été altérée ou modifiée depuis sa création, par exemple avec des sommes de contrôle (checksum). 
- - La cohérence applicative: Dans les systèmes complexes, une sauvegarde peut être techniquement valide (fichiers intacts) mais fonctionnellement inutilisable (transactions incomplètes dans une base de données), les tests efficaces sont les exercices de restauration incluant des tests fonctionnels (le métier confirme pouvoir travailler sur le système restauré) cf. SVG-001-015.";;;M;
-SVG-001-015;Sécurité des sauvegardes;Réaliser des tests de restauration réguliers;3;S'assurer de la capacité à restaurer;"1. Planifiez dans votre agenda des tests de restauration réguliers pour vos sauvegardes, à minima annuellement.
+2. VÃ©rifier lâ€™intÃ©gritÃ© d'une sauvegarde peut correspondre Ã  diffÃ©rentes actions et ces tests peuvent viser :
+ - La cohÃ©rence avec la source de la donnÃ©es : sâ€™assurer que la sauvegarde correspond bien aux fichiers du systÃ¨me de production au moment oÃ¹ elle a Ã©tÃ© faite, par exemple avec la comparaison d'empreintes numÃ©riques (hash).
+ - Lâ€™absence de corruption : vÃ©rifier que la sauvegarde nâ€™a pas Ã©tÃ© altÃ©rÃ©e ou modifiÃ©e depuis sa crÃ©ation, par exemple avec des sommes de contrÃ´le (checksum). 
+ - La cohÃ©rence applicative: Dans les systÃ¨mes complexes, une sauvegarde peut Ãªtre techniquement valide (fichiers intacts) mais fonctionnellement inutilisable (transactions incomplÃ¨tes dans une base de donnÃ©es), les tests efficaces sont les exercices de restauration incluant des tests fonctionnels (le mÃ©tier confirme pouvoir travailler sur le systÃ¨me restaurÃ©) cf. SVG-001-015.";;;M;
+SVG-001-015;SÃ©curitÃ© des sauvegardes;RÃ©aliser des tests de restauration rÃ©guliers;3;S'assurer de la capacitÃ© Ã  restaurer;"1. Planifiez dans votre agenda des tests de restauration rÃ©guliers pour vos sauvegardes, Ã  minima annuellement.
 
-2. Les tests à réaliser peuvent reprendre les éléments de la recommandation SVG-001-012, l'objectif de la répétition des tests étant de vérifier que votre méthode de sauvegarde continue de fonctionner correctement dans le temps. 
+2. Les tests Ã  rÃ©aliser peuvent reprendre les Ã©lÃ©ments de la recommandation SVG-001-012, l'objectif de la rÃ©pÃ©tition des tests Ã©tant de vÃ©rifier que votre mÃ©thode de sauvegarde continue de fonctionner correctement dans le temps. 
 
-3. Répéter les tests de restauration a aussi pour but de vous entraîner à restaurer vos sauvegardes, surtout pour certains types de données qui peuvent être beaucoup plus complexes à restaurer que de simples documents ou dossiers (Par exemple, une base de données sauvegardée de manière incrémentale).
+3. RÃ©pÃ©ter les tests de restauration a aussi pour but de vous entraÃ®ner Ã  restaurer vos sauvegardes, surtout pour certains types de donnÃ©es qui peuvent Ãªtre beaucoup plus complexes Ã  restaurer que de simples documents ou dossiers (Par exemple, une base de donnÃ©es sauvegardÃ©e de maniÃ¨re incrÃ©mentale).";;;M;
+SVG-001-016;SÃ©curitÃ© des sauvegardes;CrÃ©er une sauvegardes ultime hors-ligne;1;Externaliser la sauvegarde;"1. CrÃ©ez une archive annuelle
+RÃ©alisez une sauvegarde complÃ¨te des donnÃ©es notamment vos donnÃ©es vitales, et stockez-les sur un autre disque dur dÃ©diÃ©. 
 
-";;;M;
-SVG-001-016;Sécurité des sauvegardes;Créer une sauvegardes ultime hors-ligne;1;Externaliser la sauvegarde;"1. Créez une archive annuelle
-Réalisez une sauvegarde complète des données notamment vos données vitales, et stockez-les sur un autre disque dur dédié. 
+2. Stockez le support en lieu sÃ»r
+Conservez ce disque dur hors du site de travail, idÃ©alement dans un espace sÃ©curisÃ© fermant Ã  clÃ©.
 
-2. Stockez le support en lieu sûr
-Conservez ce disque dur hors du site de travail, idéalement dans un espace sécurisé fermant à clé.
-
-Cette mesure vous permettra de repartir d’une base minimale, même en cas de cyberattaque complexe qui infecterait vos sauvegardes régulières.
+Cette mesure vous permettra de repartir dâ€™une base minimale, mÃªme en cas de cyberattaque complexe qui infecterait vos sauvegardes rÃ©guliÃ¨res.
 
 
-Prérequis :
+PrÃ©requis :
 
-a) Identifiez les données vitales à votre entreprise et leur emplacement : ordinateur, site internet, cloud (cf. section exemples). Dans le cas où vous perdez tout votre informatique, quelles seraient les données indispensables pour  reprendre votre activité ? Le volume total de cette première liste de données ne devrait pas dépasser 5 à 10 Go.";;;M;
-SVG-001-017;Sécurité des sauvegardes;Réaliser une seconde sauvegarde régulière hors site & hors ligne;3;Externaliser la sauvegarde;"1a. Alternez 2 supports de sauvegarde si vous sauvegardez directement sur disques.
+a) Identifiez les donnÃ©es vitales Ã  votre entreprise et leur emplacement : ordinateur, site internet, cloud (cf. section exemples). Dans le cas oÃ¹ vous perdez tout votre informatique, quelles seraient les donnÃ©es indispensables pour  reprendre votre activitÃ© ? Le volume total de cette premiÃ¨re liste de donnÃ©es ne devrait pas dÃ©passer 5 Ã  10 Go.";;;M;
+SVG-001-017;SÃ©curitÃ© des sauvegardes;RÃ©aliser une seconde sauvegarde rÃ©guliÃ¨re hors site & hors ligne;3;Externaliser la sauvegarde;"1a. Alternez 2 supports de sauvegarde si vous sauvegardez directement sur disques.
 Effectuez vos sauvegardes en alternance sur deux disques durs toutes les semaines par exemple.
 
-1b. Si vous disposez d'un NAS, ajoutez un disque externe sur votre NAS et planifiez une sauvegarde complète régulièrement (par exemple tous 1er Dimanche du mois).
+1b. Si vous disposez d'un NAS, ajoutez un disque externe sur votre NAS et planifiez une sauvegarde complÃ¨te rÃ©guliÃ¨rement (par exemple tous 1er Dimanche du mois).
 
-1c. Si vous disposez d'une sauvegarde en cloud, synchronisez les données sauvegardées sur un disque dur une fois par mois par exemple.
+1c. Si vous disposez d'une sauvegarde en cloud, synchronisez les donnÃ©es sauvegardÃ©es sur un disque dur une fois par mois par exemple.
 
-2. Séparez physiquement vos supports
-Conservez toujours un disque dur de sauvegarde dans un lieu différent de votre lieu de travail (domicile, second site, garage, etc.) afin de limiter le risque de perte simultanée des deux supports de sauvegardes.
+2. SÃ©parez physiquement vos supports
+Conservez toujours un disque dur de sauvegarde dans un lieu diffÃ©rent de votre lieu de travail (domicile, second site, garage, etc.) afin de limiter le risque de perte simultanÃ©e des deux supports de sauvegardes.
 
-NB : Attention à la confidentialité
-Ces méthodes, sans mesures de sécurité complémentaires, ne sont pas recommandées si vos données présentent un besoin de confidentialité élevé. => Référez-vous à la recommandation SVG-001-030 si vous êtes dans ce cas.";;"Exemple de sauvegarde vers Backblaze B2 (via S3 API)
-Créez un bucket sur Backblaze B2.
-Récupérez :
+NB : Attention Ã  la confidentialitÃ©
+Ces mÃ©thodes, sans mesures de sÃ©curitÃ© complÃ©mentaires, ne sont pas recommandÃ©es si vos donnÃ©es prÃ©sentent un besoin de confidentialitÃ© Ã©levÃ©. => RÃ©fÃ©rez-vous Ã  la recommandation SVG-001-030 si vous Ãªtes dans ce cas.";;"Exemple de sauvegarde vers Backblaze B2 (via S3 API)
+CrÃ©ez un bucket sur Backblaze B2.
+RÃ©cupÃ©rez :
  - Key ID
  - Application Key
  - l'URL S3 (ex. : https://s3.eu-central-003.backblazeb2.com)
 Sur votre NAS :
- - Créez une tâche de sauvegarde (par exemple via hyperbackup pour synology).
+ - CrÃ©ez une tÃ¢che de sauvegarde (par exemple via hyperbackup pour synology).
  - Choisissez S3 storage comme destination.
 Renseignez :
  -  l'URL S3
- - Les clés d’accès
+ - Les clÃ©s dâ€™accÃ¨s
  - Le nom du bucket
 
 
 Dans les deux exemples, automatisez la sauvegarde : 
-Planifiez la tâche (quotidienne, hebdomadaire…).
-Activez les notifications en cas d’échec.";M;
-SVG-001-018;Sécurité des sauvegardes;Mettre à jour le système de sauvegardes;2;Disposer d'un service de sauvegarde robuste;"1. Activez les mises à jour automatiques si possible
-Activez les mises à jour automatiques des outils (NAS, agent de sauvegarde, etc.)  que vous utilisez pour la sauvegarde.";;;M;
-SVG-001-019;Sécurité des sauvegardes;Définir des mots de passe robustes;2;Disposer d'un service de sauvegarde robuste;"Tous les mots de passe utilisés pour sécuriser votre système de sauvegarde doivent être robustes, notamment :
- - Comptes d’accès aux services Cloud
+Planifiez la tÃ¢che (quotidienne, hebdomadaireâ€¦).
+Activez les notifications en cas dâ€™Ã©chec.";M;
+SVG-001-018;SÃ©curitÃ© des sauvegardes;Mettre Ã  jour le systÃ¨me de sauvegardes;2;Disposer d'un service de sauvegarde robuste;"1. Activez les mises Ã  jour automatiques si possible
+Activez les mises Ã  jour automatiques des outils (NAS, agent de sauvegarde, etc.)  que vous utilisez pour la sauvegarde.";;;M;
+SVG-001-019;SÃ©curitÃ© des sauvegardes;DÃ©finirÂ des mots de passe robustes;2;Disposer d'un service de sauvegarde robuste;"Tous les mots de passe utilisÃ©s pour sÃ©curiser votre systÃ¨me de sauvegarde doivent Ãªtre robustes, notamment :
+ - Comptes dâ€™accÃ¨s aux services Cloud
  - Mots de passe pour le chiffrement des sauvegardes
  - Identifiants pour la sauvegarde NAS ? Cloud
 
 1. Exigences minimales
- - Longueur : au moins 12 caractères (15 ou plus recommandé)
- - Composition : mélange de majuscules, minuscules, chiffres et caractères spéciaux (?@#+=)
+ - Longueur : au moins 12 caractÃ¨res (15 ou plus recommandÃ©)
+ - Composition : mÃ©lange de majuscules, minuscules, chiffres et caractÃ¨res spÃ©ciaux (?@#+=)
 
-2. À proscrire
+2. Ã€ proscrire
  - Mots du dictionnaire
  - Noms communs
- - Informations personnelles ou liées à votre entreprise (ex. : date de création)
+ - Informations personnelles ou liÃ©es Ã  votre entreprise (ex. : date de crÃ©ation)
 
-3. Diversité des mots de passe
-Les mots de passe doivent être uniques pour chaque logiciel ou système.
+3. DiversitÃ© des mots de passe
+Les mots de passe doivent Ãªtre uniques pour chaque logiciel ou systÃ¨me.
 
-Pour simplifier l'usage de mots de passe robustes, il est recommandé d'utiliser un gestionnaire de mots de passe.
+Pour simplifier l'usage de mots de passe robustes, il est recommandÃ© d'utiliser un gestionnaire de mots de passe.
 !! Sauvegarde du gestionnaire
-Votre gestionnaire de mots de passe fait partie des données vitales. Il est essentiel de prévoir une sauvegarde sécurisée :
- - Ne l’intégrez pas uniquement à votre système de sauvegarde principal, au risque de perdre l’accès si ce dernier est compromis.
- - Référez-vous à la recommandation SVG-001-020 pour les bonnes pratiques.";;;M;
-SVG-001-020;Sécurité des sauvegardes;Activer la double authentification sur les comptes Cloud;2;Disposer d'un service de sauvegarde robuste;"1. Activez la double authentification (2FA)
-Activez la double authentification sur tous les comptes Cloud utilisés dans votre système de sauvegarde.
-Cette mesure ajoute une étape supplémentaire à la connexion (par exemple, validation via un téléphone), renforçant ainsi fortement la sécurité contre les accès non autorisés.";;;M;
-SVG-001-021;Sécurité des sauvegardes;Appliquer le principe du moindre privilège ;3;Disposer d'un service de sauvegarde robuste;"1. Limitez les droits des comptes utilisés par les logiciels de sauvegarde
-Si vous utilisez un NAS avec un logiciel de sauvegarde automatique, créez un compte de service avec :
- - Droits d’écriture sur le NAS
+Votre gestionnaire de mots de passe fait partie des donnÃ©es vitales. Il est essentiel de prÃ©voir une sauvegarde sÃ©curisÃ©e :
+ - Ne lâ€™intÃ©grez pas uniquement Ã  votre systÃ¨me de sauvegarde principal, au risque de perdre lâ€™accÃ¨s si ce dernier est compromis.
+ - RÃ©fÃ©rez-vous Ã  la recommandation SVG-001-020 pour les bonnes pratiques.";;;M;
+SVG-001-020;SÃ©curitÃ© des sauvegardes;ActiverÂ la double authentification sur les comptes Cloud;2;Disposer d'un service de sauvegarde robuste;"1. Activez la double authentification (2FA)
+Activez la double authentification sur tous les comptes Cloud utilisÃ©s dans votre systÃ¨me de sauvegarde.
+Cette mesure ajoute une Ã©tape supplÃ©mentaire Ã  la connexion (par exemple, validation via un tÃ©lÃ©phone), renforÃ§ant ainsi fortement la sÃ©curitÃ© contre les accÃ¨s non autorisÃ©s.";;;M;
+SVG-001-021;SÃ©curitÃ© des sauvegardes;Appliquer le principe du moindre privilÃ¨ge;3;Disposer d'un service de sauvegarde robuste;"1. Limitez les droits des comptes utilisÃ©s par les logiciels de sauvegarde
+Si vous utilisez un NAS avec un logiciel de sauvegarde automatique, crÃ©ez un compte de service avec :
+ - Droits dâ€™Ã©criture sur le NAS
  - Aucun droit de suppression
- - Droits de lecture uniquement sur les données de production
+ - Droits de lecture uniquement sur les donnÃ©es de production
 
-2. Sécurisez les sauvegardes vers le Cloud
-Le compte ou la clé d’API utilisée pour transférer des données on-premise vers le Cloud doit avoir uniquement des droits d’écriture.
+2. SÃ©curisez les sauvegardes vers le Cloud
+Le compte ou la clÃ© dâ€™API utilisÃ©e pour transfÃ©rer des donnÃ©es on-premise vers le Cloud doit avoir uniquement des droits dâ€™Ã©criture.
 
 3. Segmentez les droits en cas de double sauvegarde Cloud
-Si vous réalisez deux copies de sauvegarde chez le même fournisseur Cloud :
- - Créez deux comptes distincts
- - Chaque compte doit avoir uniquement des droits d’écriture sur son espace de stockage dédié";;;M;
-SVG-001-022;Sécurité des sauvegardes;Chiffrer les sauvegardes au niveau du disque ;3;Disposer d'un service de sauvegarde robuste;"1. Chiffrez vos disques de sauvegarde
-Activez le chiffrement de volume pour protéger l’ensemble du support, à l’aide d’une fonctionnalité native du système ou d’une solution équivalente.
+Si vous rÃ©alisez deux copies de sauvegarde chez le mÃªme fournisseur Cloud :
+ - CrÃ©ez deux comptes distincts
+ - Chaque compte doit avoir uniquement des droits dâ€™Ã©criture sur son espace de stockage dÃ©diÃ©";;;M;
+SVG-001-022;SÃ©curitÃ© des sauvegardes;ChiffrerÂ les sauvegardes au niveau du disque;3;Disposer d'un service de sauvegarde robuste;"1. Chiffrez vos disques de sauvegarde
+Activez le chiffrement de volume pour protÃ©ger lâ€™ensemble du support, Ã  lâ€™aide dâ€™une fonctionnalitÃ© native du systÃ¨me ou dâ€™une solution Ã©quivalente.
 
-2. Conservez la clé de récupération dans vos données vitales.
+2. Conservez la clÃ© de rÃ©cupÃ©ration dans vos donnÃ©es vitales.
 
-3. Si les solutions logicielles vous semblent complexes, étudiez l’achat d’un disque dur équipé d’un chiffrement matériel.
+3. Si les solutions logicielles vous semblent complexes, Ã©tudiez lâ€™achat dâ€™un disque dur Ã©quipÃ© dâ€™un chiffrement matÃ©riel.
 
-4. Pour un NAS, activez le chiffrement de volume directement dans les paramètres de ce dernier.";;"Chiffrement de volume NAS synology : https://kb.synology.com/fr-fr/DSM/tutorial/Which_models_support_encrypted_volumes 
+4. Pour un NAS, activez le chiffrement de volume directement dans les paramÃ¨tres de ce dernier.";;"Chiffrement de volume NAS synology : https://kb.synology.com/fr-fr/DSM/tutorial/Which_models_support_encrypted_volumes 
 
 Bitlocker sur DD externe : https://support-fr.wd.com/app/answers/detailweb/a_id/825/~/disque-externe%C2%A0%3A-chiffrement-pour-windows-%C3%A0-laide-de-bitlocker";M;
-SVG-001-023;Sécurité des sauvegardes;Protéger physiquement les supports;4;Disposer d'un service de sauvegarde robuste;"1. Protégez les supports physiques hébergeant vos données.
-Recommandations pour garantir la sécurité et la durabilité de vos supports de sauvegarde et de votre NAS :
- - Conservez-les dans un endroit sec, à l’abri de la chaleur et de l’humidité
- - Privilégiez une salle climatisée, fermant à clé, avec un extincteur CO? placé à l’extérieur
- - Placez le NAS en équilibre, à plus de 10 cm du sol
- - Évitez de l’installer sous une climatisation pour prévenir les risques de condensation";;;M;
-SVG-001-024;Sécurité des sauvegardes;Chiffrer les sauvegardes sensibles au niveau du fichier;4;Disposer d'un service de sauvegarde robuste ;"2. Chiffrez vos documents sensibles avant sauvegarde
+SVG-001-023;SÃ©curitÃ© des sauvegardes;ProtÃ©gerÂ physiquement les supports;4;Disposer d'un service de sauvegarde robuste;"1. ProtÃ©gez les supports physiques hÃ©bergeant vos donnÃ©es.
+Recommandations pour garantir la sÃ©curitÃ© et la durabilitÃ© de vos supports de sauvegarde et de votre NAS :
+ - Conservez-les dans un endroit sec, Ã  lâ€™abri de la chaleur et de lâ€™humiditÃ©
+ - PrivilÃ©giez une salle climatisÃ©e, fermant Ã  clÃ©, avec un extincteur CO? placÃ© Ã  lâ€™extÃ©rieur
+ - Placez le NAS en Ã©quilibre, Ã  plus de 10 cm du sol
+ - Ã‰vitez de lâ€™installer sous une climatisation pour prÃ©venir les risques de condensation";;;M;
+SVG-001-024;SÃ©curitÃ© des sauvegardes;ChiffrerÂ les sauvegardes sensibles au niveau du fichier;4;Disposer d'un service de sauvegarde robuste;"2. Chiffrez vos documents sensibles avant sauvegarde
 Si vous avez des documents bureautiques sensibles, effectuez un chiffrement manuel avant de les sauvegarder :
- - Utilisez un outil simple d’archivage ou de chiffrement permettant de créer une archive protégée par mot de passe.
- - Cette méthode est idéale pour des fichiers isolés sans complexité technique.
- - Conservez le mot de passe dans un endroit sécurisé (gestionnaire de mots de passe recommandé).";;;M;
-SVG-001-025;Sécurité des sauvegardes;Détruire de manière sécurisée les anciens supports;4;Disposer d'un service de sauvegarde robuste ;"1. Détruisez physiquement les anciens supports contenant des données sensibles
-Lorsque des supports ont stocké des données sensibles (santé, défense, etc.), la destruction physique est la méthode la plus sûre pour éviter toute récupération.
+ - Utilisez un outil simple dâ€™archivage ou de chiffrement permettant de crÃ©er une archive protÃ©gÃ©e par mot de passe.
+ - Cette mÃ©thode est idÃ©ale pour des fichiers isolÃ©s sans complexitÃ© technique.
+ - Conservez le mot de passe dans un endroit sÃ©curisÃ© (gestionnaire de mots de passe recommandÃ©).";;;M;
+SVG-001-025;SÃ©curitÃ© des sauvegardes;DÃ©truireÂ de maniÃ¨re sÃ©curisÃ©e les anciens supports;4;Disposer d'un service de sauvegarde robuste;"1. DÃ©truisez physiquement les anciens supports contenant des donnÃ©es sensibles
+Lorsque des supports ont stockÃ© des donnÃ©es sensibles (santÃ©, dÃ©fense, etc.), la destruction physique est la mÃ©thode la plus sÃ»re pour Ã©viter toute rÃ©cupÃ©ration.
 
-2. Pourquoi éviter la simple suppression logicielle ?
-Les solutions logicielles d’effacement ne garantissent pas une suppression à 100 %. Des techniques de récupération très avancées peuvent permettre de restaurer des données effacées.
+2. Pourquoi Ã©viter la simple suppression logicielle ?
+Les solutions logicielles dâ€™effacement ne garantissent pas une suppression Ã  100 %. Des techniques de rÃ©cupÃ©ration trÃ¨s avancÃ©es peuvent permettre de restaurer des donnÃ©es effacÃ©es.
 
-3. Méthodes de destruction physique
- - Perçage du disque
- - Broyage ou destruction par un prestataire certifié";;;M;
-SVG-001-026;Sécurité des sauvegardes;Mettre en place des sauvegardes immuables contre les ransomwares;4;Disposer d'un service de sauvegarde robuste ;"Une sauvegarde immuable est une façon de protéger les données qui garantit que les données sont fixes, inchangeables et ne peuvent jamais être supprimées ou modifiées.
+3. MÃ©thodes de destruction physique
+ - PerÃ§age du disque
+ - Broyage ou destruction par un prestataire certifiÃ©";;;M;
+SVG-001-026;SÃ©curitÃ© des sauvegardes;MettreÂ en place des sauvegardes immuables contre les ransomwares;4;Disposer d'un service de sauvegarde robuste;"Une sauvegarde immuable est une faÃ§on de protÃ©ger les donnÃ©es qui garantit que les donnÃ©es sont fixes, inchangeables et ne peuvent jamais Ãªtre supprimÃ©es ou modifiÃ©es.
 
 1. Utilisez une solution de sauvegarde immuable ou WORM
-Pour vos données critiques, mettez en place une solution de sauvegarde immuable, empêchant toute modification ou suppression des fichiers sauvegardés pendant une période définie.
+Pour vos donnÃ©es critiques, mettez en place une solution de sauvegarde immuable, empÃªchant toute modification ou suppression des fichiers sauvegardÃ©s pendant une pÃ©riode dÃ©finie.
 Le terme de WORM(Write Once, Read Many) peut parfois remplacer immuable.
 
-2. Activez l’immuabilité sur vos supports
-Ce type de protection peut être activé :
+2. Activez lâ€™immuabilitÃ© sur vos supports
+Ce type de protection peut Ãªtre activÃ© :
  - Au niveau du NAS
  - Sur certains services de stockage Cloud
 
-3. Définissez une durée d’immuabilité adaptée
-Choisissez une durée cohérente avec :
- - Votre fréquence de sauvegarde
- - Vos obligations légales ou réglementaires";;;M;
-SVG-001-027;Sécurité des sauvegardes;Limiter la taille des données sauvegardées ;;Optimiser les sauvegardes (stockage, durées de sauvegarde et restauration);"1. Utilisez des outils de ré-encodage sur les photos et vidéos que vous souhaitez sauvegarder afin de réduire leur volume de stockage. 
+3. DÃ©finissez une durÃ©e dâ€™immuabilitÃ© adaptÃ©e
+Choisissez une durÃ©e cohÃ©rente avec :
+ - Votre frÃ©quence de sauvegarde
+ - Vos obligations lÃ©gales ou rÃ©glementaires";;;M;
+SVG-001-027;SÃ©curitÃ© des sauvegardes;Limiter la taille des donnÃ©es sauvegardÃ©es;;"Optimiser les sauvegardes (stockage, durÃ©es de sauvegarde et restauration)";"1. Utilisez des outils de rÃ©-encodage sur les photos et vidÃ©os que vous souhaitez sauvegarder afin de rÃ©duire leur volume de stockage. 
 
-Cela vous sera très utile si vous réalisez vos sauvegardes vitales sur un Cloud gratuit dont l'espace de stockage disponible est très limité.";;;M;
-SVG-001-028;Sécurité des sauvegardes;Réaliser des sauvegardes incrémentales/différentielles;;Optimiser les sauvegardes (stockage, durées de sauvegarde et restauration);"Afin d'économiser de l'espace de stockage, au-delà des sauvegardes complètes, il est possible de réaliser des sauvegardes incrémentales ou différentielles :
-Complète : copie intégrale des données.
-  => Avantage : simple à restaurer
-  => Inconvénient : consomme beaucoup d’espace et de temps
-Incrémentale : sauvegarde uniquement les fichiers modifiés depuis la dernière sauvegarde.
-  => Avantage : rapide, idéale pour des systèmes fréquemment modifiés
-  => Inconvénient : restauration plus complexe
-Différentielle : sauvegarde les fichiers modifiés depuis la dernière sauvegarde complète.
-  => Avantage : adaptée aux systèmes qui changent peu
-  => Inconvénient : plus lourde qu’une incrémentale mais plus simple à restaurer
+Cela vous sera trÃ¨s utile si vous rÃ©alisez vos sauvegardes vitales sur un Cloud gratuit dont l'espace de stockage disponible est trÃ¨s limitÃ©.";;;M;
+SVG-001-028;SÃ©curitÃ© des sauvegardes;RÃ©aliser des sauvegardes incrÃ©mentales/diffÃ©rentielles;;"Optimiser les sauvegardes (stockage, durÃ©es de sauvegarde et restauration)";"Afin d'Ã©conomiser de l'espace de stockage, au-delÃ  des sauvegardes complÃ¨tes, il est possible de rÃ©aliser des sauvegardes incrÃ©mentales ou diffÃ©rentielles :
+ComplÃ¨te : copie intÃ©grale des donnÃ©es.
+  => Avantage : simple Ã  restaurer
+  => InconvÃ©nient : consomme beaucoup dâ€™espace et de temps
+IncrÃ©mentale : sauvegarde uniquement les fichiers modifiÃ©s depuis la derniÃ¨re sauvegarde.
+  => Avantage : rapide, idÃ©ale pour des systÃ¨mes frÃ©quemment modifiÃ©s
+  => InconvÃ©nient : restauration plus complexe
+DiffÃ©rentielle : sauvegarde les fichiers modifiÃ©s depuis la derniÃ¨re sauvegarde complÃ¨te.
+  => Avantage : adaptÃ©e aux systÃ¨mes qui changent peu
+  => InconvÃ©nient : plus lourde quâ€™une incrÃ©mentale mais plus simple Ã  restaurer
 
-1. Sélectionnez et combinez les approches pour optimiser
-Configurer vos sauvegardes quotidienne de façon incrémentale ou différentielle et réalisez des sauvegardes mensuelles complètes. Appliquez des sauvegardes différentielles au systèmes qui changent peu et des sauvegardes incrémentales pour les systèmes/fichers qui changent fréquemment.";;"Exemple pour la sauvegarde de fichier de comptabilité qui présentent peu de modifications journalières : 
-Sauvegarde Complète : Une fois par semaine ET Sauvegarde Différentielle : Tous les soirs, du lundi au vendredi à 22h.
+1. SÃ©lectionnez et combinez les approches pour optimiser
+Configurer vos sauvegardes quotidienne de faÃ§on incrÃ©mentale ou diffÃ©rentielle et rÃ©alisez des sauvegardes mensuelles complÃ¨tes. Appliquez des sauvegardes diffÃ©rentielles au systÃ¨mes qui changent peu et des sauvegardes incrÃ©mentales pour les systÃ¨mes/fichers qui changent frÃ©quemment.";;"Exemple pour la sauvegarde de fichier de comptabilitÃ© qui prÃ©sentent peu de modifications journaliÃ¨res : 
+Sauvegarde ComplÃ¨te : Une fois par semaine ET Sauvegarde DiffÃ©rentielle : Tous les soirs, du lundi au vendredi Ã  22h.
 
-Exemple pour la sauvegarde d'un répertoire spécifique sur tous les postes de travail :
-Sauvegarde incrémentale quotidienne avec une rétention de 30 jours. 
-ET Sauvegarde Complète : Une fois par semaine avec une rétention de 3 mois. ";M;
-SVG-001-029;Sécurité des sauvegardes;Vérifier les réglementations impactant les services de sauvegardes utilisables ;3;Respecter les exigences réglementaires ;"1. Vérifiez les réglementations applicables
-Avant de mettre en place votre système de sauvegarde, assurez-vous qu’il respecte les obligations légales liées à votre secteur d’activité ou à vos données spécifiques.
+Exemple pour la sauvegarde d'un rÃ©pertoire spÃ©cifique sur tous les postes de travail :
+Sauvegarde incrÃ©mentale quotidienne avec une rÃ©tention de 30 jours. 
+ET Sauvegarde ComplÃ¨te : Une fois par semaine avec une rÃ©tention de 3 mois.";M;
+SVG-001-029;SÃ©curitÃ© des sauvegardes;VÃ©rifier les rÃ©glementations impactant les services de sauvegardes utilisables;3;Respecter les exigences rÃ©glementaires;"1. VÃ©rifiez les rÃ©glementations applicables
+Avant de mettre en place votre systÃ¨me de sauvegarde, assurez-vous quâ€™il respecte les obligations lÃ©gales liÃ©es Ã  votre secteur dâ€™activitÃ© ou Ã  vos donnÃ©es spÃ©cifiques.
 
-Exemple : secteur de la santé
-Si vous traitez ou hébergez des données de santé à caractère personnel, vous devez utiliser des services certifiés HDS (Hébergeur de Données de Santé).";;;M;
-NOM-001-001;Nomadisme;[PC portable] Fournir un filtre de confidentialité;0;Sécurisation des terminaux;Vous mettez à disposition de vos utilisateurs des filtres de confidentialité pour les PC portables fournis par vos services.;Permet de limiter les informations visibles par des personnes extérieures à l'entité lors de déplacements (transports publics, hôtels) ou dans des espaces de coworking.;;;M
-NOM-001-002;Nomadisme;[Smartphone] Fournir un filtre de confidentialité;0;Sécurisation des terminaux;Vous mettez à disposition de vos utilisateurs des filtres de confidentialité pour les smartphones fournis par vos services.;Permet de limiter les informations visibles par des personnes extérieures à l'entité lors de déplacements (transports publics, hôtels) ou dans des espaces de coworking.;;;M
-NOM-001-003;Nomadisme;[PC portable] Mettre à disposition une gamme uniforme de postes fournis par l'entité;2;Sécurisation des terminaux;Vous gérez l'obsolescence des PC portables de vos utilisateurs. Pour cela, vous leur mettez à disposition des PC portables achetés par vos services et vous privilégiez l'uniformité dans la gamme des modèles achetés.;La mise à disposition d'équipements par l'entité permet d'avoir une maîtrise sur l'obsolescence des équipements fournis (mises à jour de sécurité à disposition).;;;M
-NOM-001-004;Nomadisme;[PC portable] Interdire les pratiques de BYOD;1;Sécurisation des terminaux;"Vous interdisez les pratiques de type ""bring your own devices"" pour les PC portables de vos utilisateurs.";;;;M
-NOM-001-005;Nomadisme;[PC portable] Mettre à disposition une gamme uniforme de postes fournis et opérés par l'entité;3;Sécurisation des terminaux;Vous mettez à disposition de vos utilisateurs des postes maîtrisés par vos services ou par un tiers avec lequel vous avez contractualisé une prestation. Vous privilégiez l'uniformité dans la gamme des modèles achetés et dans l'installation mise en oeuvre. La maîtrise comprend l'achat, la masteurisation, le maintien en condition opérationnelle et en condition de sécurité des postes.;;;;M
-NOM-001-006;Nomadisme;[Smartphones/Tablettes] Mettre à disposition une gamme uniforme de terminaux fournis par l'entité;2;Sécurisation des terminaux;Vous maitrisez l'obsolescence des smartphones/tablettes de vos utilisateurs. Pour cela, vous leur mettez à disposition des smartphones/tablettes achetés par vos services et vous privilégiez l'uniformité dans la gamme des modèles achetés.;La mise à disposition d'équipements par l'entité permet d'avoir une maîtrise sur l'obsolescence des équipements fournis (mises à jour de sécurité à disposition).;;;M
-NOM-001-007;Nomadisme;[Smartphones/Tablettes] Interdire les pratiques de BYOD;1;Sécurisation des terminaux;"Vous interdisez les pratiques de type ""bring your own devices"" pour les smartphones et tablettes de vos utilisateurs.";;;;M
-NOM-001-008;Nomadisme;[Smartphones/Tablettes] Mettre à disposition une gamme uniforme de terminaux fournis et opérés par l'entité;3;Sécurisation des terminaux;Vous mettez à disposition de vos utilisateurs des smartphones/tablettes maîtrisés par vos services ou par un tiers avec lequel vous avez contractualisé une prestation. Vous privilégiez l'uniformité dans la gamme des modèles achetés et dans l'installation mise en oeuvre. La maîtrise comprend l'achat, la masteurisation, le maintien en condition opérationnelle et en condition de sécurité des terminaux.;;;;M
-NOM-001-009;Nomadisme;[PC portable] Chiffrer les disques;4;Sécurisation des terminaux;"Vous mettez en œuvre un chiffrement de l'ensemble du disque des postes de type PC portable sur la flotte déjà déployée. Le déchiffrement se fait au démarrage du poste à travers l'utilisation d'un mot de passe spécifique.
-En parallèle, vous mettez en place un séquestre des clés de déchiffrement.
+Exemple : secteur de la santÃ©
+Si vous traitez ou hÃ©bergez des donnÃ©es de santÃ© Ã  caractÃ¨re personnel, vous devez utiliser des services certifiÃ©s HDS (HÃ©bergeur de DonnÃ©es de SantÃ©).";;;M;
+NOM-001-001;Nomadisme;[PC portable] Fournir un filtre de confidentialitÃ©;0;SÃ©curisation des terminaux;Vous mettez Ã  disposition de vos utilisateurs des filtres de confidentialitÃ© pour les PC portables fournis par vos services.;"Permet de limiter les informations visibles par des personnes extÃ©rieures Ã  l'entitÃ© lors de dÃ©placements (transports publics, hÃ´tels) ou dans des espaces de coworking.";;;M
+NOM-001-002;Nomadisme;[Smartphone] Fournir un filtre de confidentialitÃ©;0;SÃ©curisation des terminaux;Vous mettez Ã  disposition de vos utilisateurs des filtres de confidentialitÃ© pour les smartphones fournis par vos services.;"Permet de limiter les informations visibles par des personnes extÃ©rieures Ã  l'entitÃ© lors de dÃ©placements (transports publics, hÃ´tels) ou dans des espaces de coworking.";;;M
+NOM-001-003;Nomadisme;[PC portable] Mettre Ã  disposition une gamme uniforme de postes fournis par l'entitÃ©;2;SÃ©curisation des terminaux;"Vous gÃ©rez l'obsolescence des PC portables de vos utilisateurs. Pour cela, vous leur mettez Ã  disposition des PC portables achetÃ©s par vos services et vous privilÃ©giez l'uniformitÃ© dans la gamme des modÃ¨les achetÃ©s.";La mise Ã  disposition d'Ã©quipements par l'entitÃ© permet d'avoir une maÃ®trise sur l'obsolescence des Ã©quipements fournis (mises Ã  jour de sÃ©curitÃ© Ã  disposition).;;;M
+NOM-001-004;Nomadisme;[PC portable] Interdire les pratiques de BYOD;1;SÃ©curisation des terminaux;"Vous interdisez les pratiques de type ""bring your own devices"" pour les PC portables de vos utilisateurs.";;;;M
+NOM-001-005;Nomadisme;[PC portable] Mettre Ã  disposition une gamme uniforme de postes fournis et opÃ©rÃ©s par l'entitÃ©;3;SÃ©curisation des terminaux;"Vous mettez Ã  disposition de vos utilisateurs des postes maÃ®trisÃ©s par vos services ou par un tiers avec lequel vous avez contractualisÃ© une prestation. Vous privilÃ©giez l'uniformitÃ© dans la gamme des modÃ¨les achetÃ©s et dans l'installation mise en oeuvre. La maÃ®trise comprend l'achat, la masteurisation, le maintien en condition opÃ©rationnelle et en condition de sÃ©curitÃ© des postes.";;;;M
+NOM-001-006;Nomadisme;[Smartphones/Tablettes] Mettre Ã  disposition une gamme uniforme de terminaux fournis par l'entitÃ©;2;SÃ©curisation des terminaux;"Vous maitrisez l'obsolescence des smartphones/tablettes de vos utilisateurs. Pour cela, vous leur mettez Ã  disposition des smartphones/tablettes achetÃ©s par vos services et vous privilÃ©giez l'uniformitÃ© dans la gamme des modÃ¨les achetÃ©s.";La mise Ã  disposition d'Ã©quipements par l'entitÃ© permet d'avoir une maÃ®trise sur l'obsolescence des Ã©quipements fournis (mises Ã  jour de sÃ©curitÃ© Ã  disposition).;;;M
+NOM-001-007;Nomadisme;[Smartphones/Tablettes] Interdire les pratiques de BYOD;1;SÃ©curisation des terminaux;"Vous interdisez les pratiques de type ""bring your own devices"" pour les smartphones et tablettes de vos utilisateurs.";;;;M
+NOM-001-008;Nomadisme;[Smartphones/Tablettes] Mettre Ã  disposition une gamme uniforme de terminaux fournis et opÃ©rÃ©s par l'entitÃ©;3;SÃ©curisation des terminaux;"Vous mettez Ã  disposition de vos utilisateurs des smartphones/tablettes maÃ®trisÃ©s par vos services ou par un tiers avec lequel vous avez contractualisÃ© une prestation. Vous privilÃ©giez l'uniformitÃ© dans la gamme des modÃ¨les achetÃ©s et dans l'installation mise en oeuvre. La maÃ®trise comprend l'achat, la masteurisation, le maintien en condition opÃ©rationnelle et en condition de sÃ©curitÃ© des terminaux.";;;;M
+NOM-001-009;Nomadisme;[PC portable] Chiffrer les disques;4;SÃ©curisation des terminaux;"Vous mettez en Å“uvre un chiffrement de l'ensemble du disque des postes de type PC portable sur la flotte dÃ©jÃ  dÃ©ployÃ©e. Le dÃ©chiffrement se fait au dÃ©marrage du poste Ã  travers l'utilisation d'un mot de passe spÃ©cifique.
+En parallÃ¨le, vous mettez en place un sÃ©questre des clÃ©s de dÃ©chiffrement.
 
-Vous utilisez les fonctionnalités de chiffrement de surface incluse dans l'OS.
+Vous utilisez les fonctionnalitÃ©s de chiffrement de surface incluse dans l'OS.
 
-Lorsque vous avez la possibilité de choisir les algorithmes et les tailles de clé utilisés, vous en choisissez des ""robustes"".
+Lorsque vous avez la possibilitÃ© de choisir les algorithmes et les tailles de clÃ© utilisÃ©s, vous en choisissez des ""robustes"".
 
-Note : le chiffrement est utile uniquement si le terminal est éteint. Demandez à vos utilisateurs d'éteindre leurs terminaux lors des déplacements et en dehors des horaires de travail.";;;;M
-NOM-001-010;Nomadisme;[Smartphones/Tablettes] Chiffrer les données des terminaux mobiles;4;Sécurisation des terminaux;"Vous mettez en œuvre un chiffrement de l'ensemble des données (appareil et carte SD le cas échéant) contenues sur les smartphones et tablettes de la flotte déjà déployée, lorsque cela est possible.
-Vous mettez en œuvre ce chiffrement en utilisant des algorithmes et des tailles de clé ""robustes"".
+Note : le chiffrement est utile uniquement si le terminal est Ã©teint. Demandez Ã  vos utilisateurs d'Ã©teindre leurs terminaux lors des dÃ©placements et en dehors des horaires de travail.";;;;M
+NOM-001-010;Nomadisme;[Smartphones/Tablettes] Chiffrer les donnÃ©es des terminaux mobiles;4;SÃ©curisation des terminaux;"Vous mettez en Å“uvre un chiffrement de l'ensemble des donnÃ©es (appareil et carte SD le cas Ã©chÃ©ant) contenues sur les smartphones et tablettes de la flotte dÃ©jÃ  dÃ©ployÃ©e, lorsque cela est possible.
+Vous mettez en Å“uvre ce chiffrement en utilisant des algorithmes et des tailles de clÃ© ""robustes"".
 
-Note : trois types de chiffrements sont possibles pour le chiffrement des données contenues sur l'appareil : 
-- le chiffrement complet du disque : au démarrage, l'utilisateur doit fournir ses identifiants avant qu'aucune des parties du disque ne soit accessible ;
-- le chiffrement basé sur les fichiers : il permet de chiffrer différents fichiers avec des clés différentes qui peuvent être déverrouillées indépendamment ;
-- le chiffrement des métadonnées : tout le contenu qui n'est pas chiffré par le chiffrement basé sur les fichiers, comme les mises en page des répertoires, les tailles de fichier, les autorisations et les heures de création/modification.";;;;M
-NOM-001-011;Nomadisme;[Smartphones/Tablettes] Chiffrer les données professionnelles des terminaux mobiles;3;Sécurisation des terminaux;Vous mettez en œuvre un chiffrement sur les données professionnelles contenues sur les smartphones et tablettes où une solution de gestion de terminaux mobiles (MDM : Mobile Device Management, en anglais) est déployée. Une telle solution de MDM peut être mise en place, soit par la création d'un espace professionnel sur le terminal, soit par l'enrôlement du terminal afin qu'il puisse accéder à certaines Apps (par exemple Office365). L'objectif de la mesure est alors de chiffrer les données sur la partie maîtrisée du terminal.;;;;M
-NOM-001-012;Nomadisme;Séparer les usages professionnels des usages personnels;1;Accès aux applications et aux données;Vous utilisez les coordonnées professionnelles (adresse e-mail, numéro de téléphone, adresse postale) uniquement lorsque cela est demandé et nécessaire (ex: création de compte sur une application utilisée à des fins professionnelles, renseignement de formulaire dans le cadre professionnel, etc.).;;;;M
-NOM-001-013;Nomadisme;Créer une adresse e-mail professionnelle dédiée;1;Accès aux applications et aux données;Vous demandez à vos collaborateurs de créer une adresse e-mail dédiée pour l'activité professionnelle si aucune n'est fournie par l'entreprise. Par exemple michelle.martin.pro@gmail.com;Séparer les usages professionnels des usages personnels.;;;M
-NOM-001-014;Nomadisme;Fournir une adresse e-mail professionnelle;2;Accès aux applications et aux données;Vous fournissez une adresse e-mail professionnelle à vos utilisateurs. Celle-ci est gérée par vos services ou par un tiers mandaté à cet effet.;Séparer les usages professionnels des usages personnels.;;;M
-NOM-001-015;Nomadisme;Fournir un numéro de téléphone professionnel;3;Accès aux applications et aux données;"Vous fournissez un numéro de téléphone professionnel à vos utilisateurs.
-Pour mettre cela en œuvre, vous pouvez fournir un téléphone à vos utilisateurs ou bien fournir une carte SIM (cela pré-suppose que vos utilisateurs desiposent de téléphones compatibles double-SIM) ou bien fournir une e-SIM (cela pré-suppose que vos utilisateurs disposent d'un téléphone compatible avec une e-SIM).";Séparer les usages professionnels des usages personnels.;;;M
-NOM-001-016;Nomadisme;[Smartphones/Tablettes] Séparer les usages professionnels des usages personnels sur les terminaux mobiles maîtrisés par vos services;3;Accès aux applications et aux données;"Vous mettez en œuvre des solutions de séparation des usages personnels et des usages professionnels sur les terminaux mobiles maîtrisés par vos services lorsque cela est possible techniquement. Ce type de solution est couramment appelée ""enclave sécurisée"". 
+Note : trois types de chiffrements sont possibles pour le chiffrement des donnÃ©es contenues sur l'appareil : 
+- le chiffrement complet du disque : au dÃ©marrage, l'utilisateur doit fournir ses identifiants avant qu'aucune des parties du disque ne soit accessible ;
+- le chiffrement basÃ© sur les fichiers : il permet de chiffrer diffÃ©rents fichiers avec des clÃ©s diffÃ©rentes qui peuvent Ãªtre dÃ©verrouillÃ©es indÃ©pendamment ;
+- le chiffrement des mÃ©tadonnÃ©es : tout le contenu qui n'est pas chiffrÃ© par le chiffrement basÃ© sur les fichiers, comme les mises en page des rÃ©pertoires, les tailles de fichier, les autorisations et les heures de crÃ©ation/modification.";;;;M
+NOM-001-011;Nomadisme;[Smartphones/Tablettes] Chiffrer les donnÃ©es professionnelles des terminaux mobiles;3;SÃ©curisation des terminaux;"Vous mettez en Å“uvre un chiffrement sur les donnÃ©es professionnelles contenues sur les smartphones et tablettes oÃ¹ une solution de gestion de terminaux mobiles (MDM : Mobile Device Management, en anglais) est dÃ©ployÃ©e. Une telle solution de MDM peut Ãªtre mise en place, soit par la crÃ©ation d'un espace professionnel sur le terminal, soit par l'enrÃ´lement du terminal afin qu'il puisse accÃ©der Ã  certaines Apps (par exemple Office365). L'objectif de la mesure est alors de chiffrer les donnÃ©es sur la partie maÃ®trisÃ©e du terminal.";;;;M
+NOM-001-012;Nomadisme;SÃ©parer les usages professionnels des usages personnels;1;AccÃ¨s aux applications et aux donnÃ©es;"Vous utilisez les coordonnÃ©es professionnelles (adresse e-mail, numÃ©ro de tÃ©lÃ©phone, adresse postale) uniquement lorsque cela est demandÃ© et nÃ©cessaire (ex: crÃ©ation de compte sur une application utilisÃ©e Ã  des fins professionnelles, renseignement de formulaire dans le cadre professionnel, etc.).";;;;M
+NOM-001-013;Nomadisme;CrÃ©er une adresse e-mail professionnelle dÃ©diÃ©e;1;AccÃ¨s aux applications et aux donnÃ©es;Vous demandez Ã  vos collaborateurs de crÃ©er une adresse e-mail dÃ©diÃ©e pour l'activitÃ© professionnelle si aucune n'est fournie par l'entreprise. Par exemple michelle.martin.pro@gmail.com;SÃ©parer les usages professionnels des usages personnels.;;;M
+NOM-001-014;Nomadisme;Fournir une adresse e-mail professionnelle;2;AccÃ¨s aux applications et aux donnÃ©es;Vous fournissez une adresse e-mail professionnelle Ã  vos utilisateurs. Celle-ci est gÃ©rÃ©e par vos services ou par un tiers mandatÃ© Ã  cet effet.;SÃ©parer les usages professionnels des usages personnels.;;;M
+NOM-001-015;Nomadisme;Fournir un numÃ©ro de tÃ©lÃ©phone professionnel;3;AccÃ¨s aux applications et aux donnÃ©es;"Vous fournissez un numÃ©ro de tÃ©lÃ©phone professionnel Ã  vos utilisateurs.
+Pour mettre cela en Å“uvre, vous pouvez fournir un tÃ©lÃ©phone Ã  vos utilisateurs ou bien fournir une carte SIM (cela prÃ©-suppose que vos utilisateurs desiposent de tÃ©lÃ©phones compatibles double-SIM) ou bien fournir une e-SIM (cela prÃ©-suppose que vos utilisateurs disposent d'un tÃ©lÃ©phone compatible avec une e-SIM).";SÃ©parer les usages professionnels des usages personnels.;;;M
+NOM-001-016;Nomadisme;[Smartphones/Tablettes] SÃ©parer les usages professionnels des usages personnels sur les terminaux mobiles maÃ®trisÃ©s par vos services;3;AccÃ¨s aux applications et aux donnÃ©es;"Vous mettez en Å“uvre des solutions de sÃ©paration des usages personnels et des usages professionnels sur les terminaux mobiles maÃ®trisÃ©s par vos services lorsque cela est possible techniquement. Ce type de solution est couramment appelÃ©e ""enclave sÃ©curisÃ©e"". 
 
-Note : Une enclave sécurisée est inutile sur un terminal débridé (""rooté""). Il est donc important de vérifier que les terminaux ne sont pas débridés et ne sont pas débridables par l'utilisateur final.";;;;M
-NOM-001-017;Nomadisme;Etre en capacité de bloquer à distance un terminal mobile fourni et opéré par vos services;3;Accès aux terminaux;"Vous mettez en œuvre une fonctionnalité permettant de bloquer à distance un terminal mobile maîtrisé par vos services, en cas de vol ou de perte.
-1. Ce blocage empêche le déverrouillage du terminal ; seuls vos services sont en capacité d'y mettre fin, en cas de récupération du terminal.
-2. Vous bloquez également l'accès à l'OS si cela est possible.
-";;;;M
-NOM-001-018;Nomadisme;Etre en capacité d'effacer à distance et de manière sécurisée un terminal mobile maîtrisé par vos services;3;Accès aux applications et aux données;Vous mettez en œuvre une fonctionnalité permettant d'effacer à distance les données contenues sur un terminal mobile maîtrisé par vos services, en cas de vol ou de perte.;;;;M
-NOM-001-019;Nomadisme;Définir une politique de mise en veille et de verrouillage;0;Accès aux terminaux;Vous mettez en place une politique de mise en veille et de verrouillage automatique des terminaux aussi bien ceux maîtrisés par vos services que pour le BYOD. Dans ce dernier cas, vous demandez à vos utilisateurs qu'ils s'engagent à suivre cette politique. Vous choisissez les délais de mise en veille et de verrouillage automatique selon les besoins métier (par exemple, après 5 minutes d'inactivité sur un PC portable, et après 2 ou 3 minutes d'inactivité sur un téléphone ou une tablette).;Limiter les risques de consultation d'information illégitime.;;;M
-NOM-001-020;Nomadisme;Mettre en œuvre une solution de gestion de flotte mobile pour les terminaux maîtrisés par vos services;5;Maintien en condition de sécurité;"Vous mettez en œuvre une solution de gestion de flotte des terminaux mobiles (MDM) maîtrisés par vos services. Cette solution vous permet notamment de mettre en œuvre les mesures suivantes :
+Note : Une enclave sÃ©curisÃ©e est inutile sur un terminal dÃ©bridÃ© (""rootÃ©""). Il est donc important de vÃ©rifier que les terminaux ne sont pas dÃ©bridÃ©s et ne sont pas dÃ©bridables par l'utilisateur final.";;;;M
+NOM-001-017;Nomadisme;Etre en capacitÃ© de bloquer Ã  distance un terminal mobile fourni et opÃ©rÃ© par vos services;3;AccÃ¨s aux terminaux;"Vous mettez en Å“uvre une fonctionnalitÃ© permettant de bloquer Ã  distance un terminal mobile maÃ®trisÃ© par vos services, en cas de vol ou de perte.
+1. Ce blocage empÃªche le dÃ©verrouillage du terminal ; seuls vos services sont en capacitÃ© d'y mettre fin, en cas de rÃ©cupÃ©ration du terminal.
+2. Vous bloquez Ã©galement l'accÃ¨s Ã  l'OS si cela est possible.";;;;M
+NOM-001-018;Nomadisme;Etre en capacitÃ© d'effacer Ã  distance et de maniÃ¨re sÃ©curisÃ©e un terminal mobile maÃ®trisÃ© par vos services;3;AccÃ¨s aux applications et aux donnÃ©es;"Vous mettez en Å“uvre une fonctionnalitÃ© permettant d'effacer Ã  distance les donnÃ©es contenues sur un terminal mobile maÃ®trisÃ© par vos services, en cas de vol ou de perte.";;;;M
+NOM-001-019;Nomadisme;DÃ©finir une politique de mise en veille et de verrouillage;0;AccÃ¨s aux terminaux;"Vous mettez en place une politique de mise en veille et de verrouillage automatique des terminaux aussi bien ceux maÃ®trisÃ©s par vos services que pour le BYOD. Dans ce dernier cas, vous demandez Ã  vos utilisateurs qu'ils s'engagent Ã  suivre cette politique. Vous choisissez les dÃ©lais de mise en veille et de verrouillage automatique selon les besoins mÃ©tier (par exemple, aprÃ¨s 5 minutes d'inactivitÃ© sur un PC portable, et aprÃ¨s 2 ou 3 minutes d'inactivitÃ© sur un tÃ©lÃ©phone ou une tablette).";Limiter les risques de consultation d'information illÃ©gitime.;;;M
+NOM-001-020;Nomadisme;Mettre en Å“uvre une solution de gestion de flotte mobile pour les terminaux maÃ®trisÃ©s par vos services;5;Maintien en condition de sÃ©curitÃ©;"Vous mettez en Å“uvre une solution de gestion de flotte des terminaux mobiles (MDM) maÃ®trisÃ©s par vos services. Cette solution vous permet notamment de mettre en Å“uvre les mesures suivantes :
 NOM-001-010,NOM-001-011,NOM-001-017,NOM-001-018,NOM-001-034,NOM-001-036,NOM-001-042,NOM-001-043,NOM-001-045,NOM-001-046,NOM-001-048,NOM-001-049,NOM-001-051,NOM-001-052,NOM-001-053, NOM-001-055";;;;M
-NOM-001-021;Nomadisme;Mettre en œuvre une solution de gestion des terminaux non fournis par vos services;3;Maintien en condition de sécurité;Vous mettez en œuvre une solution de gestion des terminaux mobiles non fournis par vos services mais qui accèdent à des applications et données de votre entité. Cette solution vous permet notamment de mettre en oeuvre les mesures suivantes : NOM-001-010, NOM-001-036, NOM-001-042, NOM-001-043, NOM-001-051.;;;;M
-NOM-001-022;Nomadisme;Protéger les comptes avec un mot de passe;1;Accès aux terminaux;Vous mettez en place un mot de passe sur tous les comptes associés aux terminaux,  si ce n'est pas déjà fait. En particulier pour les compte permettant de déverrouiller les terminaux et d'accéder aux mails.;;;;M
-NOM-001-023;Nomadisme;Mettre en oeuvre une politique de mots de passe;2;Accès aux terminaux;Vous mettez en place une politique de mots de passe qui respecte les contraintes suivantes : au moins 12 caractères parmi les minuscules, majuscules, chiffres et caractères spéciaux, pas de limite haute sur la taille du mot de passe, blocage des références à l'entité et à l'identité de l'utilisateur. Cette politique est appliquée aux mots de passe des comptes utilisateur permettant l'accès aux terminaux.;;;;M
-NOM-001-024;Nomadisme;[PC portable] Bloquer l'accès aux comptes utilisateurs après plusieurs tentatives de connexion infructueuses;2;Accès aux terminaux;Vous paramétrez les terminaux et/ou les comptes utilisateurs afin de bloquer l'accès à la session de l'utilisateur après plusieurs tentatives de connexion infructueuses, et vous mettez en place un mécanisme de déblocage. Le nombre de tentatives infructueuses limite recommandé est compris entre 5 et 10.;;;;M
-NOM-001-027;Nomadisme;[PC portable] Mettre entre œuvre une authentification multifacteurs avec jeton d’authentification physique pour la session utilisateur;5;Accès aux terminaux;Vous déployez une authentification multifacteurs avec jeton d’authentification physique pour l'accès à la session utilisateur. Il peut s'agir par exemple d'une carte à puce ou d'une Yubikey.;;;;M
-NOM-001-028;Nomadisme;Mettre entre œuvre une authentification  multifacteurs avec jeton d’authentification physique pour l'accès aux applications sensibles et/ou d'administration;5;Accès aux applications et aux données;Vous déployez une authentification multifacteurs avec jeton d’authentification physique pour l'accès aux applications métier en mode SaaS dans le cas des applications ayant un fort niveau de sensibilité, comme par exemple les applications permettant d'effectuer des actions d'administration.;;;;M
-NOM-001-029;Nomadisme;[Smartphone/tablette] Activer un code de déverrouillage pour accéder au terminal;1;Accès aux terminaux;Vous forcez l'utilisation d'un code de déverrouillage pour accéder aux terminaux aussi bien ceux maîtrisés par vos services que pour le BYOD. Dans ce dernier cas, vous demandez à vos utilisateurs qu'ils s'engagent à suivre cette politique.;;;;M
-NOM-001-030;Nomadisme;[Smartphone/tablette] Empêcher l'utilisation d'un schéma de déverrouillage pour accéder au terminal;2;Accès aux terminaux;Vous empêchez le déverrouillage des terminaux maîtrisés par vos services à partir d'un schéma de déverrouillage.;;;;M
-NOM-001-031;Nomadisme;[Smartphone/tablette] Autoriser l'utilisation de la biométrie pour le déverrouillage des terminaux;2;Accès aux terminaux;"Vous autorisez le déverrouillage des terminaux maîtrisés par vos services à partir de la biométrie (reconnaissance faciale, empreinte).
-Cette mesure ne se substitue pas à la nécessité d'avoir un code de déverrouillage, utilisable si la biométrie ne fonctionne pas. De plus, le code de déverrouillage est demandé périodiquement à l'utilisateur.";;;;M
-NOM-001-032;Nomadisme;[Smartphone/tablette] Mettre en œuvre des règles sur le code de déverrouillage pour accéder au terminal;2;Accès aux terminaux;Vous mettez en œuvre les contraintes suivantes pour le code de déverrouillage pour accéder aux terminaux maîtrisés par vos services : ce code de déverrouillage est alpha-numérique et doit avoir au moins 4 caractères.;;;;M
-NOM-001-034;Nomadisme;[PC portable] Mettre en œuvre un antivirus sur les terminaux;2;Sécurisation des terminaux;Vous installez et maintenez à jour une solution d'antivirus sur les terminaux maîtrisés par vos services.  Vous pouvez utiliser l'antivirus natif de votre système d'exploitation, si celui-ci existe.;;;;M
-NOM-001-035;Nomadisme;[PC portable] Activer le pare-feu local sur les terminaux;2;Sécurisation des terminaux;Vous installez et configurez un pare-feu logiciel sur le système d'exploitation des terminaux maîtrisés par vos services. Vous utilisez en priorité le pare-feu natif de votre système d'exploitation, si celui-ci existe.;;;;M
-NOM-001-036;Nomadisme;Activer les mises à jour automatiques ;0;Maintien en condition de sécurité;Vous configurez partout où cela est possible (OS, Apps, etc.) les mises à jour automatiques sur vos terminaux.;;;;M
-NOM-001-037;Nomadisme;[PC portable] Configurer le pare-feu local pour bloquer les connexions des autres terminaux;3;Sécurisation des terminaux;"Vous bloquez toute connexion directe d'un équipement qui n'est ni un point d'accès Wi-Fi, ni un commutateur. Ce blocage est à paramétrer au niveau du pare-feu précédemment installé sur le système d'exploitation des terminaux maîtrisés par vos services.
-Sur les terminaux Windows, il s'agit de la configuration par défaut.";;;;M
-NOM-001-038;Nomadisme;Limiter les accès aux applications métier du SI en situation de nomadisme;3;Accès aux applications et aux données;Vous définissez quelles applications métier sont accessibles à vos utilisateurs en situation de nomadisme, et vous mettez en œuvre des mécanismes de blocage d'accès aux autres applications.;Limiter les risques d'utilisation d'applications sensibles depuis des environnements non maîtrisés.;;;M
-NOM-001-039;Nomadisme;Limiter les accès aux données métier du SI en situation de nomadisme ;3;Accès aux applications et aux données;Vous définissez quels fichiers sont accessibles à vos utilisateurs en situation de nomadisme (par exemple avec un label) et vous mettez en œuvre des mécanismes de blocage d'accès en lecture et/ou écriture aux fichiers non accessibles en situation de nomadisme.;;;;M
-NOM-001-040;Nomadisme;Définir les limites acceptables de téléchargement des données;3;Accès aux applications et aux données;Vous définissez les volumes (nombre de fichiers, criticité des fichiers, taille des fichiers en Go) acceptables de données téléchargées en situation de nomadisme, en fonction du métier de vos utilisateurs et sur une plage horaire, et en fonction du terminal utilisé (smartphone, tablette, PC portable).;Limiter la quantité de données pouvant être exfiltrées par un attaquant suite à une compromission de compte;;;M
-NOM-001-042;Nomadisme;Avoir un store d'applications dédié;4;Maintien en condition de sécurité;"Vous identifiez une sélection d'Apps et de logiciels répondant aux besoins métier et utilisateurs.
-Vous vérifiez la sécurité de ces Apps et logiciels à travers notamment des analyses antivirales et des analyses de code statiques et dynamiques, ainsi qu'une vérification de leur empreinte (SHA-256).
-Vous mettez ces Apps et logiciels à disposition de vos utilisateurs dans un centre logiciel ou un ""store d'applications"" dédié. Les utilisateurs doivent passer par ce centre logiciel ou ce store pour installer une Apps ou un logiciel ; ils ne peuvent rien installer d'autre.
+NOM-001-021;Nomadisme;Mettre en Å“uvre une solution de gestion des terminaux non fournis par vos services;3;Maintien en condition de sÃ©curitÃ©;"Vous mettez en Å“uvre une solution de gestion des terminaux mobiles non fournis par vos services mais qui accÃ¨dent Ã  des applications et donnÃ©es de votre entitÃ©. Cette solution vous permet notamment de mettre en oeuvre les mesures suivantes : NOM-001-010, NOM-001-036, NOM-001-042, NOM-001-043, NOM-001-051.";;;;M
+NOM-001-022;Nomadisme;ProtÃ©ger les comptes avec un mot de passe;1;AccÃ¨s aux terminaux;"Vous mettez en place un mot de passe sur tous les comptes associÃ©s aux terminaux,  si ce n'est pas dÃ©jÃ  fait. En particulier pour les compte permettant de dÃ©verrouiller les terminaux et d'accÃ©der aux mails.";;;;M
+NOM-001-023;Nomadisme;Mettre en oeuvre une politique de mots de passe;2;AccÃ¨s aux terminaux;"Vous mettez en place une politique de mots de passe qui respecte les contraintes suivantes : au moins 12 caractÃ¨res parmi les minuscules, majuscules, chiffres et caractÃ¨res spÃ©ciaux, pas de limite haute sur la taille du mot de passe, blocage des rÃ©fÃ©rences Ã  l'entitÃ© et Ã  l'identitÃ© de l'utilisateur. Cette politique est appliquÃ©e aux mots de passe des comptes utilisateur permettant l'accÃ¨s aux terminaux.";;;;M
+NOM-001-024;Nomadisme;[PC portable] Bloquer l'accÃ¨s aux comptes utilisateurs aprÃ¨s plusieurs tentatives de connexion infructueuses;2;AccÃ¨s aux terminaux;"Vous paramÃ©trez les terminaux et/ou les comptes utilisateurs afin de bloquer l'accÃ¨s Ã  la session de l'utilisateur aprÃ¨s plusieurs tentatives de connexion infructueuses, et vous mettez en place un mÃ©canisme de dÃ©blocage. Le nombre de tentatives infructueuses limite recommandÃ© est compris entre 5 et 10.";;;;M
+NOM-001-027;Nomadisme;[PC portable] Mettre entre Å“uvre une authentification multifacteurs avec jeton dâ€™authentification physique pour la session utilisateur;5;AccÃ¨s aux terminaux;Vous dÃ©ployez une authentification multifacteurs avec jeton dâ€™authentification physique pour l'accÃ¨s Ã  la session utilisateur. Il peut s'agir par exemple d'une carte Ã  puce ou d'une Yubikey.;;;;M
+NOM-001-028;Nomadisme;Mettre entre Å“uvre une authentification  multifacteurs avec jeton dâ€™authentification physique pour l'accÃ¨s aux applications sensibles et/ou d'administration;5;AccÃ¨s aux applications et aux donnÃ©es;"Vous dÃ©ployez une authentification multifacteurs avec jeton dâ€™authentification physique pour l'accÃ¨s aux applications mÃ©tier en mode SaaS dans le cas des applications ayant un fort niveau de sensibilitÃ©, comme par exemple les applications permettant d'effectuer des actions d'administration.";;;;M
+NOM-001-029;Nomadisme;[Smartphone/tablette] Activer un code de dÃ©verrouillage pour accÃ©der au terminal;1;AccÃ¨s aux terminaux;"Vous forcez l'utilisation d'un code de dÃ©verrouillage pour accÃ©der aux terminaux aussi bien ceux maÃ®trisÃ©s par vos services que pour le BYOD. Dans ce dernier cas, vous demandez Ã  vos utilisateurs qu'ils s'engagent Ã  suivre cette politique.";;;;M
+NOM-001-030;Nomadisme;[Smartphone/tablette] EmpÃªcher l'utilisation d'un schÃ©ma de dÃ©verrouillage pour accÃ©der au terminal;2;AccÃ¨s aux terminaux;Vous empÃªchez le dÃ©verrouillage des terminaux maÃ®trisÃ©s par vos services Ã  partir d'un schÃ©ma de dÃ©verrouillage.;;;;M
+NOM-001-031;Nomadisme;[Smartphone/tablette] Autoriser l'utilisation de la biomÃ©trie pour le dÃ©verrouillage des terminaux;2;AccÃ¨s aux terminaux;"Vous autorisez le dÃ©verrouillage des terminaux maÃ®trisÃ©s par vos services Ã  partir de la biomÃ©trie (reconnaissance faciale, empreinte).
+Cette mesure ne se substitue pas Ã  la nÃ©cessitÃ© d'avoir un code de dÃ©verrouillage, utilisable si la biomÃ©trie ne fonctionne pas. De plus, le code de dÃ©verrouillage est demandÃ© pÃ©riodiquement Ã  l'utilisateur.";;;;M
+NOM-001-032;Nomadisme;[Smartphone/tablette] Mettre en Å“uvre des rÃ¨gles sur le code de dÃ©verrouillage pour accÃ©der au terminal;2;AccÃ¨s aux terminaux;Vous mettez en Å“uvre les contraintes suivantes pour le code de dÃ©verrouillage pour accÃ©der aux terminaux maÃ®trisÃ©s par vos services : ce code de dÃ©verrouillage est alpha-numÃ©rique et doit avoir au moins 4 caractÃ¨res.;;;;M
+NOM-001-034;Nomadisme;[PC portable] Mettre en Å“uvre un antivirus sur les terminaux;2;SÃ©curisation des terminaux;"Vous installez et maintenez Ã  jour une solution d'antivirus sur les terminaux maÃ®trisÃ©s par vos services.  Vous pouvez utiliser l'antivirus natif de votre systÃ¨me d'exploitation, si celui-ci existe.";;;;M
+NOM-001-035;Nomadisme;[PC portable] Activer le pare-feu local sur les terminaux;2;SÃ©curisation des terminaux;"Vous installez et configurez un pare-feu logiciel sur le systÃ¨me d'exploitation des terminaux maÃ®trisÃ©s par vos services. Vous utilisez en prioritÃ© le pare-feu natif de votre systÃ¨me d'exploitation, si celui-ci existe.";;;;M
+NOM-001-036;Nomadisme;Activer les mises Ã  jour automatiques;0;Maintien en condition de sÃ©curitÃ©;"Vous configurez partout oÃ¹ cela est possible (OS, Apps, etc.) les mises Ã  jour automatiques sur vos terminaux.";;;;M
+NOM-001-037;Nomadisme;[PC portable] Configurer le pare-feu local pour bloquer les connexions des autres terminaux;3;SÃ©curisation des terminaux;"Vous bloquez toute connexion directe d'un Ã©quipement qui n'est ni un point d'accÃ¨s Wi-Fi, ni un commutateur. Ce blocage est Ã  paramÃ©trer au niveau du pare-feu prÃ©cÃ©demment installÃ© sur le systÃ¨me d'exploitation des terminaux maÃ®trisÃ©s par vos services.
+Sur les terminaux Windows, il s'agit de la configuration par dÃ©faut.";;;;M
+NOM-001-038;Nomadisme;Limiter les accÃ¨s aux applications mÃ©tier du SI en situation de nomadisme;3;AccÃ¨s aux applications et aux donnÃ©es;"Vous dÃ©finissez quelles applications mÃ©tier sont accessibles Ã  vos utilisateurs en situation de nomadisme, et vous mettez en Å“uvre des mÃ©canismes de blocage d'accÃ¨s aux autres applications.";Limiter les risques d'utilisation d'applications sensibles depuis des environnements non maÃ®trisÃ©s.;;;M
+NOM-001-039;Nomadisme;Limiter les accÃ¨s aux donnÃ©es mÃ©tier du SI en situation de nomadisme;3;AccÃ¨s aux applications et aux donnÃ©es;Vous dÃ©finissez quels fichiers sont accessibles Ã  vos utilisateurs en situation de nomadisme (par exemple avec un label) et vous mettez en Å“uvre des mÃ©canismes de blocage d'accÃ¨s en lecture et/ou Ã©criture aux fichiers non accessibles en situation de nomadisme.;;;;M
+NOM-001-040;Nomadisme;DÃ©finir les limites acceptables de tÃ©lÃ©chargement des donnÃ©es;3;AccÃ¨s aux applications et aux donnÃ©es;"Vous dÃ©finissez les volumes (nombre de fichiers, criticitÃ© des fichiers, taille des fichiers en Go) acceptables de donnÃ©es tÃ©lÃ©chargÃ©es en situation de nomadisme, en fonction du mÃ©tier de vos utilisateurs et sur une plage horaire, et en fonction du terminal utilisÃ© (smartphone, tablette, PC portable).";Limiter la quantitÃ© de donnÃ©es pouvant Ãªtre exfiltrÃ©es par un attaquant suite Ã  une compromission de compte;;;M
+NOM-001-042;Nomadisme;Avoir un store d'applications dÃ©diÃ©;4;Maintien en condition de sÃ©curitÃ©;"Vous identifiez une sÃ©lection d'Apps et de logiciels rÃ©pondant aux besoins mÃ©tier et utilisateurs.
+Vous vÃ©rifiez la sÃ©curitÃ© de ces Apps et logiciels Ã  travers notamment des analyses antivirales et des analyses de code statiques et dynamiques, ainsi qu'une vÃ©rification de leur empreinte (SHA-256).
+Vous mettez ces Apps et logiciels Ã  disposition de vos utilisateurs dans un centre logiciel ou un ""store d'applications"" dÃ©diÃ©. Les utilisateurs doivent passer par ce centre logiciel ou ce store pour installer une Apps ou un logiciel ; ils ne peuvent rien installer d'autre.
 
-Cette mesure est applicable sur les terminaux maîtrisés par vos services, ainsi que pour les terminaux possédant une enclave sécurisée opérée par vos services.";;;;M
-NOM-001-043;Nomadisme;Forcer le déploiement et l'application des mises à jour;2;Maintien en condition de sécurité;Vous mettez en place le déploiement automatique des mises à jour sur les terminaux maîtrisés par vos services, une fois celles-ci validées par vos services. Ces mises à jour peuvent être repoussées temporairement (quelques heures) par l'utilisateur mais doivent être faites au plus tard dans les 24h, et dans tous les cas à l'arrêt du terminal.;;;;M
-NOM-001-045;Nomadisme;Superviser le téléchargement de données et le bloquer au-delà des seuils acceptales;4;Maintien en condition de sécurité;Vous mettez en place de la supervision des volumes de données téléchargées depuis les serveurs et dépôts de données vers les terminaux en situation de nomadisme. Cette supervision génère des alertes en fonction des règles définies précédemment [NOM-001-040] et bloque automatiquement le téléchargement de données une fois les seuils précédemment définis atteints [NOM-001-040].;;;;M
-NOM-001-046;Nomadisme;[Smartphones/Tablettes] Limiter les accès aux données professionnelles par les applications personnelles;2;Accès aux applications et aux données;"Vous limitez les accès aux données professionnelles par d'autres Apps non professionnelles. Les accès aux données personnelles depuis les Apps professionnelles sont possibles (par exemple les images), mais pas l'inverse (par exemple, WhatsApp n'a pas les droits d'accès à la liste des contacts professionnels, ni aux images professionnelles).
-Lors du transfert d'une donnée personnelle vers une Apps professionnelle, une analyse antivirale est automatiquement lancée afin de s'asssurer de l'innocuité de la donnée.
+Cette mesure est applicable sur les terminaux maÃ®trisÃ©s par vos services, ainsi que pour les terminaux possÃ©dant une enclave sÃ©curisÃ©e opÃ©rÃ©e par vos services.";;;;M
+NOM-001-043;Nomadisme;Forcer le dÃ©ploiement et l'application des mises Ã  jour;2;Maintien en condition de sÃ©curitÃ©;"Vous mettez en place le dÃ©ploiement automatique des mises Ã  jour sur les terminaux maÃ®trisÃ©s par vos services, une fois celles-ci validÃ©es par vos services. Ces mises Ã  jour peuvent Ãªtre repoussÃ©es temporairement (quelques heures) par l'utilisateur mais doivent Ãªtre faites au plus tard dans les 24h, et dans tous les cas Ã  l'arrÃªt du terminal.";;;;M
+NOM-001-045;Nomadisme;Superviser le tÃ©lÃ©chargement de donnÃ©es et le bloquer au-delÃ  des seuils acceptales;4;Maintien en condition de sÃ©curitÃ©;Vous mettez en place de la supervision des volumes de donnÃ©es tÃ©lÃ©chargÃ©es depuis les serveurs et dÃ©pÃ´ts de donnÃ©es vers les terminaux en situation de nomadisme. Cette supervision gÃ©nÃ¨re des alertes en fonction des rÃ¨gles dÃ©finies prÃ©cÃ©demment [NOM-001-040] et bloque automatiquement le tÃ©lÃ©chargement de donnÃ©es une fois les seuils prÃ©cÃ©demment dÃ©finis atteints [NOM-001-040].;;;;M
+NOM-001-046;Nomadisme;[Smartphones/Tablettes] Limiter les accÃ¨s aux donnÃ©es professionnelles par les applications personnelles;2;AccÃ¨s aux applications et aux donnÃ©es;"Vous limitez les accÃ¨s aux donnÃ©es professionnelles par d'autres Apps non professionnelles. Les accÃ¨s aux donnÃ©es personnelles depuis les Apps professionnelles sont possibles (par exemple les images), mais pas l'inverse (par exemple, WhatsApp n'a pas les droits d'accÃ¨s Ã  la liste des contacts professionnels, ni aux images professionnelles).
+Lors du transfert d'une donnÃ©e personnelle vers une Apps professionnelle, une analyse antivirale est automatiquement lancÃ©e afin de s'asssurer de l'innocuitÃ© de la donnÃ©e.
 
-Cette mesure est applicable sur les terminaux maîtrisés par vos services, ainsi que pour les terminaux possédant une enclave sécurisée opérée par vos services.";;;;M
-NOM-001-047;Nomadisme;[Smartphones/Tablettes] Limiter les accès aux données personnelles par les applications professionnelles;3;Accès aux applications et aux données;"Vous bloquez les accès aux données professionnelles par d'autres Apps non professionnelles et vous intedisez/bloquez les accès aux données personnelles par vos Apps professionnelles. L'effet recherché est l'étanchéité entre les espaces personnels et professionnels ; seuls le matériel et l'OS sont partagés, mais pas les Apps ni les fichiers. Par exemple, vous pouvez installer une application d'appareil photo dédiée à l'espace professionnel.
+Cette mesure est applicable sur les terminaux maÃ®trisÃ©s par vos services, ainsi que pour les terminaux possÃ©dant une enclave sÃ©curisÃ©e opÃ©rÃ©e par vos services.";;;;M
+NOM-001-047;Nomadisme;[Smartphones/Tablettes] Limiter les accÃ¨s aux donnÃ©es personnelles par les applications professionnelles;3;AccÃ¨s aux applications et aux donnÃ©es;"Vous bloquez les accÃ¨s aux donnÃ©es professionnelles par d'autres Apps non professionnelles et vous intedisez/bloquez les accÃ¨s aux donnÃ©es personnelles par vos Apps professionnelles. L'effet recherchÃ© est l'Ã©tanchÃ©itÃ© entre les espaces personnels et professionnels ; seuls le matÃ©riel et l'OS sont partagÃ©s, mais pas les Apps ni les fichiers. Par exemple, vous pouvez installer une application d'appareil photo dÃ©diÃ©e Ã  l'espace professionnel.
 
-Cette mesure est applicable sur les terminaux maîtrisés par vos services, ainsi que pour les terminaux possédant une enclave sécurisée opérée par vos services.";Empêcher des fichiers personnels potentiellement corrompus d'accéder à l'environnement professionnel.;;;M
-NOM-001-048;Nomadisme;Désinstaller les logiciels inutiles;2;Sécurisation des terminaux;"Vous ne gardez que les logiciels et applications nécessaires pour vos métiers, et vous désinstallez tous les autres dans la mesure du possible (certains logiciels et applications constructeurs ne peuvent pas être désintallés).
+Cette mesure est applicable sur les terminaux maÃ®trisÃ©s par vos services, ainsi que pour les terminaux possÃ©dant une enclave sÃ©curisÃ©e opÃ©rÃ©e par vos services.";EmpÃªcher des fichiers personnels potentiellement corrompus d'accÃ©der Ã  l'environnement professionnel.;;;M
+NOM-001-048;Nomadisme;DÃ©sinstaller les logiciels inutiles;2;SÃ©curisation des terminaux;"Vous ne gardez que les logiciels et applications nÃ©cessaires pour vos mÃ©tiers, et vous dÃ©sinstallez tous les autres dans la mesure du possible (certains logiciels et applications constructeurs ne peuvent pas Ãªtre dÃ©sintallÃ©s).
 
-Cette mesure est applicable sur les terminaux maîtrisés par vos services.";;;;M
-NOM-001-049;Nomadisme;[Smartphones/Tablettes] Supprimer les autorisations des applications;3;Sécurisation des terminaux;"Vous supprimez les autorisations accordées (micro, caméra, localisation, accès aux données de type contact, photo, fichier, etc.) à des Apps non utilisées depuis plusieurs mois (par exemple : supprimer les autorisations après 6 mois).
-Cette fonctionnalité peut être mise en oeuvre à travers une solution de MDM sur les terminaux maîtrisés par vos services, ou directement via la surcouche constructeur du terminal (par exemple Samsung, Apple).";;;;M
-NOM-001-051;Nomadisme;Enrôler les appareils et les comptes;2;Accès aux applications et aux données;Vous mettez en œuvre une solution permettant l'enrôlement et le désenrôlement des comptes et des terminaux afin de pouvoir contrôler leurs accès aux applications métier.;;;;M
-NOM-001-053;Nomadisme;[Smartphones/Tablettes] Forcer l'utilisation de mots de passe pour les accès aux applications métier;1;Accès aux applications et aux données;Vous forcez l'utilisation du mot de passe de déverrouillage (ou déverrouillage biométrique : empreinte, reconnaissance faciale) du téléphone/de la tablette pour déverrouiller les Apps installées sur le terminal, lorsque cela est possible.;;;;M
-NOM-001-054;Nomadisme;[Smartphones/Tablettes] Forcer l'authentification pour les accès aux applications métier;2;Accès aux applications et aux données;"Vous forcez l'authentification pour accéder aux Apps lorsque cela est possible.
-La demande de réauthentification peut être paramétrée en accord avec les usages métier : par exemple, une demande toutes les 12 ou 24h, mais pas forcément systématique à chaque accès à l'application.";;;;M
-NOM-001-056;Nomadisme;Fournir un cache-caméra;0;Sécurisation des terminaux;Vous mettez à disposition de vos utilisateurs des caches-caméra.;;;;M
-NOM-001-057;Nomadisme;Mettre en place l'utilisation du MFA pour les accès aux applications métier;3;Accès aux applications et aux données;Vous mettez en place l'utilisation du MFA pour s'authentifier sur les applications métier, lorsque cela est possible.;;;;M
-NOM-001-058;Nomadisme;Forcer l'utilisation du MFA pour les accès aux applications métier;4;Accès aux applications et aux données;Vous forcez l'utilisation du MFA pour s'authentifier sur les applications métier, lorsque cela est possible. La demande de réauthentification peut être paramétrée en accord avec les usages métier : par exemple, une demande toutes les 12 ou 24h, mais pas forcément systématique à chaque accès à l'application.;;;;M
-NOM-001-059;Nomadisme;Désinstaller les applications et logiciels inutilisés depuis un certain temps;2;Sécurisation des terminaux;"Vous êtes alertés lorsqu'une Apps ou un logiciel installé sur le terminal d'un de vos utilisateurs n'a pas été utilisé depuis plusieurs mois et vous proposez automatiquement à l'utilisateur la suppression ou le maintien de l'Apps ou du logiciel.
-Cette mesure est applicable sur les terminaux maîtrisés par vos services.";;;;M
-NOM-001-060;Nomadisme;Superviser les terminaux enregistrés;3;Maintien en condition de sécurité;Vous mettez en place de la supervision de vos terminaux maîtrisés par vos services : versions et droits des logiciels et applications installés, alertes antivirales/pare-feu, localisation.;;;;M
-NOM-001-061;Nomadisme;[Smartphones/Tablettes] Interdire l'usage de la 2G ;2;Sécurisation des terminaux;Vous interdisez l'utilisation du mode réseau dégradé 2G sur les terminaux maîtrisés par vos services, en bloquant ce paramètre de connexion.;"La 2G permet à un attaquant de mettre en place une attaque de type ""IMSI catcher"" (cf: Procès IMSI catcher 2026 https://www.lemonde.fr/pixels/article/2026/02/27/au-proces-des-escroqueries-a-l-imsi-catcher-un-braquage-sans-se-salir-les-mains_6668557_4408996.html)";;;M
-NOM-001-062;Nomadisme;Mettre en place un DNS filtrant;4;Sécurisation des terminaux;"Vous mettez en place l'utilisation d'un DNS filtrant sur les terminaux de vos utilisateurs. En fonction du service DNS choisi, celui-ci permet de bloquer des applications ou sites web malveillants, nuisibles ou inappropriés afin qu'ils ne puissent pas être chargés sur les terminaux de vos utilisateurs.
+Cette mesure est applicable sur les terminaux maÃ®trisÃ©s par vos services.";;;;M
+NOM-001-049;Nomadisme;[Smartphones/Tablettes] Supprimer les autorisations des applications;3;SÃ©curisation des terminaux;"Vous supprimez les autorisations accordÃ©es (micro, camÃ©ra, localisation, accÃ¨s aux donnÃ©es de type contact, photo, fichier, etc.) Ã  des Apps non utilisÃ©es depuis plusieurs mois (par exemple : supprimer les autorisations aprÃ¨s 6 mois).
+Cette fonctionnalitÃ© peut Ãªtre mise en oeuvre Ã  travers une solution de MDM sur les terminaux maÃ®trisÃ©s par vos services, ou directement via la surcouche constructeur du terminal (par exemple Samsung, Apple).";;;;M
+NOM-001-051;Nomadisme;EnrÃ´ler les appareils et les comptes;2;AccÃ¨s aux applications et aux donnÃ©es;Vous mettez en Å“uvre une solution permettant l'enrÃ´lement et le dÃ©senrÃ´lement des comptes et des terminaux afin de pouvoir contrÃ´ler leurs accÃ¨s aux applications mÃ©tier.;;;;M
+NOM-001-053;Nomadisme;[Smartphones/Tablettes] Forcer l'utilisation de mots de passe pour les accÃ¨s aux applications mÃ©tier;1;AccÃ¨s aux applications et aux donnÃ©es;"Vous forcez l'utilisation du mot de passe de dÃ©verrouillage (ou dÃ©verrouillage biomÃ©trique : empreinte, reconnaissance faciale) du tÃ©lÃ©phone/de la tablette pour dÃ©verrouiller les Apps installÃ©es sur le terminal, lorsque cela est possible.";;;;M
+NOM-001-054;Nomadisme;[Smartphones/Tablettes] Forcer l'authentification pour les accÃ¨s aux applications mÃ©tier;2;AccÃ¨s aux applications et aux donnÃ©es;"Vous forcez l'authentification pour accÃ©der aux Apps lorsque cela est possible.
+La demande de rÃ©authentification peut Ãªtre paramÃ©trÃ©e en accord avec les usages mÃ©tier : par exemple, une demande toutes les 12 ou 24h, mais pas forcÃ©ment systÃ©matique Ã  chaque accÃ¨s Ã  l'application.";;;;M
+NOM-001-056;Nomadisme;Fournir un cache-camÃ©ra;0;SÃ©curisation des terminaux;Vous mettez Ã  disposition de vos utilisateurs des caches-camÃ©ra.;;;;M
+NOM-001-057;Nomadisme;Mettre en place l'utilisation du MFA pour les accÃ¨s aux applications mÃ©tier;3;AccÃ¨s aux applications et aux donnÃ©es;"Vous mettez en place l'utilisation du MFA pour s'authentifier sur les applications mÃ©tier, lorsque cela est possible.";;;;M
+NOM-001-058;Nomadisme;Forcer l'utilisation du MFA pour les accÃ¨s aux applications mÃ©tier;4;AccÃ¨s aux applications et aux donnÃ©es;"Vous forcez l'utilisation du MFA pour s'authentifier sur les applications mÃ©tier, lorsque cela est possible. La demande de rÃ©authentification peut Ãªtre paramÃ©trÃ©e en accord avec les usages mÃ©tier : par exemple, une demande toutes les 12 ou 24h, mais pas forcÃ©ment systÃ©matique Ã  chaque accÃ¨s Ã  l'application.";;;;M
+NOM-001-059;Nomadisme;DÃ©sinstaller les applications et logiciels inutilisÃ©s depuis un certain temps;2;SÃ©curisation des terminaux;"Vous Ãªtes alertÃ©s lorsqu'une Apps ou un logiciel installÃ© sur le terminal d'un de vos utilisateurs n'a pas Ã©tÃ© utilisÃ© depuis plusieurs mois et vous proposez automatiquement Ã  l'utilisateur la suppression ou le maintien de l'Apps ou du logiciel.
+Cette mesure est applicable sur les terminaux maÃ®trisÃ©s par vos services.";;;;M
+NOM-001-060;Nomadisme;Superviser les terminaux enregistrÃ©s;3;Maintien en condition de sÃ©curitÃ©;"Vous mettez en place de la supervision de vos terminaux maÃ®trisÃ©s par vos services : versions et droits des logiciels et applications installÃ©s, alertes antivirales/pare-feu, localisation.";;;;M
+NOM-001-061;Nomadisme;[Smartphones/Tablettes] Interdire l'usage de la 2G;2;SÃ©curisation des terminaux;"Vous interdisez l'utilisation du mode rÃ©seau dÃ©gradÃ© 2G sur les terminaux maÃ®trisÃ©s par vos services, en bloquant ce paramÃ¨tre de connexion.";"La 2G permet Ã  un attaquant de mettre en place une attaque de type ""IMSI catcher"" (cf: ProcÃ¨s IMSI catcher 2026 https://www.lemonde.fr/pixels/article/2026/02/27/au-proces-des-escroqueries-a-l-imsi-catcher-un-braquage-sans-se-salir-les-mains_6668557_4408996.html)";;;M
+NOM-001-062;Nomadisme;Mettre en place un DNS filtrant;4;SÃ©curisation des terminaux;"Vous mettez en place l'utilisation d'un DNS filtrant sur les terminaux de vos utilisateurs. En fonction du service DNS choisi, celui-ci permet de bloquer des applications ou sites web malveillants, nuisibles ou inappropriÃ©s afin qu'ils ne puissent pas Ãªtre chargÃ©s sur les terminaux de vos utilisateurs.
 
-Pour les smartphones Android, dans les paramètres de connexion, il existe une option ""DNS privé"" à configurer. Elle permet de définir le nom d'hôte d'un fournisseur DNS privé. Si celui-ci n'est pas disponible, le terminal ne pourra pas se connecter à Internet. 
+Pour les smartphones Android, dans les paramÃ¨tres de connexion, il existe une option ""DNS privÃ©"" Ã  configurer. Elle permet de dÃ©finir le nom d'hÃ´te d'un fournisseur DNS privÃ©. Si celui-ci n'est pas disponible, le terminal ne pourra pas se connecter Ã  Internet. 
 
-Cette mesure est applicable sur les terminaux maîtrisés par vos services.";;;;M
-NOM-001-063;Nomadisme;[PC portable] Déployer le chiffrement des disques à l'installation des postes;2;Sécurisation des terminaux;"Vous mettez en œuvre un chiffrement de l'ensemble du disque des postes lors de leur installation. Le déchiffrement se fait au démarrage du poste à travers l'utilisation d'un mot de passe spécifique.
-En parallèle, vous mettez en place un séquestre des clés de déchiffrement.
+Cette mesure est applicable sur les terminaux maÃ®trisÃ©s par vos services.";;;;M
+NOM-001-063;Nomadisme;[PC portable] DÃ©ployer le chiffrement des disques Ã  l'installation des postes;2;SÃ©curisation des terminaux;"Vous mettez en Å“uvre un chiffrement de l'ensemble du disque des postes lors de leur installation. Le dÃ©chiffrement se fait au dÃ©marrage du poste Ã  travers l'utilisation d'un mot de passe spÃ©cifique.
+En parallÃ¨le, vous mettez en place un sÃ©questre des clÃ©s de dÃ©chiffrement.
 
-Sur Windows, vous utilisez Bitlocker avec les paramètres par défaut.
+Sur Windows, vous utilisez Bitlocker avec les paramÃ¨tres par dÃ©faut.
 
-Sur les autres OS, lorsque vous avez la possibilité de choisir les algorithmes et les tailles de clé utilisés, vous en choisissez des ""robustes"".
+Sur les autres OS, lorsque vous avez la possibilitÃ© de choisir les algorithmes et les tailles de clÃ© utilisÃ©s, vous en choisissez des ""robustes"".
 
-Note : le chiffrement est utile uniquement si le terminal est éteint. Demandez à vos utilisateurs d'éteindre leurs terminaux lors des déplacements et en dehors des horaires de travail.
+Note : le chiffrement est utile uniquement si le terminal est Ã©teint. Demandez Ã  vos utilisateurs d'Ã©teindre leurs terminaux lors des dÃ©placements et en dehors des horaires de travail.
 
-Cette mesure est applicable sur les terminaux maîtrisés par vos services.";;;;M
-NOM-001-064;Nomadisme;[Smartphones/Tablettes] Déployer le chiffrement des données à l'installation du terminal;2;Sécurisation des terminaux;"Vous mettez en œuvre un chiffrement de l'ensemble des données (appareil et carte SD le cas échéant) contenues sur les smartphones et tablettes lors de l'installation, lorsque cela est possible.
-Vous mettez en œuvre ce chiffrement en utilisant des algorithmes et des tailles de clé ""robustes"".
+Cette mesure est applicable sur les terminaux maÃ®trisÃ©s par vos services.";;;;M
+NOM-001-064;Nomadisme;[Smartphones/Tablettes] DÃ©ployer le chiffrement des donnÃ©es Ã  l'installation du terminal;2;SÃ©curisation des terminaux;"Vous mettez en Å“uvre un chiffrement de l'ensemble des donnÃ©es (appareil et carte SD le cas Ã©chÃ©ant) contenues sur les smartphones et tablettes lors de l'installation, lorsque cela est possible.
+Vous mettez en Å“uvre ce chiffrement en utilisant des algorithmes et des tailles de clÃ© ""robustes"".
 
-Note : trois types de chiffrements sont possibles pour le chiffrement des données contenues sur l'appareil : 
-- le chiffrement complet du disque (disponible jusqu'à Android 9) : au démarrage, l'utilisateur doit fournir ses identifiants avant qu'aucune partie du disque ne soit accessible ;
-- le chiffrement basé sur les fichiers : il permet de chiffrer différents fichiers avec des clés différentes qui peuvent être déverrouillées indépendamment ;
-- le chiffrement des métadonnées : tout le contenu qui n'est pas chiffré par le chiffrement basé sur les fichiers, comme les mises en page des répertoires, les tailles de fichier, les autorisations et les heures de création/modification.
+Note : trois types de chiffrements sont possibles pour le chiffrement des donnÃ©es contenues sur l'appareil : 
+- le chiffrement complet du disque (disponible jusqu'Ã  Android 9) : au dÃ©marrage, l'utilisateur doit fournir ses identifiants avant qu'aucune partie du disque ne soit accessible ;
+- le chiffrement basÃ© sur les fichiers : il permet de chiffrer diffÃ©rents fichiers avec des clÃ©s diffÃ©rentes qui peuvent Ãªtre dÃ©verrouillÃ©es indÃ©pendamment ;
+- le chiffrement des mÃ©tadonnÃ©es : tout le contenu qui n'est pas chiffrÃ© par le chiffrement basÃ© sur les fichiers, comme les mises en page des rÃ©pertoires, les tailles de fichier, les autorisations et les heures de crÃ©ation/modification.
 
-Cette mesure est applicable sur les terminaux maîtrisés par vos services.";;;;M
-NOM-001-065;Nomadisme;[Smartphones/Tablettes] Mettre en place un antivirus sur les terminaux;5;Sécurisation des terminaux;Vous installez et maintenez à jour une solution d'antivirus sur les terminaux maîtrisés par vos services.  Vous utilisez en priorité l'antivirus natif de votre système d'exploitation si celui-ci existe.;;;;M
-NOM-001-066;Nomadisme;Mettre entre œuvre une authentification FIDO pour l'accès aux applications métier;5;Accès aux applications et aux données;Vous déployez une authentification multifcateurs forte pour l'accès aux applications métier. Par exemple, avec un facteur de possession de type TOTP, HOTP ou FIDO.;;;;M
-NOM-001-067;Nomadisme;[PC portable] Bloquer temporairement l'accès aux comptes utilisateurs après 3 tentatives de connexion infructueuses;1;Accès aux terminaux;Vous paramétrez les terminaux et/ou les comptes utilisateurs afin de bloquer temporairement (par exemple 5min) l'accès à la session de l'utilisateur après 3 tentatives de connexion infructueuses.;;;;M
+Cette mesure est applicable sur les terminaux maÃ®trisÃ©s par vos services.";;;;M
+NOM-001-065;Nomadisme;[Smartphones/Tablettes] Mettre en place un antivirus sur les terminaux;5;SÃ©curisation des terminaux;Vous installez et maintenez Ã  jour une solution d'antivirus sur les terminaux maÃ®trisÃ©s par vos services.  Vous utilisez en prioritÃ© l'antivirus natif de votre systÃ¨me d'exploitation si celui-ci existe.;;;;M
+NOM-001-066;Nomadisme;Mettre entre Å“uvre une authentification FIDO pour l'accÃ¨s aux applications mÃ©tier;5;AccÃ¨s aux applications et aux donnÃ©es;"Vous dÃ©ployez une authentification multifcateurs forte pour l'accÃ¨s aux applications mÃ©tier. Par exemple, avec un facteur de possession de type TOTP, HOTP ou FIDO.";;;;M
+NOM-001-067;Nomadisme;[PC portable] Bloquer temporairement l'accÃ¨s aux comptes utilisateurs aprÃ¨s 3 tentatives de connexion infructueuses;1;AccÃ¨s aux terminaux;Vous paramÃ©trez les terminaux et/ou les comptes utilisateurs afin de bloquer temporairement (par exemple 5min) l'accÃ¨s Ã  la session de l'utilisateur aprÃ¨s 3 tentatives de connexion infructueuses.;;;;M
+ADM-001-100;Administration;sdflviuhskdjuhv;2;Activer le pare-feu local sur les terminaux d'administration;;;;;
